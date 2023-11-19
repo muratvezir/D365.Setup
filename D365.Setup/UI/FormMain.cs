@@ -129,33 +129,10 @@ namespace D365.Setup
             textBoxAgentPath.DataBindings.Add("Text", fileShareList[0], "Path");
             textBoxAgentBasePath.DataBindings.Add("Text", fileShareList[0], "BasePath");
             textBoxAgentLocalPath.DataBindings.Add("Text", fileShareList[0], "LocalPath");
-            chkAgentShr.DataBindings.Add("Checked", fileShareList[0], "disabled");
 
 
-            textBoxAosPath.DataBindings.Add("Text", fileShareList[1], "Path");
-            textBoxAosBasePath.DataBindings.Add("Text", fileShareList[1], "BasePath");
-            textBoxAosLocalPath.DataBindings.Add("Text", fileShareList[1], "LocalPath");
-            chkAosShr.DataBindings.Add("Checked", fileShareList[1], "disabled");
 
-            textBoxDixfPath.DataBindings.Add("Text", fileShareList[2], "Path");
-            textBoxDixfBasePath.DataBindings.Add("Text", fileShareList[2], "BasePath");
-            textBoxDixfLocalPath.DataBindings.Add("Text", fileShareList[2], "LocalPath");
-            chkDixfShr.DataBindings.Add("Checked", fileShareList[2], "disabled");
 
-            textBoxDiagPath.DataBindings.Add("Text", fileShareList[3], "Path");
-            textBoxDiagBasePath.DataBindings.Add("Text", fileShareList[3], "BasePath");
-            textBoxDiagLocalPath.DataBindings.Add("Text", fileShareList[3], "LocalPath");
-            chkDiagnoseShr.DataBindings.Add("Checked", fileShareList[3], "disabled");
-
-                  
-            textBoxListener.DataBindings.Add("Text", configBindingSource , "SQLCluster.ListenerName");
-
-            BindingSource sqlVmsbindings = new BindingSource();
-            sqlVmsbindings.DataSource = deserializedXML.SQLCluster.SQLVMList;
-
-            ListSqlVms.DataSource = sqlVmsbindings;
-            ListSqlVms.DisplayMember = "Name";
-           
         }
 
 
@@ -177,31 +154,6 @@ namespace D365.Setup
         private void buttonRead_Click(object sender, EventArgs e)
         {
             ReadFromXml();
-        }
-
-        private void buttonRemoveServer_Click(object sender, EventArgs e)
-        {
-            var itemToRemove = deserializedXML.SQLCluster.SQLVMList.FirstOrDefault(item => item.name == "sql1");
-            if (itemToRemove != null)
-            {
-                deserializedXML.SQLCluster.SQLVMList.Remove(itemToRemove);
-            }
-            var lbBindings = (BindingSource)ListSqlVms.DataSource;
-            lbBindings.ResetBindings(false);
-        }
-
-        private void buttonAddServer_Click(object sender, EventArgs e)
-        {
-            SqlServerName inputDialog = new SqlServerName();
-            if (inputDialog.ShowDialog() == DialogResult.OK)
-            {
-                string userInput = inputDialog.UserInput;
-                var newItem = new ConfigSQLClusterSQLVM() { name = userInput };
-                deserializedXML.SQLCluster.SQLVMList.Add(newItem);
-            }
-            lbBindings.ResetBindings(false);
-
-
         }
     }
 }

@@ -1279,12 +1279,12 @@ namespace D365.Setup
     public partial class ConfigSQLCluster
     {
 
-        private object listenerNameField;
+        private string listenerNameField;
 
-        private ConfigSQLClusterSQLVMList sQLVMListField;
+        private List<ConfigSQLClusterSQLVM> sQLVMListField;
 
         /// <remarks/>
-        public object ListenerName
+        public string ListenerName
         {
             get
             {
@@ -1297,7 +1297,8 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        public ConfigSQLClusterSQLVMList SQLVMList
+        [System.Xml.Serialization.XmlArrayItemAttribute("SQLVM", IsNullable = false)]
+        public List<ConfigSQLClusterSQLVM> SQLVMList
         {
             get
             {
@@ -1314,30 +1315,7 @@ namespace D365.Setup
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class ConfigSQLClusterSQLVMList
-    {
-
-        private ConfigSQLClusterSQLVMListSQLVM sQLVMField;
-
-        /// <remarks/>
-        public ConfigSQLClusterSQLVMListSQLVM SQLVM
-        {
-            get
-            {
-                return this.sQLVMField;
-            }
-            set
-            {
-                this.sQLVMField = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class ConfigSQLClusterSQLVMListSQLVM
+    public partial class ConfigSQLClusterSQLVM
     {
 
         private string nameField;
