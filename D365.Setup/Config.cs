@@ -173,7 +173,7 @@ namespace D365.Setup
 
         private string domainNameField;
 
-        private ConfigADServiceAccountsADServiceAccount[] aDServiceAccountField;
+        private List<ConfigADServiceAccountsADServiceAccount> aDServiceAccountField;
 
         /// <remarks/>
         public string DomainName
@@ -190,7 +190,7 @@ namespace D365.Setup
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ADServiceAccount")]
-        public ConfigADServiceAccountsADServiceAccount[] ADServiceAccount
+        public List<ConfigADServiceAccountsADServiceAccount> ADServiceAccount
         {
             get
             {

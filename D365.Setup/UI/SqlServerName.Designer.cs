@@ -31,8 +31,8 @@ namespace D365.Setup
         {
             this.textBoxSqlServerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxSqlServerName
@@ -51,32 +51,35 @@ namespace D365.Setup
             this.label1.TabIndex = 1;
             this.label1.Text = "Sql Vm Name";
             // 
-            // button1
+            // buttonOK
             // 
-            this.button1.Location = new System.Drawing.Point(288, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 46);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ok";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonOK.Location = new System.Drawing.Point(288, 79);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(103, 46);
+            this.buttonOK.TabIndex = 2;
+            this.buttonOK.Text = "Ok";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // button2
+            // buttonCancel
             // 
-            this.button2.Location = new System.Drawing.Point(399, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(399, 79);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(103, 46);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // SqlServerName
             // 
+            this.AcceptButton = this.buttonOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(514, 151);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSqlServerName);
             this.Name = "SqlServerName";
@@ -93,7 +96,7 @@ namespace D365.Setup
 
         private System.Windows.Forms.TextBox textBoxSqlServerName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

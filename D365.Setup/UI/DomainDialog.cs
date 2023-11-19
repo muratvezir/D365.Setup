@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace D365.Setup
 {
-    public partial class SqlServerName : Form
+    public partial class DomainDialog : Form
     {
-        public string UserInput { get; private set; }
-        public SqlServerName()
+        public string DomainShortName { get; private set; }
+        public string DomainLongName { get; private set; }
+
+        public DomainDialog()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonOK_Click(object sender, EventArgs e)
         {
-            UserInput = textBoxSqlServerName.Text;
+            DomainShortName = textBoxShortName.Text;
+            DomainLongName = textBoxLongName.Text;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
