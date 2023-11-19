@@ -48,11 +48,46 @@ namespace D365.Setup
             using (FileStream stream = File.OpenRead(xmlFilePath))
             {
                 deserializedXML = (Config)serializer.Deserialize(stream);
-            } 
+            }
+
+            BindConfigToFormControls();
+
+           
 
 
+
+
+        }
+
+        #region FormUIMethods
+
+        public IEnumerable<Control> GetAllDataBoundControls(Control control)
+        {
+            var dataBoundControls = control.Controls
+                .OfType<Control>()
+                .Where(c => c.DataBindings.Count > 0);
+
+            foreach (Control innerControl in control.Controls)
+            {
+                dataBoundControls = dataBoundControls.Concat(GetAllDataBoundControls(innerControl));
+            }
+
+            return dataBoundControls;
+        }
+
+
+
+        private void BindConfigToFormControls()
+        {
             configBindingSource.DataSource = deserializedXML;
-            labelVersion.DataBindings.Clear();
+
+            var allDataBoundControls = GetAllDataBoundControls(this).Distinct();
+
+            foreach (var control in allDataBoundControls)
+            {
+                control.DataBindings.Clear();
+            }
+
 
             textBoxConfig.DataBindings.Add("Text", configBindingSource, "Schema.Version");
             textBoxDomainName.DataBindings.Add("Text", configBindingSource, "ADServiceAccounts.DomainName");
@@ -78,9 +113,31 @@ namespace D365.Setup
             textBoxDixF.DataBindings.Add("Text", accountBindingList[6], "DNSHostName");
             chkDixF.DataBindings.Add("Checked", accountBindingList[6], "disabled");
 
+            var dbServerList = new BindingList<ConfigSecurity>(deserializedXML.DbServer);
+
+            textBoxAxDbAdmin.DataBindings.Add("Text", dbServerList[0], "User.userName");
+            chkAxDbAdmin.DataBindings.Add("Checked", dbServerList[0], "User.generateUser");
+
+            textBoxAxDwAdmin.DataBindings.Add("Text", dbServerList[1], "User.userName");
+            chkAxDwAdmin.DataBindings.Add("Checked", dbServerList[1], "User.generateUser");
+
+            textBoxAxDwRuntime.DataBindings.Add("Text", dbServerList[2], "User.userName");
+            chkDwRuntime.DataBindings.Add("Checked", dbServerList[2], "User.generateUser");
+
+            var fileShareList = new BindingList<ConfigFileShare>(deserializedXML.FileShares);
+
+            textBoxAgentPath.DataBindings.Add("Text", fileShareList[0], "Path");
+            textBoxAgentBasePath.DataBindings.Add("Text", fileShareList[0], "BasePath");
+            textBoxAgentLocalPath.DataBindings.Add("Text", fileShareList[0], "LocalPath");
+
+
 
 
         }
+
+
+        #endregion FormUIMethods
+
 
 
 
