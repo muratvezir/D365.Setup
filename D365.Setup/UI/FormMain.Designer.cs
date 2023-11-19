@@ -79,7 +79,7 @@ namespace D365.Setup
             this.label7 = new System.Windows.Forms.Label();
             this.groupFileShare = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.chkAgentShr = new System.Windows.Forms.CheckBox();
+            this.chkAgent = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxAgentPath = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -87,40 +87,34 @@ namespace D365.Setup
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxAgentLocalPath = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxAosLocalPath = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxAosBasePath = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxAosPath = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.chkAosShr = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxDixfLocalPath = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBoxDixfBasePath = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBoxDixfPath = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.chkDixfShr = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBoxDiagLocalPath = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBoxDiagBasePath = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBoxDiagPath = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.chkDiagnoseShr = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBoxListener = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.ListSqlVms = new System.Windows.Forms.ListBox();
-            this.buttonAddServer = new System.Windows.Forms.Button();
-            this.buttonRemoveServer = new System.Windows.Forms.Button();
             this.groupTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).BeginInit();
@@ -133,7 +127,6 @@ namespace D365.Setup
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupTop
@@ -267,7 +260,6 @@ namespace D365.Setup
             // 
             // tabPageADServiceAccounts
             // 
-            this.tabPageADServiceAccounts.Controls.Add(this.groupBox4);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBox3);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBox2);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBox1);
@@ -587,7 +579,7 @@ namespace D365.Setup
             this.groupFileShare.Controls.Add(this.label11);
             this.groupFileShare.Controls.Add(this.textBoxAgentPath);
             this.groupFileShare.Controls.Add(this.label10);
-            this.groupFileShare.Controls.Add(this.chkAgentShr);
+            this.groupFileShare.Controls.Add(this.chkAgent);
             this.groupFileShare.Controls.Add(this.label9);
             this.groupFileShare.Location = new System.Drawing.Point(639, 18);
             this.groupFileShare.Name = "groupFileShare";
@@ -605,14 +597,14 @@ namespace D365.Setup
             this.label9.TabIndex = 43;
             this.label9.Text = "Disabled";
             // 
-            // chkAgentShr
+            // chkAgent
             // 
-            this.chkAgentShr.AutoSize = true;
-            this.chkAgentShr.Location = new System.Drawing.Point(395, 30);
-            this.chkAgentShr.Name = "chkAgentShr";
-            this.chkAgentShr.Size = new System.Drawing.Size(28, 27);
-            this.chkAgentShr.TabIndex = 44;
-            this.chkAgentShr.UseVisualStyleBackColor = true;
+            this.chkAgent.AutoSize = true;
+            this.chkAgent.Location = new System.Drawing.Point(395, 30);
+            this.chkAgent.Name = "chkAgent";
+            this.chkAgent.Size = new System.Drawing.Size(28, 27);
+            this.chkAgent.TabIndex = 44;
+            this.chkAgent.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -664,13 +656,13 @@ namespace D365.Setup
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxAosLocalPath);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBoxAosBasePath);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBoxAosPath);
+            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.chkAosShr);
+            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Location = new System.Drawing.Point(1087, 18);
             this.groupBox1.Name = "groupBox1";
@@ -679,12 +671,12 @@ namespace D365.Setup
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aos File Share";
             // 
-            // textBoxAosLocalPath
+            // textBox1
             // 
-            this.textBoxAosLocalPath.Location = new System.Drawing.Point(123, 135);
-            this.textBoxAosLocalPath.Name = "textBoxAosLocalPath";
-            this.textBoxAosLocalPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxAosLocalPath.TabIndex = 50;
+            this.textBox1.Location = new System.Drawing.Point(123, 135);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 31);
+            this.textBox1.TabIndex = 50;
             // 
             // label8
             // 
@@ -695,12 +687,12 @@ namespace D365.Setup
             this.label8.TabIndex = 49;
             this.label8.Text = "Local Path";
             // 
-            // textBoxAosBasePath
+            // textBox2
             // 
-            this.textBoxAosBasePath.Location = new System.Drawing.Point(123, 98);
-            this.textBoxAosBasePath.Name = "textBoxAosBasePath";
-            this.textBoxAosBasePath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxAosBasePath.TabIndex = 48;
+            this.textBox2.Location = new System.Drawing.Point(123, 98);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(300, 31);
+            this.textBox2.TabIndex = 48;
             // 
             // label13
             // 
@@ -711,12 +703,12 @@ namespace D365.Setup
             this.label13.TabIndex = 47;
             this.label13.Text = "Base Path";
             // 
-            // textBoxAosPath
+            // textBox3
             // 
-            this.textBoxAosPath.Location = new System.Drawing.Point(123, 60);
-            this.textBoxAosPath.Name = "textBoxAosPath";
-            this.textBoxAosPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxAosPath.TabIndex = 46;
+            this.textBox3.Location = new System.Drawing.Point(123, 60);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 31);
+            this.textBox3.TabIndex = 46;
             // 
             // label14
             // 
@@ -727,14 +719,14 @@ namespace D365.Setup
             this.label14.TabIndex = 45;
             this.label14.Text = "Path";
             // 
-            // chkAosShr
+            // checkBox1
             // 
-            this.chkAosShr.AutoSize = true;
-            this.chkAosShr.Location = new System.Drawing.Point(395, 30);
-            this.chkAosShr.Name = "chkAosShr";
-            this.chkAosShr.Size = new System.Drawing.Size(28, 27);
-            this.chkAosShr.TabIndex = 44;
-            this.chkAosShr.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(395, 30);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(28, 27);
+            this.checkBox1.TabIndex = 44;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -747,13 +739,13 @@ namespace D365.Setup
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBoxDixfLocalPath);
+            this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBoxDixfBasePath);
+            this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBoxDixfPath);
+            this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.chkDixfShr);
+            this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Location = new System.Drawing.Point(639, 221);
             this.groupBox2.Name = "groupBox2";
@@ -762,12 +754,12 @@ namespace D365.Setup
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dixf File Share";
             // 
-            // textBoxDixfLocalPath
+            // textBox4
             // 
-            this.textBoxDixfLocalPath.Location = new System.Drawing.Point(123, 135);
-            this.textBoxDixfLocalPath.Name = "textBoxDixfLocalPath";
-            this.textBoxDixfLocalPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDixfLocalPath.TabIndex = 50;
+            this.textBox4.Location = new System.Drawing.Point(123, 135);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(300, 31);
+            this.textBox4.TabIndex = 50;
             // 
             // label16
             // 
@@ -778,12 +770,12 @@ namespace D365.Setup
             this.label16.TabIndex = 49;
             this.label16.Text = "Local Path";
             // 
-            // textBoxDixfBasePath
+            // textBox5
             // 
-            this.textBoxDixfBasePath.Location = new System.Drawing.Point(123, 98);
-            this.textBoxDixfBasePath.Name = "textBoxDixfBasePath";
-            this.textBoxDixfBasePath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDixfBasePath.TabIndex = 48;
+            this.textBox5.Location = new System.Drawing.Point(123, 98);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(300, 31);
+            this.textBox5.TabIndex = 48;
             // 
             // label17
             // 
@@ -794,12 +786,12 @@ namespace D365.Setup
             this.label17.TabIndex = 47;
             this.label17.Text = "Base Path";
             // 
-            // textBoxDixfPath
+            // textBox6
             // 
-            this.textBoxDixfPath.Location = new System.Drawing.Point(123, 60);
-            this.textBoxDixfPath.Name = "textBoxDixfPath";
-            this.textBoxDixfPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDixfPath.TabIndex = 46;
+            this.textBox6.Location = new System.Drawing.Point(123, 60);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(300, 31);
+            this.textBox6.TabIndex = 46;
             // 
             // label18
             // 
@@ -810,14 +802,14 @@ namespace D365.Setup
             this.label18.TabIndex = 45;
             this.label18.Text = "Path";
             // 
-            // chkDixfShr
+            // checkBox2
             // 
-            this.chkDixfShr.AutoSize = true;
-            this.chkDixfShr.Location = new System.Drawing.Point(395, 30);
-            this.chkDixfShr.Name = "chkDixfShr";
-            this.chkDixfShr.Size = new System.Drawing.Size(28, 27);
-            this.chkDixfShr.TabIndex = 44;
-            this.chkDixfShr.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(395, 30);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(28, 27);
+            this.checkBox2.TabIndex = 44;
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
@@ -830,13 +822,13 @@ namespace D365.Setup
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBoxDiagLocalPath);
+            this.groupBox3.Controls.Add(this.textBox7);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBoxDiagBasePath);
+            this.groupBox3.Controls.Add(this.textBox8);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBoxDiagPath);
+            this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.chkDiagnoseShr);
+            this.groupBox3.Controls.Add(this.checkBox3);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Location = new System.Drawing.Point(1087, 221);
             this.groupBox3.Name = "groupBox3";
@@ -845,12 +837,12 @@ namespace D365.Setup
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Diagnostics File Share";
             // 
-            // textBoxDiagLocalPath
+            // textBox7
             // 
-            this.textBoxDiagLocalPath.Location = new System.Drawing.Point(123, 135);
-            this.textBoxDiagLocalPath.Name = "textBoxDiagLocalPath";
-            this.textBoxDiagLocalPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDiagLocalPath.TabIndex = 50;
+            this.textBox7.Location = new System.Drawing.Point(123, 135);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(300, 31);
+            this.textBox7.TabIndex = 50;
             // 
             // label20
             // 
@@ -861,12 +853,12 @@ namespace D365.Setup
             this.label20.TabIndex = 49;
             this.label20.Text = "Local Path";
             // 
-            // textBoxDiagBasePath
+            // textBox8
             // 
-            this.textBoxDiagBasePath.Location = new System.Drawing.Point(123, 98);
-            this.textBoxDiagBasePath.Name = "textBoxDiagBasePath";
-            this.textBoxDiagBasePath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDiagBasePath.TabIndex = 48;
+            this.textBox8.Location = new System.Drawing.Point(123, 98);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(300, 31);
+            this.textBox8.TabIndex = 48;
             // 
             // label21
             // 
@@ -877,12 +869,12 @@ namespace D365.Setup
             this.label21.TabIndex = 47;
             this.label21.Text = "Base Path";
             // 
-            // textBoxDiagPath
+            // textBox9
             // 
-            this.textBoxDiagPath.Location = new System.Drawing.Point(123, 60);
-            this.textBoxDiagPath.Name = "textBoxDiagPath";
-            this.textBoxDiagPath.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDiagPath.TabIndex = 46;
+            this.textBox9.Location = new System.Drawing.Point(123, 60);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(300, 31);
+            this.textBox9.TabIndex = 46;
             // 
             // label22
             // 
@@ -893,14 +885,14 @@ namespace D365.Setup
             this.label22.TabIndex = 45;
             this.label22.Text = "Path";
             // 
-            // chkDiagnoseShr
+            // checkBox3
             // 
-            this.chkDiagnoseShr.AutoSize = true;
-            this.chkDiagnoseShr.Location = new System.Drawing.Point(395, 30);
-            this.chkDiagnoseShr.Name = "chkDiagnoseShr";
-            this.chkDiagnoseShr.Size = new System.Drawing.Size(28, 27);
-            this.chkDiagnoseShr.TabIndex = 44;
-            this.chkDiagnoseShr.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(395, 30);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(28, 27);
+            this.checkBox3.TabIndex = 44;
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -928,67 +920,6 @@ namespace D365.Setup
             this.button2.TabIndex = 3;
             this.button2.Text = "Set File Share";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(14, 54);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 25);
-            this.label27.TabIndex = 36;
-            this.label27.Text = "Listener";
-            // 
-            // textBoxListener
-            // 
-            this.textBoxListener.Location = new System.Drawing.Point(200, 51);
-            this.textBoxListener.Name = "textBoxListener";
-            this.textBoxListener.Size = new System.Drawing.Size(261, 31);
-            this.textBoxListener.TabIndex = 37;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.buttonRemoveServer);
-            this.groupBox4.Controls.Add(this.buttonAddServer);
-            this.groupBox4.Controls.Add(this.ListSqlVms);
-            this.groupBox4.Controls.Add(this.textBoxListener);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Location = new System.Drawing.Point(10, 589);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(598, 200);
-            this.groupBox4.TabIndex = 54;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "SqlListener Name";
-            // 
-            // ListSqlVms
-            // 
-            this.ListSqlVms.FormattingEnabled = true;
-            this.ListSqlVms.ItemHeight = 25;
-            this.ListSqlVms.Location = new System.Drawing.Point(200, 97);
-            this.ListSqlVms.Name = "ListSqlVms";
-            this.ListSqlVms.Size = new System.Drawing.Size(260, 79);
-            this.ListSqlVms.TabIndex = 38;
-            // 
-            // buttonAddServer
-            // 
-            this.buttonAddServer.Location = new System.Drawing.Point(463, 97);
-            this.buttonAddServer.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonAddServer.Name = "buttonAddServer";
-            this.buttonAddServer.Size = new System.Drawing.Size(40, 40);
-            this.buttonAddServer.TabIndex = 39;
-            this.buttonAddServer.Text = "+";
-            this.buttonAddServer.UseVisualStyleBackColor = true;
-            this.buttonAddServer.Click += new System.EventHandler(this.buttonAddServer_Click);
-            // 
-            // buttonRemoveServer
-            // 
-            this.buttonRemoveServer.Location = new System.Drawing.Point(463, 137);
-            this.buttonRemoveServer.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonRemoveServer.Name = "buttonRemoveServer";
-            this.buttonRemoveServer.Size = new System.Drawing.Size(40, 40);
-            this.buttonRemoveServer.TabIndex = 40;
-            this.buttonRemoveServer.Text = "-";
-            this.buttonRemoveServer.UseVisualStyleBackColor = true;
-            this.buttonRemoveServer.Click += new System.EventHandler(this.buttonRemoveServer_Click);
             // 
             // FormMain
             // 
@@ -1019,8 +950,6 @@ namespace D365.Setup
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1081,42 +1010,36 @@ namespace D365.Setup
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxAgentPath;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox chkAgentShr;
+        private System.Windows.Forms.CheckBox chkAgent;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBoxDiagLocalPath;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBoxDiagBasePath;
+        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBoxDiagPath;
+        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox chkDiagnoseShr;
+        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBoxDixfLocalPath;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxDixfBasePath;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBoxDixfPath;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckBox chkDixfShr;
+        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxAosLocalPath;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxAosBasePath;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxAosPath;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox chkAosShr;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListBox ListSqlVms;
-        private System.Windows.Forms.TextBox textBoxListener;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button buttonAddServer;
-        private System.Windows.Forms.Button buttonRemoveServer;
     }
 }
