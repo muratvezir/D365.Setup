@@ -21,12 +21,25 @@ namespace D365.Setup
         public FormMain()
         {
             InitializeComponent();
-              ReadFromXml();
+           
 
         }
 
         private void ReadFromXml()
         {
+
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            //openFileDialog.Filter = "XML Dosyaları (*.xml)|*.xml";
+            //openFileDialog.FilterIndex = 1;
+            //openFileDialog.RestoreDirectory = true;
+
+            //if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //{
+
+            //    xmlFilePath = openFileDialog.FileName;
+            //}
+
             xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
 
             deserializedXML = new Config();
@@ -79,6 +92,11 @@ namespace D365.Setup
                 serializer.Serialize(writer, deserializedXML);
             }
 
+        }
+
+        private void buttonRead_Click(object sender, EventArgs e)
+        {
+            ReadFromXml();
         }
     }
 }
