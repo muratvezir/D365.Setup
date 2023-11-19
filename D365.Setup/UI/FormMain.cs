@@ -205,5 +205,32 @@ namespace D365.Setup
             lbBindings.ResetBindings(false);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DomainDialog inputDialog = new DomainDialog();
+            if (inputDialog.ShowDialog() == DialogResult.OK)
+            {
+                string domainShortName = inputDialog.DomainShortName;
+                string domainLongName = inputDialog.DomainLongName;
+
+                textBoxDomainName.Text = domainShortName;
+                textBoxLocalAgent.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                                           Where(i => i.refName == "gmsaLocalAgent").FirstOrDefault().name.TrimEnd('$') + '.'+ domainLongName;
+                textBoxFRAS.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaFRAS").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+                textBoxFRPS.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaFRPS").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+                textBoxFRCO.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaFRCO").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+                textBoxAXSF.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaAXSF").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+                textBoxReportSvc.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaSSRS").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+                textBoxDixF.Text = deserializedXML.ADServiceAccounts.ADServiceAccount.
+                           Where(i => i.refName == "gmsaDIXF").FirstOrDefault().name.TrimEnd('$') + '.' + domainLongName;
+
+            }
+        }
     }
 }
