@@ -181,7 +181,9 @@ namespace D365.Setup
 
         private void buttonRemoveServer_Click(object sender, EventArgs e)
         {
-            var itemToRemove = deserializedXML.SQLCluster.SQLVMList.FirstOrDefault(item => item.name == "sql1");
+
+            var selectedListItem = (ConfigSQLClusterSQLVM)ListSqlVms.SelectedItem;
+            var itemToRemove = deserializedXML.SQLCluster.SQLVMList.FirstOrDefault(item => item.name == selectedListItem.name);
             if (itemToRemove != null)
             {
                 deserializedXML.SQLCluster.SQLVMList.Remove(itemToRemove);
@@ -199,8 +201,8 @@ namespace D365.Setup
                 var newItem = new ConfigSQLClusterSQLVM() { name = userInput };
                 deserializedXML.SQLCluster.SQLVMList.Add(newItem);
             }
+            var lbBindings = (BindingSource)ListSqlVms.DataSource;
             lbBindings.ResetBindings(false);
-
 
         }
     }
