@@ -39,7 +39,16 @@ namespace D365.Setup
             this.btnSaveConfig = new System.Windows.Forms.Button();
             this.configBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlConfig = new System.Windows.Forms.TabControl();
+            this.tabPageCertificate = new System.Windows.Forms.TabPage();
+            this.panelChild = new System.Windows.Forms.Panel();
+            this.groupGmsa = new System.Windows.Forms.GroupBox();
             this.tabPageADServiceAccounts = new System.Windows.Forms.TabPage();
+            this.chkDixF = new System.Windows.Forms.CheckBox();
+            this.chkReportSvc = new System.Windows.Forms.CheckBox();
+            this.chkAXSF = new System.Windows.Forms.CheckBox();
+            this.chkFRCO = new System.Windows.Forms.CheckBox();
+            this.chkFRPS = new System.Windows.Forms.CheckBox();
+            this.chkFRAS = new System.Windows.Forms.CheckBox();
             this.chkLocalAgent = new System.Windows.Forms.CheckBox();
             this.textBoxFRCO = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,20 +64,15 @@ namespace D365.Setup
             this.label1 = new System.Windows.Forms.Label();
             this.labelFRAS = new System.Windows.Forms.Label();
             this.labelLocalAgent = new System.Windows.Forms.Label();
-            this.tabPageCertificate = new System.Windows.Forms.TabPage();
-            this.panelChild = new System.Windows.Forms.Panel();
-            this.chkFRAS = new System.Windows.Forms.CheckBox();
-            this.chkFRPS = new System.Windows.Forms.CheckBox();
-            this.chkFRCO = new System.Windows.Forms.CheckBox();
-            this.chkDixF = new System.Windows.Forms.CheckBox();
-            this.chkReportSvc = new System.Windows.Forms.CheckBox();
-            this.chkAXSF = new System.Windows.Forms.CheckBox();
+            this.groupDatabase = new System.Windows.Forms.GroupBox();
+            this.buttonRead = new System.Windows.Forms.Button();
             this.groupTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).BeginInit();
             this.tabControlConfig.SuspendLayout();
-            this.tabPageADServiceAccounts.SuspendLayout();
             this.panelChild.SuspendLayout();
+            this.groupGmsa.SuspendLayout();
+            this.tabPageADServiceAccounts.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupTop
@@ -80,7 +84,7 @@ namespace D365.Setup
             this.groupTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupTop.Location = new System.Drawing.Point(0, 0);
             this.groupTop.Name = "groupTop";
-            this.groupTop.Size = new System.Drawing.Size(1298, 126);
+            this.groupTop.Size = new System.Drawing.Size(1620, 126);
             this.groupTop.TabIndex = 0;
             this.groupTop.TabStop = false;
             this.groupTop.Text = "General Info";
@@ -119,16 +123,17 @@ namespace D365.Setup
             // 
             // panelBottom
             // 
+            this.panelBottom.Controls.Add(this.buttonRead);
             this.panelBottom.Controls.Add(this.btnSaveConfig);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 739);
+            this.panelBottom.Location = new System.Drawing.Point(0, 983);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(1298, 100);
+            this.panelBottom.Size = new System.Drawing.Size(1620, 100);
             this.panelBottom.TabIndex = 2;
             // 
             // btnSaveConfig
             // 
-            this.btnSaveConfig.Location = new System.Drawing.Point(18, 27);
+            this.btnSaveConfig.Location = new System.Drawing.Point(1484, 17);
             this.btnSaveConfig.Name = "btnSaveConfig";
             this.btnSaveConfig.Size = new System.Drawing.Size(111, 59);
             this.btnSaveConfig.TabIndex = 0;
@@ -144,160 +149,8 @@ namespace D365.Setup
             this.tabControlConfig.Location = new System.Drawing.Point(0, 0);
             this.tabControlConfig.Name = "tabControlConfig";
             this.tabControlConfig.SelectedIndex = 0;
-            this.tabControlConfig.Size = new System.Drawing.Size(1298, 713);
+            this.tabControlConfig.Size = new System.Drawing.Size(1620, 957);
             this.tabControlConfig.TabIndex = 0;
-            // 
-            // tabPageADServiceAccounts
-            // 
-            this.tabPageADServiceAccounts.Controls.Add(this.chkDixF);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkReportSvc);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkAXSF);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkFRCO);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkFRPS);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkFRAS);
-            this.tabPageADServiceAccounts.Controls.Add(this.chkLocalAgent);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxFRCO);
-            this.tabPageADServiceAccounts.Controls.Add(this.label5);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxDixF);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxReportSvc);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxAXSF);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxFRPS);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxFRAS);
-            this.tabPageADServiceAccounts.Controls.Add(this.textBoxLocalAgent);
-            this.tabPageADServiceAccounts.Controls.Add(this.label4);
-            this.tabPageADServiceAccounts.Controls.Add(this.label3);
-            this.tabPageADServiceAccounts.Controls.Add(this.label2);
-            this.tabPageADServiceAccounts.Controls.Add(this.label1);
-            this.tabPageADServiceAccounts.Controls.Add(this.labelFRAS);
-            this.tabPageADServiceAccounts.Controls.Add(this.labelLocalAgent);
-            this.tabPageADServiceAccounts.Location = new System.Drawing.Point(8, 39);
-            this.tabPageADServiceAccounts.Name = "tabPageADServiceAccounts";
-            this.tabPageADServiceAccounts.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(1282, 666);
-            this.tabPageADServiceAccounts.TabIndex = 0;
-            this.tabPageADServiceAccounts.Text = "AD Service Accounts (GMSA)";
-            this.tabPageADServiceAccounts.UseVisualStyleBackColor = true;
-            // 
-            // chkLocalAgent
-            // 
-            this.chkLocalAgent.AutoSize = true;
-            this.chkLocalAgent.Location = new System.Drawing.Point(463, 19);
-            this.chkLocalAgent.Name = "chkLocalAgent";
-            this.chkLocalAgent.Size = new System.Drawing.Size(28, 27);
-            this.chkLocalAgent.TabIndex = 14;
-            this.chkLocalAgent.UseVisualStyleBackColor = true;
-            // 
-            // textBoxFRCO
-            // 
-            this.textBoxFRCO.Location = new System.Drawing.Point(184, 126);
-            this.textBoxFRCO.Name = "textBoxFRCO";
-            this.textBoxFRCO.Size = new System.Drawing.Size(261, 31);
-            this.textBoxFRCO.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 25);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "FRCO";
-            // 
-            // textBoxDixF
-            // 
-            this.textBoxDixF.Location = new System.Drawing.Point(184, 237);
-            this.textBoxDixF.Name = "textBoxDixF";
-            this.textBoxDixF.Size = new System.Drawing.Size(261, 31);
-            this.textBoxDixF.TabIndex = 11;
-            // 
-            // textBoxReportSvc
-            // 
-            this.textBoxReportSvc.Location = new System.Drawing.Point(184, 200);
-            this.textBoxReportSvc.Name = "textBoxReportSvc";
-            this.textBoxReportSvc.Size = new System.Drawing.Size(261, 31);
-            this.textBoxReportSvc.TabIndex = 9;
-            // 
-            // textBoxAXSF
-            // 
-            this.textBoxAXSF.Location = new System.Drawing.Point(184, 163);
-            this.textBoxAXSF.Name = "textBoxAXSF";
-            this.textBoxAXSF.Size = new System.Drawing.Size(261, 31);
-            this.textBoxAXSF.TabIndex = 7;
-            // 
-            // textBoxFRPS
-            // 
-            this.textBoxFRPS.Location = new System.Drawing.Point(184, 89);
-            this.textBoxFRPS.Name = "textBoxFRPS";
-            this.textBoxFRPS.Size = new System.Drawing.Size(261, 31);
-            this.textBoxFRPS.TabIndex = 5;
-            // 
-            // textBoxFRAS
-            // 
-            this.textBoxFRAS.Location = new System.Drawing.Point(184, 52);
-            this.textBoxFRAS.Name = "textBoxFRAS";
-            this.textBoxFRAS.Size = new System.Drawing.Size(261, 31);
-            this.textBoxFRAS.TabIndex = 3;
-            // 
-            // textBoxLocalAgent
-            // 
-            this.textBoxLocalAgent.Location = new System.Drawing.Point(184, 15);
-            this.textBoxLocalAgent.Name = "textBoxLocalAgent";
-            this.textBoxLocalAgent.Size = new System.Drawing.Size(261, 31);
-            this.textBoxLocalAgent.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "DixF";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "ReportSvc";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "AXSF";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "FRPS";
-            // 
-            // labelFRAS
-            // 
-            this.labelFRAS.AutoSize = true;
-            this.labelFRAS.Location = new System.Drawing.Point(22, 55);
-            this.labelFRAS.Name = "labelFRAS";
-            this.labelFRAS.Size = new System.Drawing.Size(68, 25);
-            this.labelFRAS.TabIndex = 2;
-            this.labelFRAS.Text = "FRAS";
-            // 
-            // labelLocalAgent
-            // 
-            this.labelLocalAgent.AutoSize = true;
-            this.labelLocalAgent.Location = new System.Drawing.Point(22, 18);
-            this.labelLocalAgent.Name = "labelLocalAgent";
-            this.labelLocalAgent.Size = new System.Drawing.Size(126, 25);
-            this.labelLocalAgent.TabIndex = 0;
-            this.labelLocalAgent.Text = "Local Agent";
             // 
             // tabPageCertificate
             // 
@@ -315,81 +168,264 @@ namespace D365.Setup
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChild.Location = new System.Drawing.Point(0, 126);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(1298, 713);
+            this.panelChild.Size = new System.Drawing.Size(1620, 957);
             this.panelChild.TabIndex = 1;
             // 
-            // chkFRAS
+            // groupGmsa
             // 
-            this.chkFRAS.AutoSize = true;
-            this.chkFRAS.Location = new System.Drawing.Point(463, 55);
-            this.chkFRAS.Name = "chkFRAS";
-            this.chkFRAS.Size = new System.Drawing.Size(28, 27);
-            this.chkFRAS.TabIndex = 15;
-            this.chkFRAS.UseVisualStyleBackColor = true;
+            this.groupGmsa.Controls.Add(this.chkDixF);
+            this.groupGmsa.Controls.Add(this.chkReportSvc);
+            this.groupGmsa.Controls.Add(this.chkAXSF);
+            this.groupGmsa.Controls.Add(this.chkFRCO);
+            this.groupGmsa.Controls.Add(this.chkFRPS);
+            this.groupGmsa.Controls.Add(this.chkFRAS);
+            this.groupGmsa.Controls.Add(this.chkLocalAgent);
+            this.groupGmsa.Controls.Add(this.textBoxFRCO);
+            this.groupGmsa.Controls.Add(this.label5);
+            this.groupGmsa.Controls.Add(this.textBoxDixF);
+            this.groupGmsa.Controls.Add(this.textBoxReportSvc);
+            this.groupGmsa.Controls.Add(this.textBoxAXSF);
+            this.groupGmsa.Controls.Add(this.textBoxFRPS);
+            this.groupGmsa.Controls.Add(this.textBoxFRAS);
+            this.groupGmsa.Controls.Add(this.textBoxLocalAgent);
+            this.groupGmsa.Controls.Add(this.label4);
+            this.groupGmsa.Controls.Add(this.label3);
+            this.groupGmsa.Controls.Add(this.label2);
+            this.groupGmsa.Controls.Add(this.label1);
+            this.groupGmsa.Controls.Add(this.labelFRAS);
+            this.groupGmsa.Controls.Add(this.labelLocalAgent);
+            this.groupGmsa.Location = new System.Drawing.Point(10, 18);
+            this.groupGmsa.Name = "groupGmsa";
+            this.groupGmsa.Size = new System.Drawing.Size(548, 316);
+            this.groupGmsa.TabIndex = 21;
+            this.groupGmsa.TabStop = false;
+            this.groupGmsa.Text = "Gmsa";
             // 
-            // chkFRPS
+            // tabPageADServiceAccounts
             // 
-            this.chkFRPS.AutoSize = true;
-            this.chkFRPS.Location = new System.Drawing.Point(463, 92);
-            this.chkFRPS.Name = "chkFRPS";
-            this.chkFRPS.Size = new System.Drawing.Size(28, 27);
-            this.chkFRPS.TabIndex = 16;
-            this.chkFRPS.UseVisualStyleBackColor = true;
-            // 
-            // chkFRCO
-            // 
-            this.chkFRCO.AutoSize = true;
-            this.chkFRCO.Location = new System.Drawing.Point(463, 129);
-            this.chkFRCO.Name = "chkFRCO";
-            this.chkFRCO.Size = new System.Drawing.Size(28, 27);
-            this.chkFRCO.TabIndex = 17;
-            this.chkFRCO.UseVisualStyleBackColor = true;
+            this.tabPageADServiceAccounts.Controls.Add(this.groupDatabase);
+            this.tabPageADServiceAccounts.Controls.Add(this.groupGmsa);
+            this.tabPageADServiceAccounts.Location = new System.Drawing.Point(8, 39);
+            this.tabPageADServiceAccounts.Name = "tabPageADServiceAccounts";
+            this.tabPageADServiceAccounts.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(1604, 910);
+            this.tabPageADServiceAccounts.TabIndex = 0;
+            this.tabPageADServiceAccounts.Text = "Accounts";
+            this.tabPageADServiceAccounts.UseVisualStyleBackColor = true;
             // 
             // chkDixF
             // 
             this.chkDixF.AutoSize = true;
-            this.chkDixF.Location = new System.Drawing.Point(463, 240);
+            this.chkDixF.Location = new System.Drawing.Point(481, 257);
             this.chkDixF.Name = "chkDixF";
             this.chkDixF.Size = new System.Drawing.Size(28, 27);
-            this.chkDixF.TabIndex = 20;
+            this.chkDixF.TabIndex = 41;
             this.chkDixF.UseVisualStyleBackColor = true;
             // 
             // chkReportSvc
             // 
             this.chkReportSvc.AutoSize = true;
-            this.chkReportSvc.Location = new System.Drawing.Point(463, 203);
+            this.chkReportSvc.Location = new System.Drawing.Point(481, 220);
             this.chkReportSvc.Name = "chkReportSvc";
             this.chkReportSvc.Size = new System.Drawing.Size(28, 27);
-            this.chkReportSvc.TabIndex = 19;
+            this.chkReportSvc.TabIndex = 40;
             this.chkReportSvc.UseVisualStyleBackColor = true;
             // 
             // chkAXSF
             // 
             this.chkAXSF.AutoSize = true;
-            this.chkAXSF.Location = new System.Drawing.Point(463, 166);
+            this.chkAXSF.Location = new System.Drawing.Point(481, 183);
             this.chkAXSF.Name = "chkAXSF";
             this.chkAXSF.Size = new System.Drawing.Size(28, 27);
-            this.chkAXSF.TabIndex = 18;
+            this.chkAXSF.TabIndex = 39;
             this.chkAXSF.UseVisualStyleBackColor = true;
+            // 
+            // chkFRCO
+            // 
+            this.chkFRCO.AutoSize = true;
+            this.chkFRCO.Location = new System.Drawing.Point(481, 146);
+            this.chkFRCO.Name = "chkFRCO";
+            this.chkFRCO.Size = new System.Drawing.Size(28, 27);
+            this.chkFRCO.TabIndex = 38;
+            this.chkFRCO.UseVisualStyleBackColor = true;
+            // 
+            // chkFRPS
+            // 
+            this.chkFRPS.AutoSize = true;
+            this.chkFRPS.Location = new System.Drawing.Point(481, 109);
+            this.chkFRPS.Name = "chkFRPS";
+            this.chkFRPS.Size = new System.Drawing.Size(28, 27);
+            this.chkFRPS.TabIndex = 37;
+            this.chkFRPS.UseVisualStyleBackColor = true;
+            // 
+            // chkFRAS
+            // 
+            this.chkFRAS.AutoSize = true;
+            this.chkFRAS.Location = new System.Drawing.Point(481, 72);
+            this.chkFRAS.Name = "chkFRAS";
+            this.chkFRAS.Size = new System.Drawing.Size(28, 27);
+            this.chkFRAS.TabIndex = 36;
+            this.chkFRAS.UseVisualStyleBackColor = true;
+            // 
+            // chkLocalAgent
+            // 
+            this.chkLocalAgent.AutoSize = true;
+            this.chkLocalAgent.Location = new System.Drawing.Point(481, 36);
+            this.chkLocalAgent.Name = "chkLocalAgent";
+            this.chkLocalAgent.Size = new System.Drawing.Size(28, 27);
+            this.chkLocalAgent.TabIndex = 35;
+            this.chkLocalAgent.UseVisualStyleBackColor = true;
+            // 
+            // textBoxFRCO
+            // 
+            this.textBoxFRCO.Location = new System.Drawing.Point(202, 143);
+            this.textBoxFRCO.Name = "textBoxFRCO";
+            this.textBoxFRCO.Size = new System.Drawing.Size(261, 31);
+            this.textBoxFRCO.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 25);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "FRCO";
+            // 
+            // textBoxDixF
+            // 
+            this.textBoxDixF.Location = new System.Drawing.Point(202, 254);
+            this.textBoxDixF.Name = "textBoxDixF";
+            this.textBoxDixF.Size = new System.Drawing.Size(261, 31);
+            this.textBoxDixF.TabIndex = 32;
+            // 
+            // textBoxReportSvc
+            // 
+            this.textBoxReportSvc.Location = new System.Drawing.Point(202, 217);
+            this.textBoxReportSvc.Name = "textBoxReportSvc";
+            this.textBoxReportSvc.Size = new System.Drawing.Size(261, 31);
+            this.textBoxReportSvc.TabIndex = 30;
+            // 
+            // textBoxAXSF
+            // 
+            this.textBoxAXSF.Location = new System.Drawing.Point(202, 180);
+            this.textBoxAXSF.Name = "textBoxAXSF";
+            this.textBoxAXSF.Size = new System.Drawing.Size(261, 31);
+            this.textBoxAXSF.TabIndex = 28;
+            // 
+            // textBoxFRPS
+            // 
+            this.textBoxFRPS.Location = new System.Drawing.Point(202, 106);
+            this.textBoxFRPS.Name = "textBoxFRPS";
+            this.textBoxFRPS.Size = new System.Drawing.Size(261, 31);
+            this.textBoxFRPS.TabIndex = 26;
+            // 
+            // textBoxFRAS
+            // 
+            this.textBoxFRAS.Location = new System.Drawing.Point(202, 69);
+            this.textBoxFRAS.Name = "textBoxFRAS";
+            this.textBoxFRAS.Size = new System.Drawing.Size(261, 31);
+            this.textBoxFRAS.TabIndex = 24;
+            // 
+            // textBoxLocalAgent
+            // 
+            this.textBoxLocalAgent.Location = new System.Drawing.Point(202, 32);
+            this.textBoxLocalAgent.Name = "textBoxLocalAgent";
+            this.textBoxLocalAgent.Size = new System.Drawing.Size(261, 31);
+            this.textBoxLocalAgent.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(40, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "DixF";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(40, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "ReportSvc";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "AXSF";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "FRPS";
+            // 
+            // labelFRAS
+            // 
+            this.labelFRAS.AutoSize = true;
+            this.labelFRAS.Location = new System.Drawing.Point(40, 72);
+            this.labelFRAS.Name = "labelFRAS";
+            this.labelFRAS.Size = new System.Drawing.Size(68, 25);
+            this.labelFRAS.TabIndex = 23;
+            this.labelFRAS.Text = "FRAS";
+            // 
+            // labelLocalAgent
+            // 
+            this.labelLocalAgent.AutoSize = true;
+            this.labelLocalAgent.Location = new System.Drawing.Point(40, 35);
+            this.labelLocalAgent.Name = "labelLocalAgent";
+            this.labelLocalAgent.Size = new System.Drawing.Size(126, 25);
+            this.labelLocalAgent.TabIndex = 21;
+            this.labelLocalAgent.Text = "Local Agent";
+            // 
+            // groupDatabase
+            // 
+            this.groupDatabase.Location = new System.Drawing.Point(10, 341);
+            this.groupDatabase.Name = "groupDatabase";
+            this.groupDatabase.Size = new System.Drawing.Size(548, 171);
+            this.groupDatabase.TabIndex = 22;
+            this.groupDatabase.TabStop = false;
+            this.groupDatabase.Text = "Database";
+            // 
+            // buttonRead
+            // 
+            this.buttonRead.Location = new System.Drawing.Point(14, 17);
+            this.buttonRead.Name = "buttonRead";
+            this.buttonRead.Size = new System.Drawing.Size(111, 59);
+            this.buttonRead.TabIndex = 1;
+            this.buttonRead.Text = "Read";
+            this.buttonRead.UseVisualStyleBackColor = true;
+            this.buttonRead.Click += new System.EventHandler(this.buttonRead_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 839);
+            this.ClientSize = new System.Drawing.Size(1620, 1083);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.groupTop);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "365 f&O Config Template";
             this.groupTop.ResumeLayout(false);
             this.groupTop.PerformLayout();
             this.panelBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).EndInit();
             this.tabControlConfig.ResumeLayout(false);
-            this.tabPageADServiceAccounts.ResumeLayout(false);
-            this.tabPageADServiceAccounts.PerformLayout();
             this.panelChild.ResumeLayout(false);
+            this.groupGmsa.ResumeLayout(false);
+            this.groupGmsa.PerformLayout();
+            this.tabPageADServiceAccounts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -404,7 +440,20 @@ namespace D365.Setup
         private System.Windows.Forms.Panel panelBottom;
         private System.Windows.Forms.BindingSource configBindingSource;
         private System.Windows.Forms.TabControl tabControlConfig;
+        private System.Windows.Forms.TabPage tabPageCertificate;
+        private System.Windows.Forms.Panel panelChild;
+        private System.Windows.Forms.Button btnSaveConfig;
         private System.Windows.Forms.TabPage tabPageADServiceAccounts;
+        private System.Windows.Forms.GroupBox groupGmsa;
+        private System.Windows.Forms.CheckBox chkDixF;
+        private System.Windows.Forms.CheckBox chkReportSvc;
+        private System.Windows.Forms.CheckBox chkAXSF;
+        private System.Windows.Forms.CheckBox chkFRCO;
+        private System.Windows.Forms.CheckBox chkFRPS;
+        private System.Windows.Forms.CheckBox chkFRAS;
+        private System.Windows.Forms.CheckBox chkLocalAgent;
+        private System.Windows.Forms.TextBox textBoxFRCO;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxDixF;
         private System.Windows.Forms.TextBox textBoxReportSvc;
         private System.Windows.Forms.TextBox textBoxAXSF;
@@ -417,17 +466,7 @@ namespace D365.Setup
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFRAS;
         private System.Windows.Forms.Label labelLocalAgent;
-        private System.Windows.Forms.TabPage tabPageCertificate;
-        private System.Windows.Forms.Panel panelChild;
-        private System.Windows.Forms.TextBox textBoxFRCO;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox chkLocalAgent;
-        private System.Windows.Forms.Button btnSaveConfig;
-        private System.Windows.Forms.CheckBox chkDixF;
-        private System.Windows.Forms.CheckBox chkReportSvc;
-        private System.Windows.Forms.CheckBox chkAXSF;
-        private System.Windows.Forms.CheckBox chkFRCO;
-        private System.Windows.Forms.CheckBox chkFRPS;
-        private System.Windows.Forms.CheckBox chkFRAS;
+        private System.Windows.Forms.GroupBox groupDatabase;
+        private System.Windows.Forms.Button buttonRead;
     }
 }
