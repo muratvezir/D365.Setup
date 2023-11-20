@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace D365.Setup
 {
 
     // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
+    [XmlRoot(Namespace = "", IsNullable = false)]
     public partial class Config
     {
 
@@ -59,7 +60,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("Certificate", IsNullable = false)]
+        [XmlArrayItem("Certificate", IsNullable = false)]
         public ConfigCertificate[] Certificates
         {
             get
@@ -73,7 +74,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("Security", IsNullable = false)]
+        [XmlArrayItem("Security", IsNullable = false)]
         public ConfigSecurity[] DbServer
         {
             get
@@ -87,7 +88,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("Database", IsNullable = false)]
+        [XmlArrayItem("Database", IsNullable = false)]
         public ConfigDatabase[] Databases
         {
             get
@@ -101,7 +102,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("FileShare", IsNullable = false)]
+        [XmlArrayItem("FileShare", IsNullable = false)]
         public ConfigFileShare[] FileShares
         {
             get
@@ -142,16 +143,16 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigSchema
     {
 
-        private decimal versionField;
+        private string versionField;
 
         /// <remarks/>
-        public decimal Version
+        public string Version
         {
             get
             {
@@ -165,9 +166,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigADServiceAccounts
     {
 
@@ -189,7 +190,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ADServiceAccount")]
+        [XmlElement("ADServiceAccount")]
         public List<ConfigADServiceAccountsADServiceAccount> ADServiceAccount
         {
             get
@@ -204,9 +205,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigADServiceAccountsADServiceAccount
     {
 
@@ -234,7 +235,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string type
         {
             get
@@ -248,7 +249,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -262,7 +263,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string refName
         {
             get
@@ -276,7 +277,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool disabled
         {
             get
@@ -291,241 +292,69 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigCertificate
     {
 
-        private string[] itemsField;
+        [XmlElement(ElementName = "Name")]
+        public string Name { get; set; }
 
-        private ItemsChoiceType[] itemsElementNameField;
+        [XmlElement(ElementName = "FileName")]
+        public string FileName { get; set; }
 
-        private string typeField;
+        [XmlElement(ElementName = "DNSName")]
+        public string DNSName { get; set; }
 
-        private bool exportableField;
+        [XmlElement(ElementName = "Subject")]
+        public string Subject { get; set; }
 
-        private bool generateSelfSignedCertField;
+        [XmlElement(ElementName = "Provider")]
+        public string Provider { get; set; }
 
-        private bool generateADCSCertField;
+        [XmlElement(ElementName = "KeyUsage")]
+        public string KeyUsage { get; set; }
 
-        private bool generateADCSCertFieldSpecified;
+        [XmlElement(ElementName = "EnhancedKeyUsage")]
+        public string EnhancedKeyUsage { get; set; }
 
-        private bool disabledField;
+        [XmlElement(ElementName = "Thumbprint")]
+        public string Thumbprint { get; set; }
 
-        private bool disabledFieldSpecified;
+        [XmlElement(ElementName = "ProtectTo")]
+        public string ProtectTo { get; set; }
 
-        private bool manualPropertiesField;
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
 
-        private bool manualPropertiesFieldSpecified;
+        [XmlAttribute(AttributeName = "exportable")]
+        public bool Exportable { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CertificateType", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("DNSName", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("EnhancedKeyUsage", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("FileName", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("KeyUsage", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("Name", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("ProtectTo", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("Provider", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("Subject", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("Thumbprint", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public string[] Items
-        {
-            get
-            {
-                return this.itemsField;
-            }
-            set
-            {
-                this.itemsField = value;
-            }
-        }
+        [XmlAttribute(AttributeName = "generateSelfSignedCert")]
+        public bool GenerateSelfSignedCert { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType[] ItemsElementName
-        {
-            get
-            {
-                return this.itemsElementNameField;
-            }
-            set
-            {
-                this.itemsElementNameField = value;
-            }
-        }
+        [XmlAttribute(AttributeName = "generateADCSCert")]
+        public bool GenerateADCSCert { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type
-        {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
-        }
+        [XmlText]
+        public string Text { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool exportable
-        {
-            get
-            {
-                return this.exportableField;
-            }
-            set
-            {
-                this.exportableField = value;
-            }
-        }
+        [XmlAttribute(AttributeName = "disabled")]
+        public bool Disabled { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool generateSelfSignedCert
-        {
-            get
-            {
-                return this.generateSelfSignedCertField;
-            }
-            set
-            {
-                this.generateSelfSignedCertField = value;
-            }
-        }
+        [XmlElement(ElementName = "CertificateType")]
+        public string CertificateType { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool generateADCSCert
-        {
-            get
-            {
-                return this.generateADCSCertField;
-            }
-            set
-            {
-                this.generateADCSCertField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool generateADCSCertSpecified
-        {
-            get
-            {
-                return this.generateADCSCertFieldSpecified;
-            }
-            set
-            {
-                this.generateADCSCertFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool disabled
-        {
-            get
-            {
-                return this.disabledField;
-            }
-            set
-            {
-                this.disabledField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool disabledSpecified
-        {
-            get
-            {
-                return this.disabledFieldSpecified;
-            }
-            set
-            {
-                this.disabledFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool manualProperties
-        {
-            get
-            {
-                return this.manualPropertiesField;
-            }
-            set
-            {
-                this.manualPropertiesField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool manualPropertiesSpecified
-        {
-            get
-            {
-                return this.manualPropertiesFieldSpecified;
-            }
-            set
-            {
-                this.manualPropertiesFieldSpecified = value;
-            }
-        }
+        [XmlAttribute(AttributeName = "manualProperties")]
+        public bool ManualProperties { get; set; }
     }
 
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(IncludeInSchema = false)]
-    public enum ItemsChoiceType
-    {
-
-        /// <remarks/>
-        CertificateType,
-
-        /// <remarks/>
-        DNSName,
-
-        /// <remarks/>
-        EnhancedKeyUsage,
-
-        /// <remarks/>
-        FileName,
-
-        /// <remarks/>
-        KeyUsage,
-
-        /// <remarks/>
-        Name,
-
-        /// <remarks/>
-        ProtectTo,
-
-        /// <remarks/>
-        Provider,
-
-        /// <remarks/>
-        Subject,
-
-        /// <remarks/>
-        Thumbprint,
-    }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigSecurity
     {
 
@@ -546,9 +375,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigSecurityUser
     {
 
@@ -561,7 +390,7 @@ namespace D365.Setup
         private bool generateUserField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string refName
         {
             get
@@ -575,7 +404,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string type
         {
             get
@@ -589,7 +418,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string userName
         {
             get
@@ -603,7 +432,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool generateUser
         {
             get
@@ -618,9 +447,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigDatabase
     {
 
@@ -659,7 +488,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string refName
         {
             get
@@ -673,7 +502,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string dbName
         {
             get
@@ -688,9 +517,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigDatabaseDbTuning
     {
 
@@ -741,16 +570,16 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigDatabaseDbTuningDBFileGrowthMB
     {
 
         private byte valueField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public byte value
         {
             get
@@ -765,16 +594,16 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigDatabaseDbTuningLogFileGrowthMB
     {
 
         private ushort valueField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public ushort value
         {
             get
@@ -789,16 +618,16 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigDatabaseDbTuningLogFileSizeGB
     {
 
         private byte valueField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public byte value
         {
             get
@@ -813,9 +642,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigFileShare
     {
 
@@ -871,7 +700,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string refName
         {
             get
@@ -885,7 +714,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -899,7 +728,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool disabled
         {
             get
@@ -914,9 +743,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigServiceFabricCluster
     {
 
@@ -940,7 +769,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NodeType")]
+        [XmlElement("NodeType")]
         public ConfigServiceFabricClusterNodeType[] NodeType
         {
             get
@@ -954,7 +783,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("Setting", IsNullable = false)]
+        [XmlArrayItem("Setting", IsNullable = false)]
         public ConfigServiceFabricClusterSetting[] ServiceFabricSettings
         {
             get
@@ -969,9 +798,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigServiceFabricClusterNodeType
     {
 
@@ -988,7 +817,7 @@ namespace D365.Setup
         private bool disabledField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("VM", IsNullable = false)]
+        [XmlArrayItem("VM", IsNullable = false)]
         public ConfigServiceFabricClusterNodeTypeVM[] VMList
         {
             get
@@ -1002,7 +831,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -1016,7 +845,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool primary
         {
             get
@@ -1030,7 +859,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string namePrefix
         {
             get
@@ -1044,7 +873,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string purpose
         {
             get
@@ -1058,7 +887,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool disabled
         {
             get
@@ -1073,9 +902,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigServiceFabricClusterNodeTypeVM
     {
 
@@ -1092,7 +921,7 @@ namespace D365.Setup
         private bool hasSSISFieldSpecified;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -1106,7 +935,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string ipAddress
         {
             get
@@ -1120,7 +949,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string faultDomain
         {
             get
@@ -1134,7 +963,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string updateDomain
         {
             get
@@ -1148,7 +977,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool hasSSIS
         {
             get
@@ -1162,7 +991,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [XmlIgnore()]
         public bool hasSSISSpecified
         {
             get
@@ -1177,9 +1006,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigServiceFabricClusterSetting
     {
 
@@ -1190,7 +1019,7 @@ namespace D365.Setup
         private bool disabledField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("Parameter", IsNullable = false)]
+        [XmlArrayItem("Parameter", IsNullable = false)]
         public ConfigServiceFabricClusterSettingParameter[] Parameters
         {
             get
@@ -1204,7 +1033,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -1218,7 +1047,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public bool disabled
         {
             get
@@ -1233,9 +1062,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigServiceFabricClusterSettingParameter
     {
 
@@ -1244,7 +1073,7 @@ namespace D365.Setup
         private string valueField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
@@ -1258,7 +1087,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
+        [XmlText()]
         public string Value
         {
             get
@@ -1273,9 +1102,9 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigSQLCluster
     {
 
@@ -1297,7 +1126,7 @@ namespace D365.Setup
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("SQLVM", IsNullable = false)]
+        [XmlArrayItem("SQLVM", IsNullable = false)]
         public List<ConfigSQLClusterSQLVM> SQLVMList
         {
             get
@@ -1312,16 +1141,16 @@ namespace D365.Setup
     }
 
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [Serializable()]
+    [System.ComponentModel.DesignerCategory("code")]
+    [XmlType(AnonymousType = true)]
     public partial class ConfigSQLClusterSQLVM
     {
 
         private string nameField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string name
         {
             get
