@@ -27,5 +27,10 @@ namespace D365.Setup
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

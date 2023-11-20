@@ -46,11 +46,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="UI\DatabaseBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DatabaseBackup.Designer.cs">
+      <DependentUpon>DatabaseBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DomainDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\DomainDialog.Designer.cs">
       <DependentUpon>DomainDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileShareDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileShareDialog.Designer.cs">
+      <DependentUpon>FileShareDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormMain.cs">
       <SubType>Form</SubType>
@@ -66,8 +78,14 @@
     <Compile Include="UI\SqlServerName.Designer.cs">
       <DependentUpon>SqlServerName.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\DatabaseBackup.resx">
+      <DependentUpon>DatabaseBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DomainDialog.resx">
       <DependentUpon>DomainDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileShareDialog.resx">
+      <DependentUpon>FileShareDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -81,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\SqlServerName.resx">
       <DependentUpon>SqlServerName.cs</DependentUpon>
@@ -91,6 +110,7 @@
     <None Include="Properties\DataSources\ConfigADServiceAccountsADServiceAccount.datasource" />
     <None Include="Properties\DataSources\ConfigCertificate.datasource" />
     <None Include="Properties\DataSources\ConfigSchema.datasource" />
+    <None Include="Properties\DataSources\ConfigServiceFabricClusterNodeType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
