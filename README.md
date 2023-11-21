@@ -6,14 +6,7 @@ This project is developed to assist in D365 F&O Onpremise setup procedures and s
 
 ## Installation
 
-Download the project files and make sure you have .NET Framework 4.8 installed. Then, compile and start using it.
-
-```bash
-# Sample Installation Commands
-git clone https://github.com/Username/D365-F-O-Onpremise-Setup-Helper.git
-cd D365-F-O-Onpremise-Setup-Helper
-# Compilation process or other necessary installation steps could be here
-```
+Download Project File from release [Init Release](https://github.com/muratvezir/D365.Setup/releases/tag/Init)
 
 ## Usage
 The project is currently in the preparation phase, and details regarding its usage will be added here later.
