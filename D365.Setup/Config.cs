@@ -804,7 +804,7 @@ namespace D365.Setup
     public partial class ConfigServiceFabricClusterNodeType
     {
 
-        private ConfigServiceFabricClusterNodeTypeVM[] vMListField;
+        private List<ConfigServiceFabricClusterNodeTypeVM> vMListField;
 
         private string nameField;
 
@@ -818,7 +818,7 @@ namespace D365.Setup
 
         /// <remarks/>
         [XmlArrayItem("VM", IsNullable = false)]
-        public ConfigServiceFabricClusterNodeTypeVM[] VMList
+        public List<ConfigServiceFabricClusterNodeTypeVM> VMList
         {
             get
             {

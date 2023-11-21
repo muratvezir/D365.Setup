@@ -23,6 +23,8 @@ namespace D365.Setup
         public FormMain()
         {
             InitializeComponent();
+            System.Drawing.Icon icon = Properties.Resources.Dynamics365;
+            this.Icon = icon;
             toogleButtons();
 
 
@@ -31,19 +33,19 @@ namespace D365.Setup
         private void ReadFromXml()
         {
 
-            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            //openFileDialog.Filter = "XML Dosyaları (*.xml)|*.xml";
-            //openFileDialog.FilterIndex = 1;
-            //openFileDialog.RestoreDirectory = true;
+            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
 
-            //if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //{
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
 
-            //    xmlFilePath = openFileDialog.FileName;
-            //}
+                xmlFilePath = openFileDialog.FileName;
+            }
 
-            xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
+            //xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
 
             deserializedXML = new Config();
             // Deserialize to object
@@ -314,6 +316,8 @@ namespace D365.Setup
         {
             buttonDomain.Enabled = xmlReaded;
             buttonFileShare.Enabled = xmlReaded;
+            popupMenuGridNode.Enabled = xmlReaded;
+            buttonBackup.Enabled = xmlReaded;
 
         }
 
@@ -468,6 +472,36 @@ namespace D365.Setup
             clusterVmsbindings.DataSource = deserializedXML.ServiceFabricCluster.NodeType[gridNodes.CurrentCell.RowIndex].VMList;
             gridVms.AutoGenerateColumns = false;
             gridVms.DataSource = clusterVmsbindings;
+        }
+
+        private void toolStripAddNew_Click(object sender, EventArgs e)
+        {
+
+            var vmsList = deserializedXML.ServiceFabricCluster.NodeType[gridNodes.CurrentCell.RowIndex].VMList;
+            ConfigServiceFabricClusterNodeTypeVM clusterVM = new ConfigServiceFabricClusterNodeTypeVM();
+            clusterVM.name = "New Node";
+            clusterVM.ipAddress = "127.0.0.1";
+            clusterVM.faultDomain = "";
+            clusterVM.updateDomain = "";
+            clusterVM.hasSSIS = false;
+            vmsList.Add(clusterVM);
+            BindingSource clusterVmsbindings = (BindingSource)gridVms.DataSource;
+            clusterVmsbindings.ResetBindings(false);
+
+        }
+
+        private void toolStripMIRemove_Click(object sender, EventArgs e)
+        {
+            var selectedRow = gridVms.CurrentCell.RowIndex;
+            var vmsList = deserializedXML.ServiceFabricCluster.NodeType[gridNodes.CurrentCell.RowIndex].VMList;
+
+            // İlgili satırı bulup kaldırma işlemi
+            if (selectedRow <= vmsList.Count())
+            {
+                vmsList.RemoveAt(selectedRow);
+            }
+            BindingSource clusterVmsbindings = (BindingSource)gridVms.DataSource;
+            clusterVmsbindings.ResetBindings(false);
         }
     }
 }
