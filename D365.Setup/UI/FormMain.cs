@@ -17,13 +17,13 @@ namespace D365.Setup
         Boolean xmlReaded = false;
         Config deserializedXML = new Config();
         String xmlFilePath = "";
-        
+        DateTime fileLastWriteTime;
+
 
 
         public FormMain()
         {
             InitializeComponent();
-   
             System.Drawing.Icon icon = Properties.Resources.Dynamics365;
             this.Icon = icon;
             toogleButtons();
@@ -31,24 +31,29 @@ namespace D365.Setup
 
         }
 
-        private void ReadFromXml()
+        private void ReadFromXml(string _xmlfilepath)
         {
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.RestoreDirectory = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (_xmlfilepath == string.Empty)
             {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
 
-                xmlFilePath = openFileDialog.FileName;
+                openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+
+                    xmlFilePath = openFileDialog.FileName;
+                }
             }
+            else
+                xmlFilePath = _xmlfilepath;
 
-            //xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
+           fileLastWriteTime = File.GetLastWriteTime(xmlFilePath);
+           //xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
 
-            deserializedXML = new Config();
+           deserializedXML = new Config();
             // Deserialize to object
             XmlSerializer serializer = new XmlSerializer(typeof(Config));
             using (FileStream stream = File.OpenRead(xmlFilePath))
@@ -340,7 +345,7 @@ namespace D365.Setup
 
         private void buttonRead_Click(object sender, EventArgs e)
         {
-            ReadFromXml();
+            ReadFromXml("");
         }
 
         private void buttonRemoveServer_Click(object sender, EventArgs e)
@@ -530,5 +535,56 @@ namespace D365.Setup
             }
 
         }
+
+        private void FormMain_Activated(object sender, EventArgs e)
+        {
+            if (xmlFilePath == string.Empty)
+            {
+                return;
+            }
+
+            if (File.GetLastWriteTime(xmlFilePath) > fileLastWriteTime)
+            {
+                fileLastWriteTime = File.GetLastWriteTime(xmlFilePath);
+                DialogResult dialogResult = MessageBox.Show("Do you want to reload ?", "File Changed", MessageBoxButtons.OKCancel);
+
+                if (dialogResult == DialogResult.OK)
+                {
+
+                    this.BringToFront();
+                    ReadFromXml(xmlFilePath);
+                }
+            }
+
+
+
+        }
+
+        //Form Is Flickering There are to many objects 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+
+        private void labelExport_DoubleClick(object sender, EventArgs e)
+        {
+            var exportCheckBoxes = groupBoxCert.Controls.OfType<CheckBox>()
+                       .Where(textBox => textBox.Tag?.ToString() == "Export");
+
+            
+
+            foreach (CheckBox item in exportCheckBoxes)
+            {
+                item.Checked = !chkSFExport.Checked;
+                item.DataBindings["Checked"].WriteValue();
+            }
+        }
+
+       
     }
 }

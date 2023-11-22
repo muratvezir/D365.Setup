@@ -36,6 +36,7 @@ namespace D365.Setup
             this.labelVersion = new System.Windows.Forms.Label();
             this.textBoxConfig = new System.Windows.Forms.TextBox();
             this.panelBottom = new System.Windows.Forms.Panel();
+            this.buttonCert = new System.Windows.Forms.Button();
             this.buttonBackup = new System.Windows.Forms.Button();
             this.buttonFileShare = new System.Windows.Forms.Button();
             this.buttonDomain = new System.Windows.Forms.Button();
@@ -95,7 +96,7 @@ namespace D365.Setup
             this.chkSFEExport = new System.Windows.Forms.CheckBox();
             this.chkSFCExport = new System.Windows.Forms.CheckBox();
             this.chkSFExport = new System.Windows.Forms.CheckBox();
-            this.label47 = new System.Windows.Forms.Label();
+            this.labelExport = new System.Windows.Forms.Label();
             this.textBoxRSATDns = new System.Windows.Forms.TextBox();
             this.textBoxSQLDns = new System.Windows.Forms.TextBox();
             this.textBoxSSRSDns = new System.Windows.Forms.TextBox();
@@ -279,7 +280,6 @@ namespace D365.Setup
             this.Disabled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelChild = new System.Windows.Forms.Panel();
             this.configBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonCert = new System.Windows.Forms.Button();
             this.groupTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             this.tabControlConfig.SuspendLayout();
@@ -371,6 +371,17 @@ namespace D365.Setup
             this.panelBottom.Name = "panelBottom";
             this.panelBottom.Size = new System.Drawing.Size(2073, 99);
             this.panelBottom.TabIndex = 2;
+            // 
+            // buttonCert
+            // 
+            this.buttonCert.Location = new System.Drawing.Point(486, 4);
+            this.buttonCert.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCert.Name = "buttonCert";
+            this.buttonCert.Size = new System.Drawing.Size(112, 88);
+            this.buttonCert.TabIndex = 5;
+            this.buttonCert.Text = "Cert";
+            this.buttonCert.UseVisualStyleBackColor = true;
+            this.buttonCert.Click += new System.EventHandler(this.buttonCert_Click);
             // 
             // buttonBackup
             // 
@@ -515,7 +526,7 @@ namespace D365.Setup
             this.groupBoxCert.Controls.Add(this.chkSFEExport);
             this.groupBoxCert.Controls.Add(this.chkSFCExport);
             this.groupBoxCert.Controls.Add(this.chkSFExport);
-            this.groupBoxCert.Controls.Add(this.label47);
+            this.groupBoxCert.Controls.Add(this.labelExport);
             this.groupBoxCert.Controls.Add(this.textBoxRSATDns);
             this.groupBoxCert.Controls.Add(this.textBoxSQLDns);
             this.groupBoxCert.Controls.Add(this.textBoxSSRSDns);
@@ -988,6 +999,7 @@ namespace D365.Setup
             this.chkRSATExport.Name = "chkRSATExport";
             this.chkRSATExport.Size = new System.Drawing.Size(28, 27);
             this.chkRSATExport.TabIndex = 114;
+            this.chkRSATExport.Tag = "Export";
             this.chkRSATExport.UseVisualStyleBackColor = true;
             // 
             // chkSQLExport
@@ -998,6 +1010,7 @@ namespace D365.Setup
             this.chkSQLExport.Name = "chkSQLExport";
             this.chkSQLExport.Size = new System.Drawing.Size(28, 27);
             this.chkSQLExport.TabIndex = 113;
+            this.chkSQLExport.Tag = "Export";
             this.chkSQLExport.UseVisualStyleBackColor = true;
             // 
             // chkSSRSExport
@@ -1008,6 +1021,7 @@ namespace D365.Setup
             this.chkSSRSExport.Name = "chkSSRSExport";
             this.chkSSRSExport.Size = new System.Drawing.Size(28, 27);
             this.chkSSRSExport.TabIndex = 112;
+            this.chkSSRSExport.Tag = "Export";
             this.chkSSRSExport.UseVisualStyleBackColor = true;
             // 
             // chkLAExport
@@ -1018,6 +1032,7 @@ namespace D365.Setup
             this.chkLAExport.Name = "chkLAExport";
             this.chkLAExport.Size = new System.Drawing.Size(28, 27);
             this.chkLAExport.TabIndex = 111;
+            this.chkLAExport.Tag = "Export";
             this.chkLAExport.UseVisualStyleBackColor = true;
             // 
             // chkRSExport
@@ -1028,6 +1043,7 @@ namespace D365.Setup
             this.chkRSExport.Name = "chkRSExport";
             this.chkRSExport.Size = new System.Drawing.Size(28, 27);
             this.chkRSExport.TabIndex = 110;
+            this.chkRSExport.Tag = "Export";
             this.chkRSExport.UseVisualStyleBackColor = true;
             // 
             // chkFRExport
@@ -1038,6 +1054,7 @@ namespace D365.Setup
             this.chkFRExport.Name = "chkFRExport";
             this.chkFRExport.Size = new System.Drawing.Size(28, 27);
             this.chkFRExport.TabIndex = 109;
+            this.chkFRExport.Tag = "Export";
             this.chkFRExport.UseVisualStyleBackColor = true;
             // 
             // chkDSExport
@@ -1048,6 +1065,7 @@ namespace D365.Setup
             this.chkDSExport.Name = "chkDSExport";
             this.chkDSExport.Size = new System.Drawing.Size(28, 27);
             this.chkDSExport.TabIndex = 108;
+            this.chkDSExport.Tag = "Export";
             this.chkDSExport.UseVisualStyleBackColor = true;
             // 
             // chkDEExport
@@ -1058,6 +1076,7 @@ namespace D365.Setup
             this.chkDEExport.Name = "chkDEExport";
             this.chkDEExport.Size = new System.Drawing.Size(28, 27);
             this.chkDEExport.TabIndex = 107;
+            this.chkDEExport.Tag = "Export";
             this.chkDEExport.UseVisualStyleBackColor = true;
             // 
             // chkSAExport
@@ -1068,6 +1087,7 @@ namespace D365.Setup
             this.chkSAExport.Name = "chkSAExport";
             this.chkSAExport.Size = new System.Drawing.Size(28, 27);
             this.chkSAExport.TabIndex = 106;
+            this.chkSAExport.Tag = "Export";
             this.chkSAExport.UseVisualStyleBackColor = true;
             // 
             // chkSFEExport
@@ -1078,6 +1098,7 @@ namespace D365.Setup
             this.chkSFEExport.Name = "chkSFEExport";
             this.chkSFEExport.Size = new System.Drawing.Size(28, 27);
             this.chkSFEExport.TabIndex = 105;
+            this.chkSFEExport.Tag = "Export";
             this.chkSFEExport.UseVisualStyleBackColor = true;
             // 
             // chkSFCExport
@@ -1088,6 +1109,7 @@ namespace D365.Setup
             this.chkSFCExport.Name = "chkSFCExport";
             this.chkSFCExport.Size = new System.Drawing.Size(28, 27);
             this.chkSFCExport.TabIndex = 104;
+            this.chkSFCExport.Tag = "Export";
             this.chkSFCExport.UseVisualStyleBackColor = true;
             // 
             // chkSFExport
@@ -1098,17 +1120,19 @@ namespace D365.Setup
             this.chkSFExport.Name = "chkSFExport";
             this.chkSFExport.Size = new System.Drawing.Size(28, 27);
             this.chkSFExport.TabIndex = 5;
+            this.chkSFExport.Tag = "Export";
             this.chkSFExport.UseVisualStyleBackColor = true;
             // 
-            // label47
+            // labelExport
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(1336, 29);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 25);
-            this.label47.TabIndex = 102;
-            this.label47.Text = "Exp";
+            this.labelExport.AutoSize = true;
+            this.labelExport.Location = new System.Drawing.Point(1336, 29);
+            this.labelExport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExport.Name = "labelExport";
+            this.labelExport.Size = new System.Drawing.Size(49, 25);
+            this.labelExport.TabIndex = 102;
+            this.labelExport.Text = "Exp";
+            this.labelExport.DoubleClick += new System.EventHandler(this.labelExport_DoubleClick);
             // 
             // textBoxRSATDns
             // 
@@ -2731,7 +2755,7 @@ namespace D365.Setup
             this.tabPageCertificate.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCertificate.Name = "tabPageCertificate";
             this.tabPageCertificate.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageCertificate.Size = new System.Drawing.Size(2011, 1221);
+            this.tabPageCertificate.Size = new System.Drawing.Size(2057, 1234);
             this.tabPageCertificate.TabIndex = 1;
             this.tabPageCertificate.Text = "Certificates";
             this.tabPageCertificate.UseVisualStyleBackColor = true;
@@ -2744,7 +2768,7 @@ namespace D365.Setup
             this.groupBox7.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox7.Size = new System.Drawing.Size(2003, 425);
+            this.groupBox7.Size = new System.Drawing.Size(2049, 425);
             this.groupBox7.TabIndex = 32;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Service Fabric Nodes";
@@ -2770,7 +2794,7 @@ namespace D365.Setup
             this.gridVms.RowHeadersVisible = false;
             this.gridVms.RowHeadersWidth = 20;
             this.gridVms.RowTemplate.Height = 20;
-            this.gridVms.Size = new System.Drawing.Size(1991, 389);
+            this.gridVms.Size = new System.Drawing.Size(2037, 389);
             this.gridVms.TabIndex = 31;
             // 
             // name
@@ -2839,7 +2863,7 @@ namespace D365.Setup
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(2003, 373);
+            this.groupBox6.Size = new System.Drawing.Size(2049, 373);
             this.groupBox6.TabIndex = 25;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Service Fabric Nodes Types";
@@ -2851,7 +2875,7 @@ namespace D365.Setup
             this.panel1.Location = new System.Drawing.Point(4, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1995, 341);
+            this.panel1.Size = new System.Drawing.Size(2041, 341);
             this.panel1.TabIndex = 29;
             // 
             // panel3
@@ -2860,7 +2884,7 @@ namespace D365.Setup
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1995, 341);
+            this.panel3.Size = new System.Drawing.Size(2041, 341);
             this.panel3.TabIndex = 31;
             // 
             // gridNodes
@@ -2880,7 +2904,7 @@ namespace D365.Setup
             this.gridNodes.RowHeadersVisible = false;
             this.gridNodes.RowHeadersWidth = 20;
             this.gridNodes.RowTemplate.Height = 20;
-            this.gridNodes.Size = new System.Drawing.Size(1995, 341);
+            this.gridNodes.Size = new System.Drawing.Size(2041, 341);
             this.gridNodes.TabIndex = 29;
             this.gridNodes.SelectionChanged += new System.EventHandler(this.gridNodes_SelectionChanged);
             // 
@@ -2910,17 +2934,6 @@ namespace D365.Setup
             this.panelChild.Size = new System.Drawing.Size(2073, 1281);
             this.panelChild.TabIndex = 1;
             // 
-            // buttonCert
-            // 
-            this.buttonCert.Location = new System.Drawing.Point(486, 4);
-            this.buttonCert.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCert.Name = "buttonCert";
-            this.buttonCert.Size = new System.Drawing.Size(112, 88);
-            this.buttonCert.TabIndex = 5;
-            this.buttonCert.Text = "Cert";
-            this.buttonCert.UseVisualStyleBackColor = true;
-            this.buttonCert.Click += new System.EventHandler(this.buttonCert_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2933,6 +2946,7 @@ namespace D365.Setup
             this.Name = "FormMain";
             this.Text = "365 f&O Config Template";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.FormMain_Activated);
             this.groupTop.ResumeLayout(false);
             this.groupTop.PerformLayout();
             this.panelBottom.ResumeLayout(false);
@@ -3129,7 +3143,7 @@ namespace D365.Setup
         private System.Windows.Forms.CheckBox chkSFEExport;
         private System.Windows.Forms.CheckBox chkSFCExport;
         private System.Windows.Forms.CheckBox chkSFExport;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label labelExport;
         private System.Windows.Forms.TextBox textBoxRSATDns;
         private System.Windows.Forms.TextBox textBoxSQLDns;
         private System.Windows.Forms.TextBox textBoxSSRSDns;
