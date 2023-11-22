@@ -43,7 +43,7 @@ namespace D365.Setup
             this.btnSaveConfig = new System.Windows.Forms.Button();
             this.tabControlConfig = new System.Windows.Forms.TabControl();
             this.tabPageADServiceAccounts = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCert = new System.Windows.Forms.GroupBox();
             this.chkRSATMan = new System.Windows.Forms.CheckBox();
             this.chkRSATDis = new System.Windows.Forms.CheckBox();
             this.chkSQLDis = new System.Windows.Forms.CheckBox();
@@ -263,27 +263,28 @@ namespace D365.Setup
             this.tabPageCertificate = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.gridVms = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gridNodes = new System.Windows.Forms.DataGridView();
-            this.panelChild = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disabled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.popupMenuGridNode = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMIAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMIRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IpAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faultDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updateDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasSSIS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.popupMenuGridNode = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMIAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMIRemove = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gridNodes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disabled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panelChild = new System.Windows.Forms.Panel();
             this.configBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonCert = new System.Windows.Forms.Button();
             this.groupTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             this.tabControlConfig.SuspendLayout();
             this.tabPageADServiceAccounts.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.groupBoxCert.SuspendLayout();
             this.groupBoxDatabase.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -295,12 +296,12 @@ namespace D365.Setup
             this.tabPageCertificate.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridVms)).BeginInit();
+            this.popupMenuGridNode.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNodes)).BeginInit();
             this.panelChild.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.popupMenuGridNode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -315,7 +316,7 @@ namespace D365.Setup
             this.groupTop.Margin = new System.Windows.Forms.Padding(4);
             this.groupTop.Name = "groupTop";
             this.groupTop.Padding = new System.Windows.Forms.Padding(4);
-            this.groupTop.Size = new System.Drawing.Size(2033, 127);
+            this.groupTop.Size = new System.Drawing.Size(2073, 127);
             this.groupTop.TabIndex = 0;
             this.groupTop.TabStop = false;
             this.groupTop.Text = "General Info";
@@ -358,16 +359,17 @@ namespace D365.Setup
             // 
             // panelBottom
             // 
+            this.panelBottom.Controls.Add(this.buttonCert);
             this.panelBottom.Controls.Add(this.buttonBackup);
             this.panelBottom.Controls.Add(this.buttonFileShare);
             this.panelBottom.Controls.Add(this.buttonDomain);
             this.panelBottom.Controls.Add(this.buttonRead);
             this.panelBottom.Controls.Add(this.btnSaveConfig);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 1362);
+            this.panelBottom.Location = new System.Drawing.Point(0, 1309);
             this.panelBottom.Margin = new System.Windows.Forms.Padding(4);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(2033, 100);
+            this.panelBottom.Size = new System.Drawing.Size(2073, 99);
             this.panelBottom.TabIndex = 2;
             // 
             // buttonBackup
@@ -377,7 +379,7 @@ namespace D365.Setup
             this.buttonBackup.Name = "buttonBackup";
             this.buttonBackup.Size = new System.Drawing.Size(112, 88);
             this.buttonBackup.TabIndex = 4;
-            this.buttonBackup.Text = "Set Backup";
+            this.buttonBackup.Text = "Backup";
             this.buttonBackup.UseVisualStyleBackColor = true;
             this.buttonBackup.Click += new System.EventHandler(this.buttonBackup_Click);
             // 
@@ -388,7 +390,7 @@ namespace D365.Setup
             this.buttonFileShare.Name = "buttonFileShare";
             this.buttonFileShare.Size = new System.Drawing.Size(112, 88);
             this.buttonFileShare.TabIndex = 3;
-            this.buttonFileShare.Text = "Set File Share";
+            this.buttonFileShare.Text = "File Share";
             this.buttonFileShare.UseVisualStyleBackColor = true;
             this.buttonFileShare.Click += new System.EventHandler(this.buttonFileShare_Click);
             // 
@@ -399,7 +401,7 @@ namespace D365.Setup
             this.buttonDomain.Name = "buttonDomain";
             this.buttonDomain.Size = new System.Drawing.Size(112, 88);
             this.buttonDomain.TabIndex = 2;
-            this.buttonDomain.Text = "Set Domain";
+            this.buttonDomain.Text = "Domain";
             this.buttonDomain.UseVisualStyleBackColor = true;
             this.buttonDomain.Click += new System.EventHandler(this.buttonDomain_Click);
             // 
@@ -416,7 +418,7 @@ namespace D365.Setup
             // 
             // btnSaveConfig
             // 
-            this.btnSaveConfig.Location = new System.Drawing.Point(1917, 4);
+            this.btnSaveConfig.Location = new System.Drawing.Point(1953, 6);
             this.btnSaveConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveConfig.Name = "btnSaveConfig";
             this.btnSaveConfig.Size = new System.Drawing.Size(112, 84);
@@ -434,12 +436,12 @@ namespace D365.Setup
             this.tabControlConfig.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlConfig.Name = "tabControlConfig";
             this.tabControlConfig.SelectedIndex = 0;
-            this.tabControlConfig.Size = new System.Drawing.Size(2033, 1335);
+            this.tabControlConfig.Size = new System.Drawing.Size(2073, 1281);
             this.tabControlConfig.TabIndex = 0;
             // 
             // tabPageADServiceAccounts
             // 
-            this.tabPageADServiceAccounts.Controls.Add(this.groupBox5);
+            this.tabPageADServiceAccounts.Controls.Add(this.groupBoxCert);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBoxDatabase);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBox4);
             this.tabPageADServiceAccounts.Controls.Add(this.groupBox3);
@@ -452,150 +454,153 @@ namespace D365.Setup
             this.tabPageADServiceAccounts.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageADServiceAccounts.Name = "tabPageADServiceAccounts";
             this.tabPageADServiceAccounts.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(2017, 1288);
+            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(2057, 1234);
             this.tabPageADServiceAccounts.TabIndex = 0;
             this.tabPageADServiceAccounts.Text = "Accounts";
             this.tabPageADServiceAccounts.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // groupBoxCert
             // 
-            this.groupBox5.Controls.Add(this.chkRSATMan);
-            this.groupBox5.Controls.Add(this.chkRSATDis);
-            this.groupBox5.Controls.Add(this.chkSQLDis);
-            this.groupBox5.Controls.Add(this.chkSSRSDis);
-            this.groupBox5.Controls.Add(this.chkLADis);
-            this.groupBox5.Controls.Add(this.chkRSDis);
-            this.groupBox5.Controls.Add(this.label49);
-            this.groupBox5.Controls.Add(this.chkFRDis);
-            this.groupBox5.Controls.Add(this.chkDSDis);
-            this.groupBox5.Controls.Add(this.chkDEDis);
-            this.groupBox5.Controls.Add(this.chkSADis);
-            this.groupBox5.Controls.Add(this.chkSFEDis);
-            this.groupBox5.Controls.Add(this.chkSFCDis);
-            this.groupBox5.Controls.Add(this.chkSFDis);
-            this.groupBox5.Controls.Add(this.chkSQLMan);
-            this.groupBox5.Controls.Add(this.chkSSRSMan);
-            this.groupBox5.Controls.Add(this.chkLAMan);
-            this.groupBox5.Controls.Add(this.chkRSMan);
-            this.groupBox5.Controls.Add(this.label50);
-            this.groupBox5.Controls.Add(this.chkFRMan);
-            this.groupBox5.Controls.Add(this.chkDSMan);
-            this.groupBox5.Controls.Add(this.chkDEMan);
-            this.groupBox5.Controls.Add(this.chkSAMan);
-            this.groupBox5.Controls.Add(this.chkSFEMan);
-            this.groupBox5.Controls.Add(this.chkSFCMan);
-            this.groupBox5.Controls.Add(this.chkSFMan);
-            this.groupBox5.Controls.Add(this.textBoxRSATProtect);
-            this.groupBox5.Controls.Add(this.textBoxSQLProtect);
-            this.groupBox5.Controls.Add(this.textBoxSSRSProtect);
-            this.groupBox5.Controls.Add(this.textBoxLAProtect);
-            this.groupBox5.Controls.Add(this.textBoxRSProtect);
-            this.groupBox5.Controls.Add(this.textBoxSAProtect);
-            this.groupBox5.Controls.Add(this.textBoxFRProtect);
-            this.groupBox5.Controls.Add(this.textBoxDSProtect);
-            this.groupBox5.Controls.Add(this.textBoxDEProtect);
-            this.groupBox5.Controls.Add(this.textBoxSFEProtect);
-            this.groupBox5.Controls.Add(this.textBoxSFCProtect);
-            this.groupBox5.Controls.Add(this.textBoxSFProtect);
-            this.groupBox5.Controls.Add(this.label48);
-            this.groupBox5.Controls.Add(this.chkRSATExport);
-            this.groupBox5.Controls.Add(this.chkSQLExport);
-            this.groupBox5.Controls.Add(this.chkSSRSExport);
-            this.groupBox5.Controls.Add(this.chkLAExport);
-            this.groupBox5.Controls.Add(this.chkRSExport);
-            this.groupBox5.Controls.Add(this.chkFRExport);
-            this.groupBox5.Controls.Add(this.chkDSExport);
-            this.groupBox5.Controls.Add(this.chkDEExport);
-            this.groupBox5.Controls.Add(this.chkSAExport);
-            this.groupBox5.Controls.Add(this.chkSFEExport);
-            this.groupBox5.Controls.Add(this.chkSFCExport);
-            this.groupBox5.Controls.Add(this.chkSFExport);
-            this.groupBox5.Controls.Add(this.label47);
-            this.groupBox5.Controls.Add(this.textBoxRSATDns);
-            this.groupBox5.Controls.Add(this.textBoxSQLDns);
-            this.groupBox5.Controls.Add(this.textBoxSSRSDns);
-            this.groupBox5.Controls.Add(this.textBoxLADns);
-            this.groupBox5.Controls.Add(this.textBoxRSDns);
-            this.groupBox5.Controls.Add(this.textBoxSADns);
-            this.groupBox5.Controls.Add(this.textBoxFRDns);
-            this.groupBox5.Controls.Add(this.textBoxDSDns);
-            this.groupBox5.Controls.Add(this.textBoxDEDns);
-            this.groupBox5.Controls.Add(this.textBoxSFEDns);
-            this.groupBox5.Controls.Add(this.textBoxSFCDns);
-            this.groupBox5.Controls.Add(this.textBoxSFDns);
-            this.groupBox5.Controls.Add(this.label46);
-            this.groupBox5.Controls.Add(this.chkRSATADCS);
-            this.groupBox5.Controls.Add(this.textBoxRSATName);
-            this.groupBox5.Controls.Add(this.textBoxSQLName);
-            this.groupBox5.Controls.Add(this.textBoxSSRSName);
-            this.groupBox5.Controls.Add(this.textBoxLAName);
-            this.groupBox5.Controls.Add(this.textBoxRSName);
-            this.groupBox5.Controls.Add(this.textBoxSAName);
-            this.groupBox5.Controls.Add(this.textBoxFRName);
-            this.groupBox5.Controls.Add(this.textBoxDSName);
-            this.groupBox5.Controls.Add(this.textBoxDEName);
-            this.groupBox5.Controls.Add(this.textBoxSFEName);
-            this.groupBox5.Controls.Add(this.textBoxSFCName);
-            this.groupBox5.Controls.Add(this.textBoxSFName);
-            this.groupBox5.Controls.Add(this.chkRSATSelf);
-            this.groupBox5.Controls.Add(this.chkSQLSelf);
-            this.groupBox5.Controls.Add(this.chkSSRSSelf);
-            this.groupBox5.Controls.Add(this.chkLASelf);
-            this.groupBox5.Controls.Add(this.chkRSSelf);
-            this.groupBox5.Controls.Add(this.label45);
-            this.groupBox5.Controls.Add(this.chkFRSelf);
-            this.groupBox5.Controls.Add(this.chkDSSelf);
-            this.groupBox5.Controls.Add(this.chkDESelf);
-            this.groupBox5.Controls.Add(this.chkSASelf);
-            this.groupBox5.Controls.Add(this.chkSFESelf);
-            this.groupBox5.Controls.Add(this.chkSFCSelf);
-            this.groupBox5.Controls.Add(this.chkSFSelf);
-            this.groupBox5.Controls.Add(this.chkSQLADCS);
-            this.groupBox5.Controls.Add(this.chkSSRSADCS);
-            this.groupBox5.Controls.Add(this.chkLAADCS);
-            this.groupBox5.Controls.Add(this.chkRSADCS);
-            this.groupBox5.Controls.Add(this.label44);
-            this.groupBox5.Controls.Add(this.label43);
-            this.groupBox5.Controls.Add(this.label42);
-            this.groupBox5.Controls.Add(this.textBoxRSATThumprint);
-            this.groupBox5.Controls.Add(this.label41);
-            this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Controls.Add(this.label39);
-            this.groupBox5.Controls.Add(this.textBoxSQLThumprint);
-            this.groupBox5.Controls.Add(this.textBoxSSRSThumprint);
-            this.groupBox5.Controls.Add(this.textBoxLAThumprint);
-            this.groupBox5.Controls.Add(this.label38);
-            this.groupBox5.Controls.Add(this.textBoxRSThumprint);
-            this.groupBox5.Controls.Add(this.label30);
-            this.groupBox5.Controls.Add(this.chkFRADCS);
-            this.groupBox5.Controls.Add(this.chkDSADCS);
-            this.groupBox5.Controls.Add(this.chkDEADCS);
-            this.groupBox5.Controls.Add(this.chkSAADCS);
-            this.groupBox5.Controls.Add(this.chkSFEADCS);
-            this.groupBox5.Controls.Add(this.chkSFCADCS);
-            this.groupBox5.Controls.Add(this.chkSFADCS);
-            this.groupBox5.Controls.Add(this.textBoxSAThumprint);
-            this.groupBox5.Controls.Add(this.label31);
-            this.groupBox5.Controls.Add(this.textBoxFRThumprint);
-            this.groupBox5.Controls.Add(this.textBoxDSThumprint);
-            this.groupBox5.Controls.Add(this.textBoxDEThumprint);
-            this.groupBox5.Controls.Add(this.textBoxSFEThumprint);
-            this.groupBox5.Controls.Add(this.textBoxSFCThumprint);
-            this.groupBox5.Controls.Add(this.textBoxSFThumprint);
-            this.groupBox5.Controls.Add(this.label32);
-            this.groupBox5.Controls.Add(this.label33);
-            this.groupBox5.Controls.Add(this.label34);
-            this.groupBox5.Controls.Add(this.label35);
-            this.groupBox5.Controls.Add(this.label36);
-            this.groupBox5.Controls.Add(this.label37);
-            this.groupBox5.Location = new System.Drawing.Point(10, 569);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(1650, 556);
-            this.groupBox5.TabIndex = 56;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Certificates";
+            this.groupBoxCert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxCert.AutoSize = true;
+            this.groupBoxCert.Controls.Add(this.chkRSATMan);
+            this.groupBoxCert.Controls.Add(this.chkRSATDis);
+            this.groupBoxCert.Controls.Add(this.chkSQLDis);
+            this.groupBoxCert.Controls.Add(this.chkSSRSDis);
+            this.groupBoxCert.Controls.Add(this.chkLADis);
+            this.groupBoxCert.Controls.Add(this.chkRSDis);
+            this.groupBoxCert.Controls.Add(this.label49);
+            this.groupBoxCert.Controls.Add(this.chkFRDis);
+            this.groupBoxCert.Controls.Add(this.chkDSDis);
+            this.groupBoxCert.Controls.Add(this.chkDEDis);
+            this.groupBoxCert.Controls.Add(this.chkSADis);
+            this.groupBoxCert.Controls.Add(this.chkSFEDis);
+            this.groupBoxCert.Controls.Add(this.chkSFCDis);
+            this.groupBoxCert.Controls.Add(this.chkSFDis);
+            this.groupBoxCert.Controls.Add(this.chkSQLMan);
+            this.groupBoxCert.Controls.Add(this.chkSSRSMan);
+            this.groupBoxCert.Controls.Add(this.chkLAMan);
+            this.groupBoxCert.Controls.Add(this.chkRSMan);
+            this.groupBoxCert.Controls.Add(this.label50);
+            this.groupBoxCert.Controls.Add(this.chkFRMan);
+            this.groupBoxCert.Controls.Add(this.chkDSMan);
+            this.groupBoxCert.Controls.Add(this.chkDEMan);
+            this.groupBoxCert.Controls.Add(this.chkSAMan);
+            this.groupBoxCert.Controls.Add(this.chkSFEMan);
+            this.groupBoxCert.Controls.Add(this.chkSFCMan);
+            this.groupBoxCert.Controls.Add(this.chkSFMan);
+            this.groupBoxCert.Controls.Add(this.textBoxRSATProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSQLProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSSRSProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxLAProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxRSProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSAProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxFRProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxDSProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxDEProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSFEProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSFCProtect);
+            this.groupBoxCert.Controls.Add(this.textBoxSFProtect);
+            this.groupBoxCert.Controls.Add(this.label48);
+            this.groupBoxCert.Controls.Add(this.chkRSATExport);
+            this.groupBoxCert.Controls.Add(this.chkSQLExport);
+            this.groupBoxCert.Controls.Add(this.chkSSRSExport);
+            this.groupBoxCert.Controls.Add(this.chkLAExport);
+            this.groupBoxCert.Controls.Add(this.chkRSExport);
+            this.groupBoxCert.Controls.Add(this.chkFRExport);
+            this.groupBoxCert.Controls.Add(this.chkDSExport);
+            this.groupBoxCert.Controls.Add(this.chkDEExport);
+            this.groupBoxCert.Controls.Add(this.chkSAExport);
+            this.groupBoxCert.Controls.Add(this.chkSFEExport);
+            this.groupBoxCert.Controls.Add(this.chkSFCExport);
+            this.groupBoxCert.Controls.Add(this.chkSFExport);
+            this.groupBoxCert.Controls.Add(this.label47);
+            this.groupBoxCert.Controls.Add(this.textBoxRSATDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSQLDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSSRSDns);
+            this.groupBoxCert.Controls.Add(this.textBoxLADns);
+            this.groupBoxCert.Controls.Add(this.textBoxRSDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSADns);
+            this.groupBoxCert.Controls.Add(this.textBoxFRDns);
+            this.groupBoxCert.Controls.Add(this.textBoxDSDns);
+            this.groupBoxCert.Controls.Add(this.textBoxDEDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSFEDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSFCDns);
+            this.groupBoxCert.Controls.Add(this.textBoxSFDns);
+            this.groupBoxCert.Controls.Add(this.label46);
+            this.groupBoxCert.Controls.Add(this.chkRSATADCS);
+            this.groupBoxCert.Controls.Add(this.textBoxRSATName);
+            this.groupBoxCert.Controls.Add(this.textBoxSQLName);
+            this.groupBoxCert.Controls.Add(this.textBoxSSRSName);
+            this.groupBoxCert.Controls.Add(this.textBoxLAName);
+            this.groupBoxCert.Controls.Add(this.textBoxRSName);
+            this.groupBoxCert.Controls.Add(this.textBoxSAName);
+            this.groupBoxCert.Controls.Add(this.textBoxFRName);
+            this.groupBoxCert.Controls.Add(this.textBoxDSName);
+            this.groupBoxCert.Controls.Add(this.textBoxDEName);
+            this.groupBoxCert.Controls.Add(this.textBoxSFEName);
+            this.groupBoxCert.Controls.Add(this.textBoxSFCName);
+            this.groupBoxCert.Controls.Add(this.textBoxSFName);
+            this.groupBoxCert.Controls.Add(this.chkRSATSelf);
+            this.groupBoxCert.Controls.Add(this.chkSQLSelf);
+            this.groupBoxCert.Controls.Add(this.chkSSRSSelf);
+            this.groupBoxCert.Controls.Add(this.chkLASelf);
+            this.groupBoxCert.Controls.Add(this.chkRSSelf);
+            this.groupBoxCert.Controls.Add(this.label45);
+            this.groupBoxCert.Controls.Add(this.chkFRSelf);
+            this.groupBoxCert.Controls.Add(this.chkDSSelf);
+            this.groupBoxCert.Controls.Add(this.chkDESelf);
+            this.groupBoxCert.Controls.Add(this.chkSASelf);
+            this.groupBoxCert.Controls.Add(this.chkSFESelf);
+            this.groupBoxCert.Controls.Add(this.chkSFCSelf);
+            this.groupBoxCert.Controls.Add(this.chkSFSelf);
+            this.groupBoxCert.Controls.Add(this.chkSQLADCS);
+            this.groupBoxCert.Controls.Add(this.chkSSRSADCS);
+            this.groupBoxCert.Controls.Add(this.chkLAADCS);
+            this.groupBoxCert.Controls.Add(this.chkRSADCS);
+            this.groupBoxCert.Controls.Add(this.label44);
+            this.groupBoxCert.Controls.Add(this.label43);
+            this.groupBoxCert.Controls.Add(this.label42);
+            this.groupBoxCert.Controls.Add(this.textBoxRSATThumprint);
+            this.groupBoxCert.Controls.Add(this.label41);
+            this.groupBoxCert.Controls.Add(this.label40);
+            this.groupBoxCert.Controls.Add(this.label39);
+            this.groupBoxCert.Controls.Add(this.textBoxSQLThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxSSRSThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxLAThumprint);
+            this.groupBoxCert.Controls.Add(this.label38);
+            this.groupBoxCert.Controls.Add(this.textBoxRSThumprint);
+            this.groupBoxCert.Controls.Add(this.label30);
+            this.groupBoxCert.Controls.Add(this.chkFRADCS);
+            this.groupBoxCert.Controls.Add(this.chkDSADCS);
+            this.groupBoxCert.Controls.Add(this.chkDEADCS);
+            this.groupBoxCert.Controls.Add(this.chkSAADCS);
+            this.groupBoxCert.Controls.Add(this.chkSFEADCS);
+            this.groupBoxCert.Controls.Add(this.chkSFCADCS);
+            this.groupBoxCert.Controls.Add(this.chkSFADCS);
+            this.groupBoxCert.Controls.Add(this.textBoxSAThumprint);
+            this.groupBoxCert.Controls.Add(this.label31);
+            this.groupBoxCert.Controls.Add(this.textBoxFRThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxDSThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxDEThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxSFEThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxSFCThumprint);
+            this.groupBoxCert.Controls.Add(this.textBoxSFThumprint);
+            this.groupBoxCert.Controls.Add(this.label32);
+            this.groupBoxCert.Controls.Add(this.label33);
+            this.groupBoxCert.Controls.Add(this.label34);
+            this.groupBoxCert.Controls.Add(this.label35);
+            this.groupBoxCert.Controls.Add(this.label36);
+            this.groupBoxCert.Controls.Add(this.label37);
+            this.groupBoxCert.Location = new System.Drawing.Point(10, 569);
+            this.groupBoxCert.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxCert.Name = "groupBoxCert";
+            this.groupBoxCert.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxCert.Size = new System.Drawing.Size(1691, 565);
+            this.groupBoxCert.TabIndex = 56;
+            this.groupBoxCert.TabStop = false;
+            this.groupBoxCert.Text = "Certificates";
             // 
             // chkRSATMan
             // 
@@ -864,6 +869,7 @@ namespace D365.Setup
             this.textBoxRSATProtect.Name = "textBoxRSATProtect";
             this.textBoxRSATProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxRSATProtect.TabIndex = 127;
+            this.textBoxRSATProtect.Tag = "Protect";
             // 
             // textBoxSQLProtect
             // 
@@ -872,6 +878,7 @@ namespace D365.Setup
             this.textBoxSQLProtect.Name = "textBoxSQLProtect";
             this.textBoxSQLProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSQLProtect.TabIndex = 126;
+            this.textBoxSQLProtect.Tag = "Protect";
             // 
             // textBoxSSRSProtect
             // 
@@ -880,6 +887,7 @@ namespace D365.Setup
             this.textBoxSSRSProtect.Name = "textBoxSSRSProtect";
             this.textBoxSSRSProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSSRSProtect.TabIndex = 125;
+            this.textBoxSSRSProtect.Tag = "Protect";
             // 
             // textBoxLAProtect
             // 
@@ -888,6 +896,7 @@ namespace D365.Setup
             this.textBoxLAProtect.Name = "textBoxLAProtect";
             this.textBoxLAProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxLAProtect.TabIndex = 124;
+            this.textBoxLAProtect.Tag = "Protect";
             // 
             // textBoxRSProtect
             // 
@@ -896,6 +905,7 @@ namespace D365.Setup
             this.textBoxRSProtect.Name = "textBoxRSProtect";
             this.textBoxRSProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxRSProtect.TabIndex = 123;
+            this.textBoxRSProtect.Tag = "Protect";
             // 
             // textBoxSAProtect
             // 
@@ -904,6 +914,7 @@ namespace D365.Setup
             this.textBoxSAProtect.Name = "textBoxSAProtect";
             this.textBoxSAProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSAProtect.TabIndex = 122;
+            this.textBoxSAProtect.Tag = "Protect";
             // 
             // textBoxFRProtect
             // 
@@ -912,6 +923,7 @@ namespace D365.Setup
             this.textBoxFRProtect.Name = "textBoxFRProtect";
             this.textBoxFRProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxFRProtect.TabIndex = 121;
+            this.textBoxFRProtect.Tag = "Protect";
             // 
             // textBoxDSProtect
             // 
@@ -920,6 +932,7 @@ namespace D365.Setup
             this.textBoxDSProtect.Name = "textBoxDSProtect";
             this.textBoxDSProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxDSProtect.TabIndex = 120;
+            this.textBoxDSProtect.Tag = "Protect";
             // 
             // textBoxDEProtect
             // 
@@ -928,6 +941,7 @@ namespace D365.Setup
             this.textBoxDEProtect.Name = "textBoxDEProtect";
             this.textBoxDEProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxDEProtect.TabIndex = 119;
+            this.textBoxDEProtect.Tag = "Protect";
             // 
             // textBoxSFEProtect
             // 
@@ -936,6 +950,7 @@ namespace D365.Setup
             this.textBoxSFEProtect.Name = "textBoxSFEProtect";
             this.textBoxSFEProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSFEProtect.TabIndex = 118;
+            this.textBoxSFEProtect.Tag = "Protect";
             // 
             // textBoxSFCProtect
             // 
@@ -944,6 +959,7 @@ namespace D365.Setup
             this.textBoxSFCProtect.Name = "textBoxSFCProtect";
             this.textBoxSFCProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSFCProtect.TabIndex = 117;
+            this.textBoxSFCProtect.Tag = "Protect";
             // 
             // textBoxSFProtect
             // 
@@ -952,6 +968,7 @@ namespace D365.Setup
             this.textBoxSFProtect.Name = "textBoxSFProtect";
             this.textBoxSFProtect.Size = new System.Drawing.Size(188, 31);
             this.textBoxSFProtect.TabIndex = 4;
+            this.textBoxSFProtect.Tag = "Protect";
             // 
             // label48
             // 
@@ -1793,6 +1810,9 @@ namespace D365.Setup
             // 
             // groupBoxDatabase
             // 
+            this.groupBoxDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxDatabase.AutoSize = true;
             this.groupBoxDatabase.Controls.Add(this.textBoxAxDw);
             this.groupBoxDatabase.Controls.Add(this.label29);
             this.groupBoxDatabase.Controls.Add(this.textBoxOrchDB);
@@ -1803,11 +1823,11 @@ namespace D365.Setup
             this.groupBoxDatabase.Controls.Add(this.label25);
             this.groupBoxDatabase.Controls.Add(this.textBoxAXDB);
             this.groupBoxDatabase.Controls.Add(this.label24);
-            this.groupBoxDatabase.Location = new System.Drawing.Point(616, 277);
+            this.groupBoxDatabase.Location = new System.Drawing.Point(616, 273);
             this.groupBoxDatabase.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxDatabase.Name = "groupBoxDatabase";
             this.groupBoxDatabase.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxDatabase.Size = new System.Drawing.Size(896, 288);
+            this.groupBoxDatabase.Size = new System.Drawing.Size(937, 288);
             this.groupBoxDatabase.TabIndex = 55;
             this.groupBoxDatabase.TabStop = false;
             this.groupBoxDatabase.Text = "Databases";
@@ -1904,16 +1924,17 @@ namespace D365.Setup
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.buttonRemoveServer);
             this.groupBox4.Controls.Add(this.buttonAddServer);
             this.groupBox4.Controls.Add(this.ListSqlVms);
             this.groupBox4.Controls.Add(this.textBoxListener);
             this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Location = new System.Drawing.Point(1668, 569);
+            this.groupBox4.Location = new System.Drawing.Point(1709, 569);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(318, 556);
+            this.groupBox4.Size = new System.Drawing.Size(318, 565);
             this.groupBox4.TabIndex = 54;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SqlListener Name";
@@ -1970,6 +1991,7 @@ namespace D365.Setup
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.textBoxDiagLocalPath);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.textBoxDiagBasePath);
@@ -1978,7 +2000,7 @@ namespace D365.Setup
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.chkDiagnoseShr);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Location = new System.Drawing.Point(1520, 273);
+            this.groupBox3.Location = new System.Drawing.Point(1561, 273);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -2063,6 +2085,7 @@ namespace D365.Setup
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.textBoxDixfLocalPath);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.textBoxDixfBasePath);
@@ -2071,7 +2094,7 @@ namespace D365.Setup
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.chkDixfShr);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(1544, 29);
+            this.groupBox2.Location = new System.Drawing.Point(1585, 17);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -2156,6 +2179,8 @@ namespace D365.Setup
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.textBoxAosLocalPath);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBoxAosBasePath);
@@ -2164,11 +2189,11 @@ namespace D365.Setup
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.chkAosShr);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(1088, 29);
+            this.groupBox1.Location = new System.Drawing.Point(1070, 17);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(442, 240);
+            this.groupBox1.Size = new System.Drawing.Size(507, 240);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aos File Share";
@@ -2249,6 +2274,9 @@ namespace D365.Setup
             // 
             // groupFileShare
             // 
+            this.groupFileShare.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupFileShare.AutoSize = true;
             this.groupFileShare.Controls.Add(this.textBoxAgentLocalPath);
             this.groupFileShare.Controls.Add(this.label12);
             this.groupFileShare.Controls.Add(this.textBoxAgentBasePath);
@@ -2257,11 +2285,11 @@ namespace D365.Setup
             this.groupFileShare.Controls.Add(this.label10);
             this.groupFileShare.Controls.Add(this.chkAgentShr);
             this.groupFileShare.Controls.Add(this.label9);
-            this.groupFileShare.Location = new System.Drawing.Point(616, 29);
+            this.groupFileShare.Location = new System.Drawing.Point(616, 17);
             this.groupFileShare.Margin = new System.Windows.Forms.Padding(4);
             this.groupFileShare.Name = "groupFileShare";
             this.groupFileShare.Padding = new System.Windows.Forms.Padding(4);
-            this.groupFileShare.Size = new System.Drawing.Size(442, 240);
+            this.groupFileShare.Size = new System.Drawing.Size(446, 240);
             this.groupFileShare.TabIndex = 23;
             this.groupFileShare.TabStop = false;
             this.groupFileShare.Text = "Agent File Share";
@@ -2457,6 +2485,7 @@ namespace D365.Setup
             // 
             // groupGmsa
             // 
+            this.groupGmsa.AutoSize = true;
             this.groupGmsa.Controls.Add(this.label6);
             this.groupGmsa.Controls.Add(this.chkDixF);
             this.groupGmsa.Controls.Add(this.chkReportSvc);
@@ -2702,7 +2731,7 @@ namespace D365.Setup
             this.tabPageCertificate.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCertificate.Name = "tabPageCertificate";
             this.tabPageCertificate.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageCertificate.Size = new System.Drawing.Size(2017, 1288);
+            this.tabPageCertificate.Size = new System.Drawing.Size(2011, 1221);
             this.tabPageCertificate.TabIndex = 1;
             this.tabPageCertificate.Text = "Certificates";
             this.tabPageCertificate.UseVisualStyleBackColor = true;
@@ -2715,7 +2744,7 @@ namespace D365.Setup
             this.groupBox7.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox7.Size = new System.Drawing.Size(2009, 425);
+            this.groupBox7.Size = new System.Drawing.Size(2003, 425);
             this.groupBox7.TabIndex = 32;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Service Fabric Nodes";
@@ -2741,110 +2770,8 @@ namespace D365.Setup
             this.gridVms.RowHeadersVisible = false;
             this.gridVms.RowHeadersWidth = 20;
             this.gridVms.RowTemplate.Height = 20;
-            this.gridVms.Size = new System.Drawing.Size(1997, 389);
+            this.gridVms.Size = new System.Drawing.Size(1991, 389);
             this.gridVms.TabIndex = 31;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.panel1);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Location = new System.Drawing.Point(4, 4);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(2009, 373);
-            this.groupBox6.TabIndex = 25;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Service Fabric Nodes Types";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2001, 341);
-            this.panel1.TabIndex = 29;
-            // 
-            // gridNodes
-            // 
-            this.gridNodes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridNodes.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.gridNodes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridNodes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.Disabled});
-            this.gridNodes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridNodes.Location = new System.Drawing.Point(0, 0);
-            this.gridNodes.Margin = new System.Windows.Forms.Padding(4);
-            this.gridNodes.MultiSelect = false;
-            this.gridNodes.Name = "gridNodes";
-            this.gridNodes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.gridNodes.RowHeadersVisible = false;
-            this.gridNodes.RowHeadersWidth = 20;
-            this.gridNodes.RowTemplate.Height = 20;
-            this.gridNodes.Size = new System.Drawing.Size(2001, 341);
-            this.gridNodes.TabIndex = 29;
-            this.gridNodes.SelectionChanged += new System.EventHandler(this.gridNodes_SelectionChanged);
-            // 
-            // panelChild
-            // 
-            this.panelChild.Controls.Add(this.tabControlConfig);
-            this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChild.Location = new System.Drawing.Point(0, 127);
-            this.panelChild.Margin = new System.Windows.Forms.Padding(4);
-            this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(2033, 1335);
-            this.panelChild.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.gridNodes);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2001, 341);
-            this.panel3.TabIndex = 31;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // Disabled
-            // 
-            this.Disabled.DataPropertyName = "disabled";
-            this.Disabled.HeaderText = "Disabled";
-            this.Disabled.MinimumWidth = 10;
-            this.Disabled.Name = "Disabled";
-            // 
-            // popupMenuGridNode
-            // 
-            this.popupMenuGridNode.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.popupMenuGridNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMIAdd,
-            this.toolStripMIRemove});
-            this.popupMenuGridNode.Name = "popupMenuGridNode";
-            this.popupMenuGridNode.Size = new System.Drawing.Size(177, 80);
-            // 
-            // toolStripMIAdd
-            // 
-            this.toolStripMIAdd.Name = "toolStripMIAdd";
-            this.toolStripMIAdd.Size = new System.Drawing.Size(176, 38);
-            this.toolStripMIAdd.Text = "Add";
-            this.toolStripMIAdd.Click += new System.EventHandler(this.toolStripAddNew_Click);
-            // 
-            // toolStripMIRemove
-            // 
-            this.toolStripMIRemove.Name = "toolStripMIRemove";
-            this.toolStripMIRemove.Size = new System.Drawing.Size(176, 38);
-            this.toolStripMIRemove.Text = "Remove";
-            this.toolStripMIRemove.Click += new System.EventHandler(this.toolStripMIRemove_Click);
             // 
             // name
             // 
@@ -2881,11 +2808,124 @@ namespace D365.Setup
             this.hasSSIS.MinimumWidth = 10;
             this.hasSSIS.Name = "hasSSIS";
             // 
+            // popupMenuGridNode
+            // 
+            this.popupMenuGridNode.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.popupMenuGridNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMIAdd,
+            this.toolStripMIRemove});
+            this.popupMenuGridNode.Name = "popupMenuGridNode";
+            this.popupMenuGridNode.Size = new System.Drawing.Size(177, 80);
+            // 
+            // toolStripMIAdd
+            // 
+            this.toolStripMIAdd.Name = "toolStripMIAdd";
+            this.toolStripMIAdd.Size = new System.Drawing.Size(176, 38);
+            this.toolStripMIAdd.Text = "Add";
+            this.toolStripMIAdd.Click += new System.EventHandler(this.toolStripAddNew_Click);
+            // 
+            // toolStripMIRemove
+            // 
+            this.toolStripMIRemove.Name = "toolStripMIRemove";
+            this.toolStripMIRemove.Size = new System.Drawing.Size(176, 38);
+            this.toolStripMIRemove.Text = "Remove";
+            this.toolStripMIRemove.Click += new System.EventHandler(this.toolStripMIRemove_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.panel1);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox6.Location = new System.Drawing.Point(4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(2003, 373);
+            this.groupBox6.TabIndex = 25;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Service Fabric Nodes Types";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(4, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1995, 341);
+            this.panel1.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.gridNodes);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1995, 341);
+            this.panel3.TabIndex = 31;
+            // 
+            // gridNodes
+            // 
+            this.gridNodes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridNodes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gridNodes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridNodes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Disabled});
+            this.gridNodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridNodes.Location = new System.Drawing.Point(0, 0);
+            this.gridNodes.Margin = new System.Windows.Forms.Padding(4);
+            this.gridNodes.MultiSelect = false;
+            this.gridNodes.Name = "gridNodes";
+            this.gridNodes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridNodes.RowHeadersVisible = false;
+            this.gridNodes.RowHeadersWidth = 20;
+            this.gridNodes.RowTemplate.Height = 20;
+            this.gridNodes.Size = new System.Drawing.Size(1995, 341);
+            this.gridNodes.TabIndex = 29;
+            this.gridNodes.SelectionChanged += new System.EventHandler(this.gridNodes_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // Disabled
+            // 
+            this.Disabled.DataPropertyName = "disabled";
+            this.Disabled.HeaderText = "Disabled";
+            this.Disabled.MinimumWidth = 10;
+            this.Disabled.Name = "Disabled";
+            // 
+            // panelChild
+            // 
+            this.panelChild.Controls.Add(this.tabControlConfig);
+            this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChild.Location = new System.Drawing.Point(0, 127);
+            this.panelChild.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChild.Name = "panelChild";
+            this.panelChild.Size = new System.Drawing.Size(2073, 1281);
+            this.panelChild.TabIndex = 1;
+            // 
+            // buttonCert
+            // 
+            this.buttonCert.Location = new System.Drawing.Point(486, 4);
+            this.buttonCert.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCert.Name = "buttonCert";
+            this.buttonCert.Size = new System.Drawing.Size(112, 88);
+            this.buttonCert.TabIndex = 5;
+            this.buttonCert.Text = "Cert";
+            this.buttonCert.UseVisualStyleBackColor = true;
+            this.buttonCert.Click += new System.EventHandler(this.buttonCert_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2033, 1462);
+            this.ClientSize = new System.Drawing.Size(2073, 1408);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.groupTop);
@@ -2898,8 +2938,9 @@ namespace D365.Setup
             this.panelBottom.ResumeLayout(false);
             this.tabControlConfig.ResumeLayout(false);
             this.tabPageADServiceAccounts.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.tabPageADServiceAccounts.PerformLayout();
+            this.groupBoxCert.ResumeLayout(false);
+            this.groupBoxCert.PerformLayout();
             this.groupBoxDatabase.ResumeLayout(false);
             this.groupBoxDatabase.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -2919,12 +2960,12 @@ namespace D365.Setup
             this.tabPageCertificate.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridVms)).EndInit();
+            this.popupMenuGridNode.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridNodes)).EndInit();
             this.panelChild.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.popupMenuGridNode.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -2934,7 +2975,6 @@ namespace D365.Setup
 
         private System.Windows.Forms.GroupBox groupTop;
         private System.Windows.Forms.Label labelVersion;
-        private System.Windows.Forms.TextBox textBoxConfig;
         private System.Windows.Forms.TextBox textBoxDomainName;
         private System.Windows.Forms.Label labelDomain;
         private System.Windows.Forms.Panel panelBottom;
@@ -3037,7 +3077,7 @@ namespace D365.Setup
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBoxCert;
         private System.Windows.Forms.CheckBox chkRSATMan;
         private System.Windows.Forms.CheckBox chkRSATDis;
         private System.Windows.Forms.CheckBox chkSQLDis;
@@ -3181,5 +3221,7 @@ namespace D365.Setup
         private System.Windows.Forms.DataGridViewTextBoxColumn faultDomain;
         private System.Windows.Forms.DataGridViewTextBoxColumn updateDomain;
         private System.Windows.Forms.DataGridViewCheckBoxColumn hasSSIS;
+        private System.Windows.Forms.TextBox textBoxConfig;
+        private System.Windows.Forms.Button buttonCert;
     }
 }

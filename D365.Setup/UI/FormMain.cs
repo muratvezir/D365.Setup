@@ -23,6 +23,7 @@ namespace D365.Setup
         public FormMain()
         {
             InitializeComponent();
+   
             System.Drawing.Icon icon = Properties.Resources.Dynamics365;
             this.Icon = icon;
             toogleButtons();
@@ -318,6 +319,7 @@ namespace D365.Setup
             buttonFileShare.Enabled = xmlReaded;
             popupMenuGridNode.Enabled = xmlReaded;
             buttonBackup.Enabled = xmlReaded;
+            buttonCert.Enabled = xmlReaded;
 
         }
 
@@ -502,6 +504,31 @@ namespace D365.Setup
             }
             BindingSource clusterVmsbindings = (BindingSource)gridVms.DataSource;
             clusterVmsbindings.ResetBindings(false);
+        }
+
+        private void buttonCert_Click(object sender, EventArgs e)
+        {
+            CertificateDialog inputDialog = new CertificateDialog();
+            if (inputDialog.ShowDialog() == DialogResult.OK)
+            {
+                var protectTextBoxes = groupBoxCert.Controls.OfType<TextBox>()
+                        .Where(textBox => textBox.Tag?.ToString() == "Protect");
+
+                foreach (TextBox item in protectTextBoxes)
+                {
+                    item.Text = inputDialog.ProtectTo;
+                    item.DataBindings["Text"].WriteValue();
+                }
+
+                textBoxSSRSName.Text = inputDialog.SSRS;
+                textBoxSSRSName.DataBindings["Text"].WriteValue();
+                textBoxSSRSDns.Text = inputDialog.SSRS;
+                textBoxSSRSDns.DataBindings["Text"].WriteValue();
+
+
+
+            }
+
         }
     }
 }
