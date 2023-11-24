@@ -6,7 +6,7 @@ This project is developed to assist in D365 F&O Onpremise setup procedures and s
 
 ## Installation
 
-Download Project File from release [Init Release](https://github.com/muratvezir/D365.Setup/releases/tag/Init)
+Download Project File from release [Alpha Release](https://github.com/muratvezir/D365.Setup/releases/tag/v0.1.0-alpha)
 
 ## Usage
 The project is currently in the preparation phase, and details regarding its usage will be added here later.
