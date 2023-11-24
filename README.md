@@ -22,5 +22,6 @@ Send a pull request.
 
 
 ## License
-This project is published under an Open Source license. You can find more information in the LICENSE file.
+This project is licensed under the GNU General Public License (GPL). See the [LICENSE](./LICENSE) file for details.
+
 
