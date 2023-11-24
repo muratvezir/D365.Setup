@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,7 +17,6 @@ namespace D365.Setup
     {
         Boolean xmlReaded = false;
         Config deserializedXML = new Config();
-        String xmlFilePath = "";
         DateTime fileLastWriteTime;
 
 
@@ -24,6 +24,7 @@ namespace D365.Setup
         public FormMain()
         {
             InitializeComponent();
+            GlobalVariables.XmlFilePath = "";
             System.Drawing.Icon icon = Properties.Resources.Dynamics365;
             this.Icon = icon;
             toogleButtons();
@@ -44,19 +45,19 @@ namespace D365.Setup
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
 
-                    xmlFilePath = openFileDialog.FileName;
+                    GlobalVariables.XmlFilePath= openFileDialog.FileName;
                 }
             }
             else
-                xmlFilePath = _xmlfilepath;
+                GlobalVariables.XmlFilePath = _xmlfilepath;
 
-           fileLastWriteTime = File.GetLastWriteTime(xmlFilePath);
-           //xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
+            fileLastWriteTime = File.GetLastWriteTime(GlobalVariables.XmlFilePath);
+            //xmlFilePath = @"C:\Users\m.vezir\Desktop\ConfigTemplate.xml";
 
-           deserializedXML = new Config();
+            deserializedXML = new Config();
             // Deserialize to object
             XmlSerializer serializer = new XmlSerializer(typeof(Config));
-            using (FileStream stream = File.OpenRead(xmlFilePath))
+            using (FileStream stream = File.OpenRead(GlobalVariables.XmlFilePath))
             {
                 deserializedXML = (Config)serializer.Deserialize(stream);
             }
@@ -304,14 +305,14 @@ namespace D365.Setup
             clusterNodesbindings.DataSource = deserializedXML.ServiceFabricCluster.NodeType;
             gridNodes.AutoGenerateColumns = false;
             gridNodes.DataSource = clusterNodesbindings;
-            
+
 
 
             BindingSource clusterVmsbindings = new BindingSource();
             clusterVmsbindings.DataSource = deserializedXML.ServiceFabricCluster.NodeType[0].VMList;
             gridVms.AutoGenerateColumns = false;
             gridVms.DataSource = clusterVmsbindings;
-  
+
 
 
 
@@ -325,6 +326,7 @@ namespace D365.Setup
             popupMenuGridNode.Enabled = xmlReaded;
             buttonBackup.Enabled = xmlReaded;
             buttonCert.Enabled = xmlReaded;
+            buttonGmsa.Enabled = xmlReaded;
 
         }
 
@@ -336,7 +338,7 @@ namespace D365.Setup
         private void btnSaveConfig_Click(object sender, EventArgs e)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Config));
-            using (TextWriter writer = new StreamWriter(xmlFilePath))
+            using (TextWriter writer = new StreamWriter(GlobalVariables.XmlFilePath))
             {
                 serializer.Serialize(writer, deserializedXML);
             }
@@ -408,9 +410,9 @@ namespace D365.Setup
                 textBoxDixF.DataBindings["Text"].WriteValue();
 
             }
-            
-           
-           
+
+
+
         }
 
         private void buttonFileShare_Click(object sender, EventArgs e)
@@ -538,21 +540,21 @@ namespace D365.Setup
 
         private void FormMain_Activated(object sender, EventArgs e)
         {
-            if (xmlFilePath == string.Empty)
+            if (GlobalVariables.XmlFilePath == string.Empty)
             {
                 return;
             }
 
-            if (File.GetLastWriteTime(xmlFilePath) > fileLastWriteTime)
+            if (File.GetLastWriteTime(GlobalVariables.XmlFilePath) > fileLastWriteTime)
             {
-                fileLastWriteTime = File.GetLastWriteTime(xmlFilePath);
+                fileLastWriteTime = File.GetLastWriteTime(GlobalVariables.XmlFilePath);
                 DialogResult dialogResult = MessageBox.Show("Do you want to reload ?", "File Changed", MessageBoxButtons.OKCancel);
 
                 if (dialogResult == DialogResult.OK)
                 {
 
                     this.BringToFront();
-                    ReadFromXml(xmlFilePath);
+                    ReadFromXml(GlobalVariables.XmlFilePath);
                 }
             }
 
@@ -576,7 +578,7 @@ namespace D365.Setup
             var exportCheckBoxes = groupBoxCert.Controls.OfType<CheckBox>()
                        .Where(textBox => textBox.Tag?.ToString() == "Export");
 
-            
+
 
             foreach (CheckBox item in exportCheckBoxes)
             {
@@ -585,6 +587,12 @@ namespace D365.Setup
             }
         }
 
-       
+        private void buttonGmsa_Click(object sender, EventArgs e)
+        {
+
+            PowerShellScriptsForm psForm = new PowerShellScriptsForm();
+            psForm.ShowDialog();
+                
+        }
     }
 }

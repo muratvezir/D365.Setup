@@ -36,6 +36,7 @@ namespace D365.Setup
             this.labelVersion = new System.Windows.Forms.Label();
             this.textBoxConfig = new System.Windows.Forms.TextBox();
             this.panelBottom = new System.Windows.Forms.Panel();
+            this.buttonGmsa = new System.Windows.Forms.Button();
             this.buttonCert = new System.Windows.Forms.Button();
             this.buttonBackup = new System.Windows.Forms.Button();
             this.buttonFileShare = new System.Windows.Forms.Button();
@@ -313,52 +314,53 @@ namespace D365.Setup
             this.groupTop.Controls.Add(this.textBoxConfig);
             this.groupTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupTop.Location = new System.Drawing.Point(0, 0);
-            this.groupTop.Margin = new System.Windows.Forms.Padding(4);
+            this.groupTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupTop.Name = "groupTop";
-            this.groupTop.Padding = new System.Windows.Forms.Padding(4);
-            this.groupTop.Size = new System.Drawing.Size(2073, 127);
+            this.groupTop.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupTop.Size = new System.Drawing.Size(1001, 66);
             this.groupTop.TabIndex = 0;
             this.groupTop.TabStop = false;
             this.groupTop.Text = "General Info";
             // 
             // textBoxDomainName
             // 
-            this.textBoxDomainName.Location = new System.Drawing.Point(182, 77);
-            this.textBoxDomainName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDomainName.Location = new System.Drawing.Point(91, 40);
+            this.textBoxDomainName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDomainName.Name = "textBoxDomainName";
-            this.textBoxDomainName.Size = new System.Drawing.Size(296, 31);
+            this.textBoxDomainName.Size = new System.Drawing.Size(150, 20);
             this.textBoxDomainName.TabIndex = 1;
             // 
             // labelDomain
             // 
             this.labelDomain.AutoSize = true;
-            this.labelDomain.Location = new System.Drawing.Point(12, 83);
-            this.labelDomain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDomain.Location = new System.Drawing.Point(6, 43);
+            this.labelDomain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDomain.Name = "labelDomain";
-            this.labelDomain.Size = new System.Drawing.Size(147, 25);
+            this.labelDomain.Size = new System.Drawing.Size(74, 13);
             this.labelDomain.TabIndex = 2;
             this.labelDomain.Text = "Domain Name";
             // 
             // labelVersion
             // 
             this.labelVersion.AutoSize = true;
-            this.labelVersion.Location = new System.Drawing.Point(12, 35);
-            this.labelVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelVersion.Location = new System.Drawing.Point(6, 18);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(85, 25);
+            this.labelVersion.Size = new System.Drawing.Size(42, 13);
             this.labelVersion.TabIndex = 1;
             this.labelVersion.Text = "Version";
             // 
             // textBoxConfig
             // 
-            this.textBoxConfig.Location = new System.Drawing.Point(182, 33);
-            this.textBoxConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxConfig.Location = new System.Drawing.Point(91, 17);
+            this.textBoxConfig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxConfig.Name = "textBoxConfig";
-            this.textBoxConfig.Size = new System.Drawing.Size(296, 31);
+            this.textBoxConfig.Size = new System.Drawing.Size(150, 20);
             this.textBoxConfig.TabIndex = 0;
             // 
             // panelBottom
             // 
+            this.panelBottom.Controls.Add(this.buttonGmsa);
             this.panelBottom.Controls.Add(this.buttonCert);
             this.panelBottom.Controls.Add(this.buttonBackup);
             this.panelBottom.Controls.Add(this.buttonFileShare);
@@ -366,18 +368,29 @@ namespace D365.Setup
             this.panelBottom.Controls.Add(this.buttonRead);
             this.panelBottom.Controls.Add(this.btnSaveConfig);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 1309);
-            this.panelBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBottom.Location = new System.Drawing.Point(0, 546);
+            this.panelBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(2073, 99);
+            this.panelBottom.Size = new System.Drawing.Size(1001, 51);
             this.panelBottom.TabIndex = 2;
+            // 
+            // buttonGmsa
+            // 
+            this.buttonGmsa.Location = new System.Drawing.Point(303, 3);
+            this.buttonGmsa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGmsa.Name = "buttonGmsa";
+            this.buttonGmsa.Size = new System.Drawing.Size(56, 46);
+            this.buttonGmsa.TabIndex = 6;
+            this.buttonGmsa.Text = "Setup";
+            this.buttonGmsa.UseVisualStyleBackColor = true;
+            this.buttonGmsa.Click += new System.EventHandler(this.buttonGmsa_Click);
             // 
             // buttonCert
             // 
-            this.buttonCert.Location = new System.Drawing.Point(486, 4);
-            this.buttonCert.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCert.Location = new System.Drawing.Point(243, 3);
+            this.buttonCert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCert.Name = "buttonCert";
-            this.buttonCert.Size = new System.Drawing.Size(112, 88);
+            this.buttonCert.Size = new System.Drawing.Size(56, 46);
             this.buttonCert.TabIndex = 5;
             this.buttonCert.Text = "Cert";
             this.buttonCert.UseVisualStyleBackColor = true;
@@ -385,10 +398,10 @@ namespace D365.Setup
             // 
             // buttonBackup
             // 
-            this.buttonBackup.Location = new System.Drawing.Point(366, 4);
-            this.buttonBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBackup.Location = new System.Drawing.Point(183, 3);
+            this.buttonBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBackup.Name = "buttonBackup";
-            this.buttonBackup.Size = new System.Drawing.Size(112, 88);
+            this.buttonBackup.Size = new System.Drawing.Size(56, 46);
             this.buttonBackup.TabIndex = 4;
             this.buttonBackup.Text = "Backup";
             this.buttonBackup.UseVisualStyleBackColor = true;
@@ -396,10 +409,10 @@ namespace D365.Setup
             // 
             // buttonFileShare
             // 
-            this.buttonFileShare.Location = new System.Drawing.Point(246, 4);
-            this.buttonFileShare.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFileShare.Location = new System.Drawing.Point(123, 3);
+            this.buttonFileShare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFileShare.Name = "buttonFileShare";
-            this.buttonFileShare.Size = new System.Drawing.Size(112, 88);
+            this.buttonFileShare.Size = new System.Drawing.Size(56, 46);
             this.buttonFileShare.TabIndex = 3;
             this.buttonFileShare.Text = "File Share";
             this.buttonFileShare.UseVisualStyleBackColor = true;
@@ -407,10 +420,10 @@ namespace D365.Setup
             // 
             // buttonDomain
             // 
-            this.buttonDomain.Location = new System.Drawing.Point(128, 4);
-            this.buttonDomain.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDomain.Location = new System.Drawing.Point(64, 3);
+            this.buttonDomain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDomain.Name = "buttonDomain";
-            this.buttonDomain.Size = new System.Drawing.Size(112, 88);
+            this.buttonDomain.Size = new System.Drawing.Size(56, 46);
             this.buttonDomain.TabIndex = 2;
             this.buttonDomain.Text = "Domain";
             this.buttonDomain.UseVisualStyleBackColor = true;
@@ -418,10 +431,10 @@ namespace D365.Setup
             // 
             // buttonRead
             // 
-            this.buttonRead.Location = new System.Drawing.Point(12, 4);
-            this.buttonRead.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRead.Location = new System.Drawing.Point(6, 3);
+            this.buttonRead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRead.Name = "buttonRead";
-            this.buttonRead.Size = new System.Drawing.Size(112, 88);
+            this.buttonRead.Size = new System.Drawing.Size(56, 46);
             this.buttonRead.TabIndex = 1;
             this.buttonRead.Text = "Read";
             this.buttonRead.UseVisualStyleBackColor = true;
@@ -429,10 +442,10 @@ namespace D365.Setup
             // 
             // btnSaveConfig
             // 
-            this.btnSaveConfig.Location = new System.Drawing.Point(1953, 6);
-            this.btnSaveConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveConfig.Location = new System.Drawing.Point(976, 3);
+            this.btnSaveConfig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveConfig.Name = "btnSaveConfig";
-            this.btnSaveConfig.Size = new System.Drawing.Size(112, 84);
+            this.btnSaveConfig.Size = new System.Drawing.Size(56, 44);
             this.btnSaveConfig.TabIndex = 0;
             this.btnSaveConfig.Text = "Save";
             this.btnSaveConfig.UseVisualStyleBackColor = true;
@@ -444,10 +457,10 @@ namespace D365.Setup
             this.tabControlConfig.Controls.Add(this.tabPageCertificate);
             this.tabControlConfig.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlConfig.Location = new System.Drawing.Point(0, 0);
-            this.tabControlConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControlConfig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControlConfig.Name = "tabControlConfig";
             this.tabControlConfig.SelectedIndex = 0;
-            this.tabControlConfig.Size = new System.Drawing.Size(2073, 1281);
+            this.tabControlConfig.Size = new System.Drawing.Size(1001, 531);
             this.tabControlConfig.TabIndex = 0;
             // 
             // tabPageADServiceAccounts
@@ -461,19 +474,17 @@ namespace D365.Setup
             this.tabPageADServiceAccounts.Controls.Add(this.groupFileShare);
             this.tabPageADServiceAccounts.Controls.Add(this.groupDatabase);
             this.tabPageADServiceAccounts.Controls.Add(this.groupGmsa);
-            this.tabPageADServiceAccounts.Location = new System.Drawing.Point(8, 39);
-            this.tabPageADServiceAccounts.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageADServiceAccounts.Location = new System.Drawing.Point(4, 22);
+            this.tabPageADServiceAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageADServiceAccounts.Name = "tabPageADServiceAccounts";
-            this.tabPageADServiceAccounts.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(2057, 1234);
+            this.tabPageADServiceAccounts.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageADServiceAccounts.Size = new System.Drawing.Size(993, 505);
             this.tabPageADServiceAccounts.TabIndex = 0;
             this.tabPageADServiceAccounts.Text = "Accounts";
             this.tabPageADServiceAccounts.UseVisualStyleBackColor = true;
             // 
             // groupBoxCert
             // 
-            this.groupBoxCert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxCert.AutoSize = true;
             this.groupBoxCert.Controls.Add(this.chkRSATMan);
             this.groupBoxCert.Controls.Add(this.chkRSATDis);
@@ -604,11 +615,11 @@ namespace D365.Setup
             this.groupBoxCert.Controls.Add(this.label35);
             this.groupBoxCert.Controls.Add(this.label36);
             this.groupBoxCert.Controls.Add(this.label37);
-            this.groupBoxCert.Location = new System.Drawing.Point(10, 569);
-            this.groupBoxCert.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxCert.Location = new System.Drawing.Point(5, 296);
+            this.groupBoxCert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxCert.Name = "groupBoxCert";
-            this.groupBoxCert.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxCert.Size = new System.Drawing.Size(1691, 565);
+            this.groupBoxCert.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxCert.Size = new System.Drawing.Size(810, 298);
             this.groupBoxCert.TabIndex = 56;
             this.groupBoxCert.TabStop = false;
             this.groupBoxCert.Text = "Certificates";
@@ -616,388 +627,388 @@ namespace D365.Setup
             // chkRSATMan
             // 
             this.chkRSATMan.AutoSize = true;
-            this.chkRSATMan.Location = new System.Drawing.Point(1576, 502);
-            this.chkRSATMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSATMan.Location = new System.Drawing.Point(788, 261);
+            this.chkRSATMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSATMan.Name = "chkRSATMan";
-            this.chkRSATMan.Size = new System.Drawing.Size(28, 27);
+            this.chkRSATMan.Size = new System.Drawing.Size(15, 14);
             this.chkRSATMan.TabIndex = 153;
             this.chkRSATMan.UseVisualStyleBackColor = true;
             // 
             // chkRSATDis
             // 
             this.chkRSATDis.AutoSize = true;
-            this.chkRSATDis.Location = new System.Drawing.Point(1516, 502);
-            this.chkRSATDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSATDis.Location = new System.Drawing.Point(758, 261);
+            this.chkRSATDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSATDis.Name = "chkRSATDis";
-            this.chkRSATDis.Size = new System.Drawing.Size(28, 27);
+            this.chkRSATDis.Size = new System.Drawing.Size(15, 14);
             this.chkRSATDis.TabIndex = 152;
             this.chkRSATDis.UseVisualStyleBackColor = true;
             // 
             // chkSQLDis
             // 
             this.chkSQLDis.AutoSize = true;
-            this.chkSQLDis.Location = new System.Drawing.Point(1516, 462);
-            this.chkSQLDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSQLDis.Location = new System.Drawing.Point(758, 240);
+            this.chkSQLDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSQLDis.Name = "chkSQLDis";
-            this.chkSQLDis.Size = new System.Drawing.Size(28, 27);
+            this.chkSQLDis.Size = new System.Drawing.Size(15, 14);
             this.chkSQLDis.TabIndex = 151;
             this.chkSQLDis.UseVisualStyleBackColor = true;
             // 
             // chkSSRSDis
             // 
             this.chkSSRSDis.AutoSize = true;
-            this.chkSSRSDis.Location = new System.Drawing.Point(1516, 421);
-            this.chkSSRSDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSSRSDis.Location = new System.Drawing.Point(758, 219);
+            this.chkSSRSDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSSRSDis.Name = "chkSSRSDis";
-            this.chkSSRSDis.Size = new System.Drawing.Size(28, 27);
+            this.chkSSRSDis.Size = new System.Drawing.Size(15, 14);
             this.chkSSRSDis.TabIndex = 150;
             this.chkSSRSDis.UseVisualStyleBackColor = true;
             // 
             // chkLADis
             // 
             this.chkLADis.AutoSize = true;
-            this.chkLADis.Location = new System.Drawing.Point(1516, 381);
-            this.chkLADis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLADis.Location = new System.Drawing.Point(758, 198);
+            this.chkLADis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLADis.Name = "chkLADis";
-            this.chkLADis.Size = new System.Drawing.Size(28, 27);
+            this.chkLADis.Size = new System.Drawing.Size(15, 14);
             this.chkLADis.TabIndex = 149;
             this.chkLADis.UseVisualStyleBackColor = true;
             // 
             // chkRSDis
             // 
             this.chkRSDis.AutoSize = true;
-            this.chkRSDis.Location = new System.Drawing.Point(1516, 340);
-            this.chkRSDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSDis.Location = new System.Drawing.Point(758, 177);
+            this.chkRSDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSDis.Name = "chkRSDis";
-            this.chkRSDis.Size = new System.Drawing.Size(28, 27);
+            this.chkRSDis.Size = new System.Drawing.Size(15, 14);
             this.chkRSDis.TabIndex = 148;
             this.chkRSDis.UseVisualStyleBackColor = true;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(1508, 29);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Location = new System.Drawing.Point(754, 15);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(43, 25);
+            this.label49.Size = new System.Drawing.Size(22, 13);
             this.label49.TabIndex = 147;
             this.label49.Text = "Dis";
             // 
             // chkFRDis
             // 
             this.chkFRDis.AutoSize = true;
-            this.chkFRDis.Location = new System.Drawing.Point(1516, 300);
-            this.chkFRDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRDis.Location = new System.Drawing.Point(758, 156);
+            this.chkFRDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRDis.Name = "chkFRDis";
-            this.chkFRDis.Size = new System.Drawing.Size(28, 27);
+            this.chkFRDis.Size = new System.Drawing.Size(15, 14);
             this.chkFRDis.TabIndex = 146;
             this.chkFRDis.UseVisualStyleBackColor = true;
             // 
             // chkDSDis
             // 
             this.chkDSDis.AutoSize = true;
-            this.chkDSDis.Location = new System.Drawing.Point(1516, 260);
-            this.chkDSDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDSDis.Location = new System.Drawing.Point(758, 135);
+            this.chkDSDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDSDis.Name = "chkDSDis";
-            this.chkDSDis.Size = new System.Drawing.Size(28, 27);
+            this.chkDSDis.Size = new System.Drawing.Size(15, 14);
             this.chkDSDis.TabIndex = 145;
             this.chkDSDis.UseVisualStyleBackColor = true;
             // 
             // chkDEDis
             // 
             this.chkDEDis.AutoSize = true;
-            this.chkDEDis.Location = new System.Drawing.Point(1516, 219);
-            this.chkDEDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDEDis.Location = new System.Drawing.Point(758, 114);
+            this.chkDEDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDEDis.Name = "chkDEDis";
-            this.chkDEDis.Size = new System.Drawing.Size(28, 27);
+            this.chkDEDis.Size = new System.Drawing.Size(15, 14);
             this.chkDEDis.TabIndex = 144;
             this.chkDEDis.UseVisualStyleBackColor = true;
             // 
             // chkSADis
             // 
             this.chkSADis.AutoSize = true;
-            this.chkSADis.Location = new System.Drawing.Point(1516, 179);
-            this.chkSADis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSADis.Location = new System.Drawing.Point(758, 93);
+            this.chkSADis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSADis.Name = "chkSADis";
-            this.chkSADis.Size = new System.Drawing.Size(28, 27);
+            this.chkSADis.Size = new System.Drawing.Size(15, 14);
             this.chkSADis.TabIndex = 143;
             this.chkSADis.UseVisualStyleBackColor = true;
             // 
             // chkSFEDis
             // 
             this.chkSFEDis.AutoSize = true;
-            this.chkSFEDis.Location = new System.Drawing.Point(1516, 138);
-            this.chkSFEDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFEDis.Location = new System.Drawing.Point(758, 72);
+            this.chkSFEDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFEDis.Name = "chkSFEDis";
-            this.chkSFEDis.Size = new System.Drawing.Size(28, 27);
+            this.chkSFEDis.Size = new System.Drawing.Size(15, 14);
             this.chkSFEDis.TabIndex = 142;
             this.chkSFEDis.UseVisualStyleBackColor = true;
             // 
             // chkSFCDis
             // 
             this.chkSFCDis.AutoSize = true;
-            this.chkSFCDis.Location = new System.Drawing.Point(1516, 98);
-            this.chkSFCDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFCDis.Location = new System.Drawing.Point(758, 51);
+            this.chkSFCDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFCDis.Name = "chkSFCDis";
-            this.chkSFCDis.Size = new System.Drawing.Size(28, 27);
+            this.chkSFCDis.Size = new System.Drawing.Size(15, 14);
             this.chkSFCDis.TabIndex = 141;
             this.chkSFCDis.UseVisualStyleBackColor = true;
             // 
             // chkSFDis
             // 
             this.chkSFDis.AutoSize = true;
-            this.chkSFDis.Location = new System.Drawing.Point(1516, 58);
-            this.chkSFDis.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFDis.Location = new System.Drawing.Point(758, 30);
+            this.chkSFDis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFDis.Name = "chkSFDis";
-            this.chkSFDis.Size = new System.Drawing.Size(28, 27);
+            this.chkSFDis.Size = new System.Drawing.Size(15, 14);
             this.chkSFDis.TabIndex = 128;
             this.chkSFDis.UseVisualStyleBackColor = true;
             // 
             // chkSQLMan
             // 
             this.chkSQLMan.AutoSize = true;
-            this.chkSQLMan.Location = new System.Drawing.Point(1576, 462);
-            this.chkSQLMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSQLMan.Location = new System.Drawing.Point(788, 240);
+            this.chkSQLMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSQLMan.Name = "chkSQLMan";
-            this.chkSQLMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSQLMan.Size = new System.Drawing.Size(15, 14);
             this.chkSQLMan.TabIndex = 140;
             this.chkSQLMan.UseVisualStyleBackColor = true;
             // 
             // chkSSRSMan
             // 
             this.chkSSRSMan.AutoSize = true;
-            this.chkSSRSMan.Location = new System.Drawing.Point(1576, 421);
-            this.chkSSRSMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSSRSMan.Location = new System.Drawing.Point(788, 219);
+            this.chkSSRSMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSSRSMan.Name = "chkSSRSMan";
-            this.chkSSRSMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSSRSMan.Size = new System.Drawing.Size(15, 14);
             this.chkSSRSMan.TabIndex = 139;
             this.chkSSRSMan.UseVisualStyleBackColor = true;
             // 
             // chkLAMan
             // 
             this.chkLAMan.AutoSize = true;
-            this.chkLAMan.Location = new System.Drawing.Point(1576, 381);
-            this.chkLAMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLAMan.Location = new System.Drawing.Point(788, 198);
+            this.chkLAMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLAMan.Name = "chkLAMan";
-            this.chkLAMan.Size = new System.Drawing.Size(28, 27);
+            this.chkLAMan.Size = new System.Drawing.Size(15, 14);
             this.chkLAMan.TabIndex = 138;
             this.chkLAMan.UseVisualStyleBackColor = true;
             // 
             // chkRSMan
             // 
             this.chkRSMan.AutoSize = true;
-            this.chkRSMan.Location = new System.Drawing.Point(1576, 340);
-            this.chkRSMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSMan.Location = new System.Drawing.Point(788, 177);
+            this.chkRSMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSMan.Name = "chkRSMan";
-            this.chkRSMan.Size = new System.Drawing.Size(28, 27);
+            this.chkRSMan.Size = new System.Drawing.Size(15, 14);
             this.chkRSMan.TabIndex = 137;
             this.chkRSMan.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(1556, 29);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Location = new System.Drawing.Point(778, 15);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(54, 25);
+            this.label50.Size = new System.Drawing.Size(28, 13);
             this.label50.TabIndex = 136;
             this.label50.Text = "Man";
             // 
             // chkFRMan
             // 
             this.chkFRMan.AutoSize = true;
-            this.chkFRMan.Location = new System.Drawing.Point(1576, 300);
-            this.chkFRMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRMan.Location = new System.Drawing.Point(788, 156);
+            this.chkFRMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRMan.Name = "chkFRMan";
-            this.chkFRMan.Size = new System.Drawing.Size(28, 27);
+            this.chkFRMan.Size = new System.Drawing.Size(15, 14);
             this.chkFRMan.TabIndex = 135;
             this.chkFRMan.UseVisualStyleBackColor = true;
             // 
             // chkDSMan
             // 
             this.chkDSMan.AutoSize = true;
-            this.chkDSMan.Location = new System.Drawing.Point(1576, 260);
-            this.chkDSMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDSMan.Location = new System.Drawing.Point(788, 135);
+            this.chkDSMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDSMan.Name = "chkDSMan";
-            this.chkDSMan.Size = new System.Drawing.Size(28, 27);
+            this.chkDSMan.Size = new System.Drawing.Size(15, 14);
             this.chkDSMan.TabIndex = 134;
             this.chkDSMan.UseVisualStyleBackColor = true;
             // 
             // chkDEMan
             // 
             this.chkDEMan.AutoSize = true;
-            this.chkDEMan.Location = new System.Drawing.Point(1576, 219);
-            this.chkDEMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDEMan.Location = new System.Drawing.Point(788, 114);
+            this.chkDEMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDEMan.Name = "chkDEMan";
-            this.chkDEMan.Size = new System.Drawing.Size(28, 27);
+            this.chkDEMan.Size = new System.Drawing.Size(15, 14);
             this.chkDEMan.TabIndex = 133;
             this.chkDEMan.UseVisualStyleBackColor = true;
             // 
             // chkSAMan
             // 
             this.chkSAMan.AutoSize = true;
-            this.chkSAMan.Location = new System.Drawing.Point(1576, 179);
-            this.chkSAMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSAMan.Location = new System.Drawing.Point(788, 93);
+            this.chkSAMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSAMan.Name = "chkSAMan";
-            this.chkSAMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSAMan.Size = new System.Drawing.Size(15, 14);
             this.chkSAMan.TabIndex = 132;
             this.chkSAMan.UseVisualStyleBackColor = true;
             // 
             // chkSFEMan
             // 
             this.chkSFEMan.AutoSize = true;
-            this.chkSFEMan.Location = new System.Drawing.Point(1576, 138);
-            this.chkSFEMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFEMan.Location = new System.Drawing.Point(788, 72);
+            this.chkSFEMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFEMan.Name = "chkSFEMan";
-            this.chkSFEMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSFEMan.Size = new System.Drawing.Size(15, 14);
             this.chkSFEMan.TabIndex = 131;
             this.chkSFEMan.UseVisualStyleBackColor = true;
             // 
             // chkSFCMan
             // 
             this.chkSFCMan.AutoSize = true;
-            this.chkSFCMan.Location = new System.Drawing.Point(1576, 98);
-            this.chkSFCMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFCMan.Location = new System.Drawing.Point(788, 51);
+            this.chkSFCMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFCMan.Name = "chkSFCMan";
-            this.chkSFCMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSFCMan.Size = new System.Drawing.Size(15, 14);
             this.chkSFCMan.TabIndex = 130;
             this.chkSFCMan.UseVisualStyleBackColor = true;
             // 
             // chkSFMan
             // 
             this.chkSFMan.AutoSize = true;
-            this.chkSFMan.Location = new System.Drawing.Point(1576, 58);
-            this.chkSFMan.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFMan.Location = new System.Drawing.Point(788, 30);
+            this.chkSFMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFMan.Name = "chkSFMan";
-            this.chkSFMan.Size = new System.Drawing.Size(28, 27);
+            this.chkSFMan.Size = new System.Drawing.Size(15, 14);
             this.chkSFMan.TabIndex = 129;
             this.chkSFMan.UseVisualStyleBackColor = true;
             // 
             // textBoxRSATProtect
             // 
-            this.textBoxRSATProtect.Location = new System.Drawing.Point(1142, 502);
-            this.textBoxRSATProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSATProtect.Location = new System.Drawing.Point(571, 261);
+            this.textBoxRSATProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSATProtect.Name = "textBoxRSATProtect";
-            this.textBoxRSATProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxRSATProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxRSATProtect.TabIndex = 127;
             this.textBoxRSATProtect.Tag = "Protect";
             // 
             // textBoxSQLProtect
             // 
-            this.textBoxSQLProtect.Location = new System.Drawing.Point(1142, 462);
-            this.textBoxSQLProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSQLProtect.Location = new System.Drawing.Point(571, 240);
+            this.textBoxSQLProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSQLProtect.Name = "textBoxSQLProtect";
-            this.textBoxSQLProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSQLProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSQLProtect.TabIndex = 126;
             this.textBoxSQLProtect.Tag = "Protect";
             // 
             // textBoxSSRSProtect
             // 
-            this.textBoxSSRSProtect.Location = new System.Drawing.Point(1142, 421);
-            this.textBoxSSRSProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSSRSProtect.Location = new System.Drawing.Point(571, 219);
+            this.textBoxSSRSProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSSRSProtect.Name = "textBoxSSRSProtect";
-            this.textBoxSSRSProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSSRSProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSSRSProtect.TabIndex = 125;
             this.textBoxSSRSProtect.Tag = "Protect";
             // 
             // textBoxLAProtect
             // 
-            this.textBoxLAProtect.Location = new System.Drawing.Point(1142, 381);
-            this.textBoxLAProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLAProtect.Location = new System.Drawing.Point(571, 198);
+            this.textBoxLAProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLAProtect.Name = "textBoxLAProtect";
-            this.textBoxLAProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxLAProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxLAProtect.TabIndex = 124;
             this.textBoxLAProtect.Tag = "Protect";
             // 
             // textBoxRSProtect
             // 
-            this.textBoxRSProtect.Location = new System.Drawing.Point(1142, 340);
-            this.textBoxRSProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSProtect.Location = new System.Drawing.Point(571, 177);
+            this.textBoxRSProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSProtect.Name = "textBoxRSProtect";
-            this.textBoxRSProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxRSProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxRSProtect.TabIndex = 123;
             this.textBoxRSProtect.Tag = "Protect";
             // 
             // textBoxSAProtect
             // 
-            this.textBoxSAProtect.Location = new System.Drawing.Point(1142, 179);
-            this.textBoxSAProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSAProtect.Location = new System.Drawing.Point(571, 93);
+            this.textBoxSAProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSAProtect.Name = "textBoxSAProtect";
-            this.textBoxSAProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSAProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSAProtect.TabIndex = 122;
             this.textBoxSAProtect.Tag = "Protect";
             // 
             // textBoxFRProtect
             // 
-            this.textBoxFRProtect.Location = new System.Drawing.Point(1142, 300);
-            this.textBoxFRProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRProtect.Location = new System.Drawing.Point(571, 156);
+            this.textBoxFRProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRProtect.Name = "textBoxFRProtect";
-            this.textBoxFRProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxFRProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxFRProtect.TabIndex = 121;
             this.textBoxFRProtect.Tag = "Protect";
             // 
             // textBoxDSProtect
             // 
-            this.textBoxDSProtect.Location = new System.Drawing.Point(1142, 260);
-            this.textBoxDSProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDSProtect.Location = new System.Drawing.Point(571, 135);
+            this.textBoxDSProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDSProtect.Name = "textBoxDSProtect";
-            this.textBoxDSProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxDSProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxDSProtect.TabIndex = 120;
             this.textBoxDSProtect.Tag = "Protect";
             // 
             // textBoxDEProtect
             // 
-            this.textBoxDEProtect.Location = new System.Drawing.Point(1142, 219);
-            this.textBoxDEProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDEProtect.Location = new System.Drawing.Point(571, 114);
+            this.textBoxDEProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDEProtect.Name = "textBoxDEProtect";
-            this.textBoxDEProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxDEProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxDEProtect.TabIndex = 119;
             this.textBoxDEProtect.Tag = "Protect";
             // 
             // textBoxSFEProtect
             // 
-            this.textBoxSFEProtect.Location = new System.Drawing.Point(1142, 138);
-            this.textBoxSFEProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFEProtect.Location = new System.Drawing.Point(571, 72);
+            this.textBoxSFEProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFEProtect.Name = "textBoxSFEProtect";
-            this.textBoxSFEProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSFEProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSFEProtect.TabIndex = 118;
             this.textBoxSFEProtect.Tag = "Protect";
             // 
             // textBoxSFCProtect
             // 
-            this.textBoxSFCProtect.Location = new System.Drawing.Point(1142, 98);
-            this.textBoxSFCProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFCProtect.Location = new System.Drawing.Point(571, 51);
+            this.textBoxSFCProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFCProtect.Name = "textBoxSFCProtect";
-            this.textBoxSFCProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSFCProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSFCProtect.TabIndex = 117;
             this.textBoxSFCProtect.Tag = "Protect";
             // 
             // textBoxSFProtect
             // 
-            this.textBoxSFProtect.Location = new System.Drawing.Point(1142, 58);
-            this.textBoxSFProtect.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFProtect.Location = new System.Drawing.Point(571, 30);
+            this.textBoxSFProtect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFProtect.Name = "textBoxSFProtect";
-            this.textBoxSFProtect.Size = new System.Drawing.Size(188, 31);
+            this.textBoxSFProtect.Size = new System.Drawing.Size(96, 20);
             this.textBoxSFProtect.TabIndex = 4;
             this.textBoxSFProtect.Tag = "Protect";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(1196, 29);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Location = new System.Drawing.Point(598, 15);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(80, 25);
+            this.label48.Size = new System.Drawing.Size(41, 13);
             this.label48.TabIndex = 115;
             this.label48.Text = "Protect";
             // 
             // chkRSATExport
             // 
             this.chkRSATExport.AutoSize = true;
-            this.chkRSATExport.Location = new System.Drawing.Point(1344, 502);
-            this.chkRSATExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSATExport.Location = new System.Drawing.Point(672, 261);
+            this.chkRSATExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSATExport.Name = "chkRSATExport";
-            this.chkRSATExport.Size = new System.Drawing.Size(28, 27);
+            this.chkRSATExport.Size = new System.Drawing.Size(15, 14);
             this.chkRSATExport.TabIndex = 114;
             this.chkRSATExport.Tag = "Export";
             this.chkRSATExport.UseVisualStyleBackColor = true;
@@ -1005,10 +1016,10 @@ namespace D365.Setup
             // chkSQLExport
             // 
             this.chkSQLExport.AutoSize = true;
-            this.chkSQLExport.Location = new System.Drawing.Point(1344, 462);
-            this.chkSQLExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSQLExport.Location = new System.Drawing.Point(672, 240);
+            this.chkSQLExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSQLExport.Name = "chkSQLExport";
-            this.chkSQLExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSQLExport.Size = new System.Drawing.Size(15, 14);
             this.chkSQLExport.TabIndex = 113;
             this.chkSQLExport.Tag = "Export";
             this.chkSQLExport.UseVisualStyleBackColor = true;
@@ -1016,10 +1027,10 @@ namespace D365.Setup
             // chkSSRSExport
             // 
             this.chkSSRSExport.AutoSize = true;
-            this.chkSSRSExport.Location = new System.Drawing.Point(1344, 421);
-            this.chkSSRSExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSSRSExport.Location = new System.Drawing.Point(672, 219);
+            this.chkSSRSExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSSRSExport.Name = "chkSSRSExport";
-            this.chkSSRSExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSSRSExport.Size = new System.Drawing.Size(15, 14);
             this.chkSSRSExport.TabIndex = 112;
             this.chkSSRSExport.Tag = "Export";
             this.chkSSRSExport.UseVisualStyleBackColor = true;
@@ -1027,10 +1038,10 @@ namespace D365.Setup
             // chkLAExport
             // 
             this.chkLAExport.AutoSize = true;
-            this.chkLAExport.Location = new System.Drawing.Point(1344, 381);
-            this.chkLAExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLAExport.Location = new System.Drawing.Point(672, 198);
+            this.chkLAExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLAExport.Name = "chkLAExport";
-            this.chkLAExport.Size = new System.Drawing.Size(28, 27);
+            this.chkLAExport.Size = new System.Drawing.Size(15, 14);
             this.chkLAExport.TabIndex = 111;
             this.chkLAExport.Tag = "Export";
             this.chkLAExport.UseVisualStyleBackColor = true;
@@ -1038,10 +1049,10 @@ namespace D365.Setup
             // chkRSExport
             // 
             this.chkRSExport.AutoSize = true;
-            this.chkRSExport.Location = new System.Drawing.Point(1344, 340);
-            this.chkRSExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSExport.Location = new System.Drawing.Point(672, 177);
+            this.chkRSExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSExport.Name = "chkRSExport";
-            this.chkRSExport.Size = new System.Drawing.Size(28, 27);
+            this.chkRSExport.Size = new System.Drawing.Size(15, 14);
             this.chkRSExport.TabIndex = 110;
             this.chkRSExport.Tag = "Export";
             this.chkRSExport.UseVisualStyleBackColor = true;
@@ -1049,10 +1060,10 @@ namespace D365.Setup
             // chkFRExport
             // 
             this.chkFRExport.AutoSize = true;
-            this.chkFRExport.Location = new System.Drawing.Point(1344, 300);
-            this.chkFRExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRExport.Location = new System.Drawing.Point(672, 156);
+            this.chkFRExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRExport.Name = "chkFRExport";
-            this.chkFRExport.Size = new System.Drawing.Size(28, 27);
+            this.chkFRExport.Size = new System.Drawing.Size(15, 14);
             this.chkFRExport.TabIndex = 109;
             this.chkFRExport.Tag = "Export";
             this.chkFRExport.UseVisualStyleBackColor = true;
@@ -1060,10 +1071,10 @@ namespace D365.Setup
             // chkDSExport
             // 
             this.chkDSExport.AutoSize = true;
-            this.chkDSExport.Location = new System.Drawing.Point(1344, 260);
-            this.chkDSExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDSExport.Location = new System.Drawing.Point(672, 135);
+            this.chkDSExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDSExport.Name = "chkDSExport";
-            this.chkDSExport.Size = new System.Drawing.Size(28, 27);
+            this.chkDSExport.Size = new System.Drawing.Size(15, 14);
             this.chkDSExport.TabIndex = 108;
             this.chkDSExport.Tag = "Export";
             this.chkDSExport.UseVisualStyleBackColor = true;
@@ -1071,10 +1082,10 @@ namespace D365.Setup
             // chkDEExport
             // 
             this.chkDEExport.AutoSize = true;
-            this.chkDEExport.Location = new System.Drawing.Point(1344, 219);
-            this.chkDEExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDEExport.Location = new System.Drawing.Point(672, 114);
+            this.chkDEExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDEExport.Name = "chkDEExport";
-            this.chkDEExport.Size = new System.Drawing.Size(28, 27);
+            this.chkDEExport.Size = new System.Drawing.Size(15, 14);
             this.chkDEExport.TabIndex = 107;
             this.chkDEExport.Tag = "Export";
             this.chkDEExport.UseVisualStyleBackColor = true;
@@ -1082,10 +1093,10 @@ namespace D365.Setup
             // chkSAExport
             // 
             this.chkSAExport.AutoSize = true;
-            this.chkSAExport.Location = new System.Drawing.Point(1344, 179);
-            this.chkSAExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSAExport.Location = new System.Drawing.Point(672, 93);
+            this.chkSAExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSAExport.Name = "chkSAExport";
-            this.chkSAExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSAExport.Size = new System.Drawing.Size(15, 14);
             this.chkSAExport.TabIndex = 106;
             this.chkSAExport.Tag = "Export";
             this.chkSAExport.UseVisualStyleBackColor = true;
@@ -1093,10 +1104,10 @@ namespace D365.Setup
             // chkSFEExport
             // 
             this.chkSFEExport.AutoSize = true;
-            this.chkSFEExport.Location = new System.Drawing.Point(1344, 138);
-            this.chkSFEExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFEExport.Location = new System.Drawing.Point(672, 72);
+            this.chkSFEExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFEExport.Name = "chkSFEExport";
-            this.chkSFEExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSFEExport.Size = new System.Drawing.Size(15, 14);
             this.chkSFEExport.TabIndex = 105;
             this.chkSFEExport.Tag = "Export";
             this.chkSFEExport.UseVisualStyleBackColor = true;
@@ -1104,10 +1115,10 @@ namespace D365.Setup
             // chkSFCExport
             // 
             this.chkSFCExport.AutoSize = true;
-            this.chkSFCExport.Location = new System.Drawing.Point(1344, 98);
-            this.chkSFCExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFCExport.Location = new System.Drawing.Point(672, 51);
+            this.chkSFCExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFCExport.Name = "chkSFCExport";
-            this.chkSFCExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSFCExport.Size = new System.Drawing.Size(15, 14);
             this.chkSFCExport.TabIndex = 104;
             this.chkSFCExport.Tag = "Export";
             this.chkSFCExport.UseVisualStyleBackColor = true;
@@ -1115,10 +1126,10 @@ namespace D365.Setup
             // chkSFExport
             // 
             this.chkSFExport.AutoSize = true;
-            this.chkSFExport.Location = new System.Drawing.Point(1344, 58);
-            this.chkSFExport.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFExport.Location = new System.Drawing.Point(672, 30);
+            this.chkSFExport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFExport.Name = "chkSFExport";
-            this.chkSFExport.Size = new System.Drawing.Size(28, 27);
+            this.chkSFExport.Size = new System.Drawing.Size(15, 14);
             this.chkSFExport.TabIndex = 5;
             this.chkSFExport.Tag = "Export";
             this.chkSFExport.UseVisualStyleBackColor = true;
@@ -1126,709 +1137,709 @@ namespace D365.Setup
             // labelExport
             // 
             this.labelExport.AutoSize = true;
-            this.labelExport.Location = new System.Drawing.Point(1336, 29);
-            this.labelExport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExport.Location = new System.Drawing.Point(668, 15);
+            this.labelExport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelExport.Name = "labelExport";
-            this.labelExport.Size = new System.Drawing.Size(49, 25);
+            this.labelExport.Size = new System.Drawing.Size(25, 13);
             this.labelExport.TabIndex = 102;
             this.labelExport.Text = "Exp";
             this.labelExport.DoubleClick += new System.EventHandler(this.labelExport_DoubleClick);
             // 
             // textBoxRSATDns
             // 
-            this.textBoxRSATDns.Location = new System.Drawing.Point(858, 502);
-            this.textBoxRSATDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSATDns.Location = new System.Drawing.Point(429, 261);
+            this.textBoxRSATDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSATDns.Name = "textBoxRSATDns";
-            this.textBoxRSATDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSATDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSATDns.TabIndex = 101;
             // 
             // textBoxSQLDns
             // 
-            this.textBoxSQLDns.Location = new System.Drawing.Point(858, 462);
-            this.textBoxSQLDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSQLDns.Location = new System.Drawing.Point(429, 240);
+            this.textBoxSQLDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSQLDns.Name = "textBoxSQLDns";
-            this.textBoxSQLDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSQLDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSQLDns.TabIndex = 100;
             // 
             // textBoxSSRSDns
             // 
-            this.textBoxSSRSDns.Location = new System.Drawing.Point(858, 421);
-            this.textBoxSSRSDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSSRSDns.Location = new System.Drawing.Point(429, 219);
+            this.textBoxSSRSDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSSRSDns.Name = "textBoxSSRSDns";
-            this.textBoxSSRSDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSSRSDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSSRSDns.TabIndex = 99;
             // 
             // textBoxLADns
             // 
-            this.textBoxLADns.Location = new System.Drawing.Point(858, 381);
-            this.textBoxLADns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLADns.Location = new System.Drawing.Point(429, 198);
+            this.textBoxLADns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLADns.Name = "textBoxLADns";
-            this.textBoxLADns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxLADns.Size = new System.Drawing.Size(138, 20);
             this.textBoxLADns.TabIndex = 98;
             // 
             // textBoxRSDns
             // 
-            this.textBoxRSDns.Location = new System.Drawing.Point(858, 340);
-            this.textBoxRSDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSDns.Location = new System.Drawing.Point(429, 177);
+            this.textBoxRSDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSDns.Name = "textBoxRSDns";
-            this.textBoxRSDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSDns.TabIndex = 97;
             // 
             // textBoxSADns
             // 
-            this.textBoxSADns.Location = new System.Drawing.Point(858, 179);
-            this.textBoxSADns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSADns.Location = new System.Drawing.Point(429, 93);
+            this.textBoxSADns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSADns.Name = "textBoxSADns";
-            this.textBoxSADns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSADns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSADns.TabIndex = 96;
             // 
             // textBoxFRDns
             // 
-            this.textBoxFRDns.Location = new System.Drawing.Point(858, 300);
-            this.textBoxFRDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRDns.Location = new System.Drawing.Point(429, 156);
+            this.textBoxFRDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRDns.Name = "textBoxFRDns";
-            this.textBoxFRDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxFRDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxFRDns.TabIndex = 95;
             // 
             // textBoxDSDns
             // 
-            this.textBoxDSDns.Location = new System.Drawing.Point(858, 260);
-            this.textBoxDSDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDSDns.Location = new System.Drawing.Point(429, 135);
+            this.textBoxDSDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDSDns.Name = "textBoxDSDns";
-            this.textBoxDSDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDSDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxDSDns.TabIndex = 94;
             // 
             // textBoxDEDns
             // 
-            this.textBoxDEDns.Location = new System.Drawing.Point(858, 219);
-            this.textBoxDEDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDEDns.Location = new System.Drawing.Point(429, 114);
+            this.textBoxDEDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDEDns.Name = "textBoxDEDns";
-            this.textBoxDEDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDEDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxDEDns.TabIndex = 93;
             // 
             // textBoxSFEDns
             // 
-            this.textBoxSFEDns.Location = new System.Drawing.Point(858, 138);
-            this.textBoxSFEDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFEDns.Location = new System.Drawing.Point(429, 72);
+            this.textBoxSFEDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFEDns.Name = "textBoxSFEDns";
-            this.textBoxSFEDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFEDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFEDns.TabIndex = 92;
             // 
             // textBoxSFCDns
             // 
-            this.textBoxSFCDns.Location = new System.Drawing.Point(858, 98);
-            this.textBoxSFCDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFCDns.Location = new System.Drawing.Point(429, 51);
+            this.textBoxSFCDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFCDns.Name = "textBoxSFCDns";
-            this.textBoxSFCDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFCDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFCDns.TabIndex = 91;
             // 
             // textBoxSFDns
             // 
-            this.textBoxSFDns.Location = new System.Drawing.Point(858, 58);
-            this.textBoxSFDns.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFDns.Location = new System.Drawing.Point(429, 30);
+            this.textBoxSFDns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFDns.Name = "textBoxSFDns";
-            this.textBoxSFDns.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFDns.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFDns.TabIndex = 3;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(970, 29);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Location = new System.Drawing.Point(485, 15);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(50, 25);
+            this.label46.Size = new System.Drawing.Size(26, 13);
             this.label46.TabIndex = 2;
             this.label46.Text = "Dns";
             // 
             // chkRSATADCS
             // 
             this.chkRSATADCS.AutoSize = true;
-            this.chkRSATADCS.Location = new System.Drawing.Point(1464, 502);
-            this.chkRSATADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSATADCS.Location = new System.Drawing.Point(732, 261);
+            this.chkRSATADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSATADCS.Name = "chkRSATADCS";
-            this.chkRSATADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkRSATADCS.Size = new System.Drawing.Size(15, 14);
             this.chkRSATADCS.TabIndex = 88;
             this.chkRSATADCS.UseVisualStyleBackColor = true;
             // 
             // textBoxRSATName
             // 
-            this.textBoxRSATName.Location = new System.Drawing.Point(574, 502);
-            this.textBoxRSATName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSATName.Location = new System.Drawing.Point(287, 261);
+            this.textBoxRSATName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSATName.Name = "textBoxRSATName";
-            this.textBoxRSATName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSATName.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSATName.TabIndex = 87;
             // 
             // textBoxSQLName
             // 
-            this.textBoxSQLName.Location = new System.Drawing.Point(574, 462);
-            this.textBoxSQLName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSQLName.Location = new System.Drawing.Point(287, 240);
+            this.textBoxSQLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSQLName.Name = "textBoxSQLName";
-            this.textBoxSQLName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSQLName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSQLName.TabIndex = 86;
             // 
             // textBoxSSRSName
             // 
-            this.textBoxSSRSName.Location = new System.Drawing.Point(574, 421);
-            this.textBoxSSRSName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSSRSName.Location = new System.Drawing.Point(287, 219);
+            this.textBoxSSRSName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSSRSName.Name = "textBoxSSRSName";
-            this.textBoxSSRSName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSSRSName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSSRSName.TabIndex = 85;
             // 
             // textBoxLAName
             // 
-            this.textBoxLAName.Location = new System.Drawing.Point(574, 381);
-            this.textBoxLAName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLAName.Location = new System.Drawing.Point(287, 198);
+            this.textBoxLAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLAName.Name = "textBoxLAName";
-            this.textBoxLAName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxLAName.Size = new System.Drawing.Size(138, 20);
             this.textBoxLAName.TabIndex = 84;
             // 
             // textBoxRSName
             // 
-            this.textBoxRSName.Location = new System.Drawing.Point(574, 340);
-            this.textBoxRSName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSName.Location = new System.Drawing.Point(287, 177);
+            this.textBoxRSName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSName.Name = "textBoxRSName";
-            this.textBoxRSName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSName.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSName.TabIndex = 83;
             // 
             // textBoxSAName
             // 
-            this.textBoxSAName.Location = new System.Drawing.Point(574, 179);
-            this.textBoxSAName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSAName.Location = new System.Drawing.Point(287, 93);
+            this.textBoxSAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSAName.Name = "textBoxSAName";
-            this.textBoxSAName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSAName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSAName.TabIndex = 82;
             // 
             // textBoxFRName
             // 
-            this.textBoxFRName.Location = new System.Drawing.Point(574, 300);
-            this.textBoxFRName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRName.Location = new System.Drawing.Point(287, 156);
+            this.textBoxFRName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRName.Name = "textBoxFRName";
-            this.textBoxFRName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxFRName.Size = new System.Drawing.Size(138, 20);
             this.textBoxFRName.TabIndex = 81;
             // 
             // textBoxDSName
             // 
-            this.textBoxDSName.Location = new System.Drawing.Point(574, 260);
-            this.textBoxDSName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDSName.Location = new System.Drawing.Point(287, 135);
+            this.textBoxDSName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDSName.Name = "textBoxDSName";
-            this.textBoxDSName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDSName.Size = new System.Drawing.Size(138, 20);
             this.textBoxDSName.TabIndex = 80;
             // 
             // textBoxDEName
             // 
-            this.textBoxDEName.Location = new System.Drawing.Point(574, 219);
-            this.textBoxDEName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDEName.Location = new System.Drawing.Point(287, 114);
+            this.textBoxDEName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDEName.Name = "textBoxDEName";
-            this.textBoxDEName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDEName.Size = new System.Drawing.Size(138, 20);
             this.textBoxDEName.TabIndex = 79;
             // 
             // textBoxSFEName
             // 
-            this.textBoxSFEName.Location = new System.Drawing.Point(574, 138);
-            this.textBoxSFEName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFEName.Location = new System.Drawing.Point(287, 72);
+            this.textBoxSFEName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFEName.Name = "textBoxSFEName";
-            this.textBoxSFEName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFEName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFEName.TabIndex = 78;
             // 
             // textBoxSFCName
             // 
-            this.textBoxSFCName.Location = new System.Drawing.Point(574, 98);
-            this.textBoxSFCName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFCName.Location = new System.Drawing.Point(287, 51);
+            this.textBoxSFCName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFCName.Name = "textBoxSFCName";
-            this.textBoxSFCName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFCName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFCName.TabIndex = 77;
             // 
             // textBoxSFName
             // 
-            this.textBoxSFName.Location = new System.Drawing.Point(574, 58);
-            this.textBoxSFName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFName.Location = new System.Drawing.Point(287, 30);
+            this.textBoxSFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFName.Name = "textBoxSFName";
-            this.textBoxSFName.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFName.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFName.TabIndex = 2;
             // 
             // chkRSATSelf
             // 
             this.chkRSATSelf.AutoSize = true;
-            this.chkRSATSelf.Location = new System.Drawing.Point(1404, 502);
-            this.chkRSATSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSATSelf.Location = new System.Drawing.Point(702, 261);
+            this.chkRSATSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSATSelf.Name = "chkRSATSelf";
-            this.chkRSATSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkRSATSelf.Size = new System.Drawing.Size(15, 14);
             this.chkRSATSelf.TabIndex = 75;
             this.chkRSATSelf.UseVisualStyleBackColor = true;
             // 
             // chkSQLSelf
             // 
             this.chkSQLSelf.AutoSize = true;
-            this.chkSQLSelf.Location = new System.Drawing.Point(1404, 462);
-            this.chkSQLSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSQLSelf.Location = new System.Drawing.Point(702, 240);
+            this.chkSQLSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSQLSelf.Name = "chkSQLSelf";
-            this.chkSQLSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSQLSelf.Size = new System.Drawing.Size(15, 14);
             this.chkSQLSelf.TabIndex = 74;
             this.chkSQLSelf.UseVisualStyleBackColor = true;
             // 
             // chkSSRSSelf
             // 
             this.chkSSRSSelf.AutoSize = true;
-            this.chkSSRSSelf.Location = new System.Drawing.Point(1404, 421);
-            this.chkSSRSSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSSRSSelf.Location = new System.Drawing.Point(702, 219);
+            this.chkSSRSSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSSRSSelf.Name = "chkSSRSSelf";
-            this.chkSSRSSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSSRSSelf.Size = new System.Drawing.Size(15, 14);
             this.chkSSRSSelf.TabIndex = 73;
             this.chkSSRSSelf.UseVisualStyleBackColor = true;
             // 
             // chkLASelf
             // 
             this.chkLASelf.AutoSize = true;
-            this.chkLASelf.Location = new System.Drawing.Point(1404, 381);
-            this.chkLASelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLASelf.Location = new System.Drawing.Point(702, 198);
+            this.chkLASelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLASelf.Name = "chkLASelf";
-            this.chkLASelf.Size = new System.Drawing.Size(28, 27);
+            this.chkLASelf.Size = new System.Drawing.Size(15, 14);
             this.chkLASelf.TabIndex = 71;
             this.chkLASelf.UseVisualStyleBackColor = true;
             // 
             // chkRSSelf
             // 
             this.chkRSSelf.AutoSize = true;
-            this.chkRSSelf.Location = new System.Drawing.Point(1404, 340);
-            this.chkRSSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSSelf.Location = new System.Drawing.Point(702, 177);
+            this.chkRSSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSSelf.Name = "chkRSSelf";
-            this.chkRSSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkRSSelf.Size = new System.Drawing.Size(15, 14);
             this.chkRSSelf.TabIndex = 70;
             this.chkRSSelf.UseVisualStyleBackColor = true;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(1396, 29);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Location = new System.Drawing.Point(698, 15);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(49, 25);
+            this.label45.Size = new System.Drawing.Size(25, 13);
             this.label45.TabIndex = 69;
             this.label45.Text = "Self";
             // 
             // chkFRSelf
             // 
             this.chkFRSelf.AutoSize = true;
-            this.chkFRSelf.Location = new System.Drawing.Point(1404, 300);
-            this.chkFRSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRSelf.Location = new System.Drawing.Point(702, 156);
+            this.chkFRSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRSelf.Name = "chkFRSelf";
-            this.chkFRSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkFRSelf.Size = new System.Drawing.Size(15, 14);
             this.chkFRSelf.TabIndex = 68;
             this.chkFRSelf.UseVisualStyleBackColor = true;
             // 
             // chkDSSelf
             // 
             this.chkDSSelf.AutoSize = true;
-            this.chkDSSelf.Location = new System.Drawing.Point(1404, 260);
-            this.chkDSSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDSSelf.Location = new System.Drawing.Point(702, 135);
+            this.chkDSSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDSSelf.Name = "chkDSSelf";
-            this.chkDSSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkDSSelf.Size = new System.Drawing.Size(15, 14);
             this.chkDSSelf.TabIndex = 67;
             this.chkDSSelf.UseVisualStyleBackColor = true;
             // 
             // chkDESelf
             // 
             this.chkDESelf.AutoSize = true;
-            this.chkDESelf.Location = new System.Drawing.Point(1404, 219);
-            this.chkDESelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDESelf.Location = new System.Drawing.Point(702, 114);
+            this.chkDESelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDESelf.Name = "chkDESelf";
-            this.chkDESelf.Size = new System.Drawing.Size(28, 27);
+            this.chkDESelf.Size = new System.Drawing.Size(15, 14);
             this.chkDESelf.TabIndex = 66;
             this.chkDESelf.UseVisualStyleBackColor = true;
             // 
             // chkSASelf
             // 
             this.chkSASelf.AutoSize = true;
-            this.chkSASelf.Location = new System.Drawing.Point(1404, 179);
-            this.chkSASelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSASelf.Location = new System.Drawing.Point(702, 93);
+            this.chkSASelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSASelf.Name = "chkSASelf";
-            this.chkSASelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSASelf.Size = new System.Drawing.Size(15, 14);
             this.chkSASelf.TabIndex = 65;
             this.chkSASelf.UseVisualStyleBackColor = true;
             // 
             // chkSFESelf
             // 
             this.chkSFESelf.AutoSize = true;
-            this.chkSFESelf.Location = new System.Drawing.Point(1404, 138);
-            this.chkSFESelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFESelf.Location = new System.Drawing.Point(702, 72);
+            this.chkSFESelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFESelf.Name = "chkSFESelf";
-            this.chkSFESelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSFESelf.Size = new System.Drawing.Size(15, 14);
             this.chkSFESelf.TabIndex = 64;
             this.chkSFESelf.UseVisualStyleBackColor = true;
             // 
             // chkSFCSelf
             // 
             this.chkSFCSelf.AutoSize = true;
-            this.chkSFCSelf.Location = new System.Drawing.Point(1404, 98);
-            this.chkSFCSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFCSelf.Location = new System.Drawing.Point(702, 51);
+            this.chkSFCSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFCSelf.Name = "chkSFCSelf";
-            this.chkSFCSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSFCSelf.Size = new System.Drawing.Size(15, 14);
             this.chkSFCSelf.TabIndex = 63;
             this.chkSFCSelf.UseVisualStyleBackColor = true;
             // 
             // chkSFSelf
             // 
             this.chkSFSelf.AutoSize = true;
-            this.chkSFSelf.Location = new System.Drawing.Point(1404, 58);
-            this.chkSFSelf.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFSelf.Location = new System.Drawing.Point(702, 30);
+            this.chkSFSelf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFSelf.Name = "chkSFSelf";
-            this.chkSFSelf.Size = new System.Drawing.Size(28, 27);
+            this.chkSFSelf.Size = new System.Drawing.Size(15, 14);
             this.chkSFSelf.TabIndex = 5;
             this.chkSFSelf.UseVisualStyleBackColor = true;
             // 
             // chkSQLADCS
             // 
             this.chkSQLADCS.AutoSize = true;
-            this.chkSQLADCS.Location = new System.Drawing.Point(1464, 462);
-            this.chkSQLADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSQLADCS.Location = new System.Drawing.Point(732, 240);
+            this.chkSQLADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSQLADCS.Name = "chkSQLADCS";
-            this.chkSQLADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSQLADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSQLADCS.TabIndex = 61;
             this.chkSQLADCS.UseVisualStyleBackColor = true;
             // 
             // chkSSRSADCS
             // 
             this.chkSSRSADCS.AutoSize = true;
-            this.chkSSRSADCS.Location = new System.Drawing.Point(1464, 421);
-            this.chkSSRSADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSSRSADCS.Location = new System.Drawing.Point(732, 219);
+            this.chkSSRSADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSSRSADCS.Name = "chkSSRSADCS";
-            this.chkSSRSADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSSRSADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSSRSADCS.TabIndex = 60;
             this.chkSSRSADCS.UseVisualStyleBackColor = true;
             // 
             // chkLAADCS
             // 
             this.chkLAADCS.AutoSize = true;
-            this.chkLAADCS.Location = new System.Drawing.Point(1464, 381);
-            this.chkLAADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLAADCS.Location = new System.Drawing.Point(732, 198);
+            this.chkLAADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLAADCS.Name = "chkLAADCS";
-            this.chkLAADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkLAADCS.Size = new System.Drawing.Size(15, 14);
             this.chkLAADCS.TabIndex = 58;
             this.chkLAADCS.UseVisualStyleBackColor = true;
             // 
             // chkRSADCS
             // 
             this.chkRSADCS.AutoSize = true;
-            this.chkRSADCS.Location = new System.Drawing.Point(1464, 340);
-            this.chkRSADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRSADCS.Location = new System.Drawing.Point(732, 177);
+            this.chkRSADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRSADCS.Name = "chkRSADCS";
-            this.chkRSADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkRSADCS.Size = new System.Drawing.Size(15, 14);
             this.chkRSADCS.TabIndex = 56;
             this.chkRSADCS.UseVisualStyleBackColor = true;
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(678, 29);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Location = new System.Drawing.Point(339, 15);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(68, 25);
+            this.label44.Size = new System.Drawing.Size(35, 13);
             this.label44.TabIndex = 55;
             this.label44.Text = "Name";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(368, 29);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Location = new System.Drawing.Point(184, 15);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(120, 25);
+            this.label43.Size = new System.Drawing.Size(60, 13);
             this.label43.TabIndex = 53;
             this.label43.Text = "Thumbprint";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(16, 508);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Location = new System.Drawing.Point(8, 264);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(68, 25);
+            this.label42.Size = new System.Drawing.Size(36, 13);
             this.label42.TabIndex = 52;
             this.label42.Text = "RSAT";
             // 
             // textBoxRSATThumprint
             // 
-            this.textBoxRSATThumprint.Location = new System.Drawing.Point(290, 502);
-            this.textBoxRSATThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSATThumprint.Location = new System.Drawing.Point(145, 261);
+            this.textBoxRSATThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSATThumprint.Name = "textBoxRSATThumprint";
-            this.textBoxRSATThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSATThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSATThumprint.TabIndex = 51;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(16, 467);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Location = new System.Drawing.Point(8, 243);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(122, 25);
+            this.label41.Size = new System.Drawing.Size(60, 13);
             this.label41.TabIndex = 50;
             this.label41.Text = "SQLCluster";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(16, 427);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Location = new System.Drawing.Point(8, 222);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(138, 25);
+            this.label40.Size = new System.Drawing.Size(72, 13);
             this.label40.TabIndex = 49;
             this.label40.Text = "SSRSHTTPS";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(16, 387);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(8, 201);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(120, 25);
+            this.label39.Size = new System.Drawing.Size(61, 13);
             this.label39.TabIndex = 48;
             this.label39.Text = "LocalAgent";
             // 
             // textBoxSQLThumprint
             // 
-            this.textBoxSQLThumprint.Location = new System.Drawing.Point(290, 462);
-            this.textBoxSQLThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSQLThumprint.Location = new System.Drawing.Point(145, 240);
+            this.textBoxSQLThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSQLThumprint.Name = "textBoxSQLThumprint";
-            this.textBoxSQLThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSQLThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSQLThumprint.TabIndex = 47;
             // 
             // textBoxSSRSThumprint
             // 
-            this.textBoxSSRSThumprint.Location = new System.Drawing.Point(290, 421);
-            this.textBoxSSRSThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSSRSThumprint.Location = new System.Drawing.Point(145, 219);
+            this.textBoxSSRSThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSSRSThumprint.Name = "textBoxSSRSThumprint";
-            this.textBoxSSRSThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSSRSThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSSRSThumprint.TabIndex = 46;
             // 
             // textBoxLAThumprint
             // 
-            this.textBoxLAThumprint.Location = new System.Drawing.Point(290, 381);
-            this.textBoxLAThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLAThumprint.Location = new System.Drawing.Point(145, 198);
+            this.textBoxLAThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLAThumprint.Name = "textBoxLAThumprint";
-            this.textBoxLAThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxLAThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxLAThumprint.TabIndex = 45;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(16, 346);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(8, 180);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(177, 25);
+            this.label38.Size = new System.Drawing.Size(89, 13);
             this.label38.TabIndex = 44;
             this.label38.Text = "ReportingService";
             // 
             // textBoxRSThumprint
             // 
-            this.textBoxRSThumprint.Location = new System.Drawing.Point(290, 340);
-            this.textBoxRSThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxRSThumprint.Location = new System.Drawing.Point(145, 177);
+            this.textBoxRSThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRSThumprint.Name = "textBoxRSThumprint";
-            this.textBoxRSThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxRSThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxRSThumprint.TabIndex = 43;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(1444, 29);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(722, 15);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(70, 25);
+            this.label30.Size = new System.Drawing.Size(36, 13);
             this.label30.TabIndex = 42;
             this.label30.Text = "ADCS";
             // 
             // chkFRADCS
             // 
             this.chkFRADCS.AutoSize = true;
-            this.chkFRADCS.Location = new System.Drawing.Point(1464, 300);
-            this.chkFRADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRADCS.Location = new System.Drawing.Point(732, 156);
+            this.chkFRADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRADCS.Name = "chkFRADCS";
-            this.chkFRADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkFRADCS.Size = new System.Drawing.Size(15, 14);
             this.chkFRADCS.TabIndex = 41;
             this.chkFRADCS.UseVisualStyleBackColor = true;
             // 
             // chkDSADCS
             // 
             this.chkDSADCS.AutoSize = true;
-            this.chkDSADCS.Location = new System.Drawing.Point(1464, 260);
-            this.chkDSADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDSADCS.Location = new System.Drawing.Point(732, 135);
+            this.chkDSADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDSADCS.Name = "chkDSADCS";
-            this.chkDSADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkDSADCS.Size = new System.Drawing.Size(15, 14);
             this.chkDSADCS.TabIndex = 40;
             this.chkDSADCS.UseVisualStyleBackColor = true;
             // 
             // chkDEADCS
             // 
             this.chkDEADCS.AutoSize = true;
-            this.chkDEADCS.Location = new System.Drawing.Point(1464, 219);
-            this.chkDEADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDEADCS.Location = new System.Drawing.Point(732, 114);
+            this.chkDEADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDEADCS.Name = "chkDEADCS";
-            this.chkDEADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkDEADCS.Size = new System.Drawing.Size(15, 14);
             this.chkDEADCS.TabIndex = 39;
             this.chkDEADCS.UseVisualStyleBackColor = true;
             // 
             // chkSAADCS
             // 
             this.chkSAADCS.AutoSize = true;
-            this.chkSAADCS.Location = new System.Drawing.Point(1464, 179);
-            this.chkSAADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSAADCS.Location = new System.Drawing.Point(732, 93);
+            this.chkSAADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSAADCS.Name = "chkSAADCS";
-            this.chkSAADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSAADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSAADCS.TabIndex = 38;
             this.chkSAADCS.UseVisualStyleBackColor = true;
             // 
             // chkSFEADCS
             // 
             this.chkSFEADCS.AutoSize = true;
-            this.chkSFEADCS.Location = new System.Drawing.Point(1464, 138);
-            this.chkSFEADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFEADCS.Location = new System.Drawing.Point(732, 72);
+            this.chkSFEADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFEADCS.Name = "chkSFEADCS";
-            this.chkSFEADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSFEADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSFEADCS.TabIndex = 37;
             this.chkSFEADCS.UseVisualStyleBackColor = true;
             // 
             // chkSFCADCS
             // 
             this.chkSFCADCS.AutoSize = true;
-            this.chkSFCADCS.Location = new System.Drawing.Point(1464, 98);
-            this.chkSFCADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFCADCS.Location = new System.Drawing.Point(732, 51);
+            this.chkSFCADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFCADCS.Name = "chkSFCADCS";
-            this.chkSFCADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSFCADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSFCADCS.TabIndex = 36;
             this.chkSFCADCS.UseVisualStyleBackColor = true;
             // 
             // chkSFADCS
             // 
             this.chkSFADCS.AutoSize = true;
-            this.chkSFADCS.Location = new System.Drawing.Point(1464, 58);
-            this.chkSFADCS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSFADCS.Location = new System.Drawing.Point(732, 30);
+            this.chkSFADCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSFADCS.Name = "chkSFADCS";
-            this.chkSFADCS.Size = new System.Drawing.Size(28, 27);
+            this.chkSFADCS.Size = new System.Drawing.Size(15, 14);
             this.chkSFADCS.TabIndex = 6;
             this.chkSFADCS.UseVisualStyleBackColor = true;
             // 
             // textBoxSAThumprint
             // 
-            this.textBoxSAThumprint.Location = new System.Drawing.Point(290, 179);
-            this.textBoxSAThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSAThumprint.Location = new System.Drawing.Point(145, 93);
+            this.textBoxSAThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSAThumprint.Name = "textBoxSAThumprint";
-            this.textBoxSAThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSAThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSAThumprint.TabIndex = 34;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(16, 185);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(8, 96);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(226, 25);
+            this.label31.Size = new System.Drawing.Size(112, 13);
             this.label31.TabIndex = 33;
             this.label31.Text = "SessionAuthentication";
             // 
             // textBoxFRThumprint
             // 
-            this.textBoxFRThumprint.Location = new System.Drawing.Point(290, 300);
-            this.textBoxFRThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRThumprint.Location = new System.Drawing.Point(145, 156);
+            this.textBoxFRThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRThumprint.Name = "textBoxFRThumprint";
-            this.textBoxFRThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxFRThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxFRThumprint.TabIndex = 32;
             // 
             // textBoxDSThumprint
             // 
-            this.textBoxDSThumprint.Location = new System.Drawing.Point(290, 260);
-            this.textBoxDSThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDSThumprint.Location = new System.Drawing.Point(145, 135);
+            this.textBoxDSThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDSThumprint.Name = "textBoxDSThumprint";
-            this.textBoxDSThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDSThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxDSThumprint.TabIndex = 30;
             // 
             // textBoxDEThumprint
             // 
-            this.textBoxDEThumprint.Location = new System.Drawing.Point(290, 219);
-            this.textBoxDEThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDEThumprint.Location = new System.Drawing.Point(145, 114);
+            this.textBoxDEThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDEThumprint.Name = "textBoxDEThumprint";
-            this.textBoxDEThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxDEThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxDEThumprint.TabIndex = 28;
             // 
             // textBoxSFEThumprint
             // 
-            this.textBoxSFEThumprint.Location = new System.Drawing.Point(290, 138);
-            this.textBoxSFEThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFEThumprint.Location = new System.Drawing.Point(145, 72);
+            this.textBoxSFEThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFEThumprint.Name = "textBoxSFEThumprint";
-            this.textBoxSFEThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFEThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFEThumprint.TabIndex = 26;
             // 
             // textBoxSFCThumprint
             // 
-            this.textBoxSFCThumprint.Location = new System.Drawing.Point(290, 98);
-            this.textBoxSFCThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFCThumprint.Location = new System.Drawing.Point(145, 51);
+            this.textBoxSFCThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFCThumprint.Name = "textBoxSFCThumprint";
-            this.textBoxSFCThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFCThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFCThumprint.TabIndex = 0;
             // 
             // textBoxSFThumprint
             // 
-            this.textBoxSFThumprint.Location = new System.Drawing.Point(290, 58);
-            this.textBoxSFThumprint.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSFThumprint.Location = new System.Drawing.Point(145, 30);
+            this.textBoxSFThumprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSFThumprint.Name = "textBoxSFThumprint";
-            this.textBoxSFThumprint.Size = new System.Drawing.Size(272, 31);
+            this.textBoxSFThumprint.Size = new System.Drawing.Size(138, 20);
             this.textBoxSFThumprint.TabIndex = 1;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(16, 306);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(8, 159);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(192, 25);
+            this.label32.Size = new System.Drawing.Size(95, 13);
             this.label32.TabIndex = 31;
             this.label32.Text = "FinancialReporting";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(16, 265);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(8, 138);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(129, 25);
+            this.label33.Size = new System.Drawing.Size(65, 13);
             this.label33.TabIndex = 29;
             this.label33.Text = "DataSigning";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(16, 225);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(8, 117);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(159, 25);
+            this.label34.Size = new System.Drawing.Size(80, 13);
             this.label34.TabIndex = 27;
             this.label34.Text = "DataEncryption";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(16, 144);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(8, 75);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(246, 25);
+            this.label35.Size = new System.Drawing.Size(122, 13);
             this.label35.TabIndex = 25;
             this.label35.Text = "ServiceFabricEncryption";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(16, 104);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(8, 54);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(199, 25);
+            this.label36.Size = new System.Drawing.Size(98, 13);
             this.label36.TabIndex = 23;
             this.label36.Text = "ServiceFabricClient";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(16, 63);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(8, 33);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(144, 25);
+            this.label37.Size = new System.Drawing.Size(72, 13);
             this.label37.TabIndex = 21;
             this.label37.Text = "ServiceFabric";
             // 
@@ -1847,128 +1858,129 @@ namespace D365.Setup
             this.groupBoxDatabase.Controls.Add(this.label25);
             this.groupBoxDatabase.Controls.Add(this.textBoxAXDB);
             this.groupBoxDatabase.Controls.Add(this.label24);
-            this.groupBoxDatabase.Location = new System.Drawing.Point(616, 273);
-            this.groupBoxDatabase.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxDatabase.Location = new System.Drawing.Point(308, 142);
+            this.groupBoxDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxDatabase.Name = "groupBoxDatabase";
-            this.groupBoxDatabase.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxDatabase.Size = new System.Drawing.Size(937, 288);
+            this.groupBoxDatabase.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDatabase.Size = new System.Drawing.Size(441, 150);
             this.groupBoxDatabase.TabIndex = 55;
             this.groupBoxDatabase.TabStop = false;
             this.groupBoxDatabase.Text = "Databases";
             // 
             // textBoxAxDw
             // 
-            this.textBoxAxDw.Location = new System.Drawing.Point(170, 173);
-            this.textBoxAxDw.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAxDw.Location = new System.Drawing.Point(85, 90);
+            this.textBoxAxDw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAxDw.Name = "textBoxAxDw";
-            this.textBoxAxDw.Size = new System.Drawing.Size(252, 31);
+            this.textBoxAxDw.Size = new System.Drawing.Size(128, 20);
             this.textBoxAxDw.TabIndex = 45;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(14, 179);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(7, 93);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(72, 25);
+            this.label29.Size = new System.Drawing.Size(38, 13);
             this.label29.TabIndex = 44;
             this.label29.Text = "AxDW";
             // 
             // textBoxOrchDB
             // 
-            this.textBoxOrchDB.Location = new System.Drawing.Point(170, 127);
-            this.textBoxOrchDB.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxOrchDB.Location = new System.Drawing.Point(85, 66);
+            this.textBoxOrchDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxOrchDB.Name = "textBoxOrchDB";
-            this.textBoxOrchDB.Size = new System.Drawing.Size(252, 31);
+            this.textBoxOrchDB.Size = new System.Drawing.Size(128, 20);
             this.textBoxOrchDB.TabIndex = 43;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(14, 133);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(7, 69);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(131, 25);
+            this.label28.Size = new System.Drawing.Size(65, 13);
             this.label28.TabIndex = 42;
             this.label28.Text = "Orchestrator";
             // 
             // textBoxFinDb
             // 
-            this.textBoxFinDb.Location = new System.Drawing.Point(170, 87);
-            this.textBoxFinDb.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFinDb.Location = new System.Drawing.Point(85, 45);
+            this.textBoxFinDb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFinDb.Name = "textBoxFinDb";
-            this.textBoxFinDb.Size = new System.Drawing.Size(252, 31);
+            this.textBoxFinDb.Size = new System.Drawing.Size(128, 20);
             this.textBoxFinDb.TabIndex = 41;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 92);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(7, 48);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(118, 25);
+            this.label26.Size = new System.Drawing.Size(59, 13);
             this.label26.TabIndex = 40;
             this.label26.Text = "Fin. Report";
             // 
             // textBoxBackupFile
             // 
-            this.textBoxBackupFile.Location = new System.Drawing.Point(454, 44);
-            this.textBoxBackupFile.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxBackupFile.Location = new System.Drawing.Point(227, 23);
+            this.textBoxBackupFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBackupFile.Name = "textBoxBackupFile";
-            this.textBoxBackupFile.Size = new System.Drawing.Size(416, 31);
+            this.textBoxBackupFile.Size = new System.Drawing.Size(210, 20);
             this.textBoxBackupFile.TabIndex = 39;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(454, 13);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(227, 7);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(125, 25);
+            this.label25.Size = new System.Drawing.Size(63, 13);
             this.label25.TabIndex = 38;
             this.label25.Text = "Backup File";
             // 
             // textBoxAXDB
             // 
-            this.textBoxAXDB.Location = new System.Drawing.Point(170, 44);
-            this.textBoxAXDB.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAXDB.Location = new System.Drawing.Point(85, 23);
+            this.textBoxAXDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAXDB.Name = "textBoxAXDB";
-            this.textBoxAXDB.Size = new System.Drawing.Size(252, 31);
+            this.textBoxAXDB.Size = new System.Drawing.Size(128, 20);
             this.textBoxAXDB.TabIndex = 37;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(14, 54);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(7, 28);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 25);
+            this.label24.Size = new System.Drawing.Size(36, 13);
             this.label24.TabIndex = 36;
             this.label24.Text = "AXDB";
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.buttonRemoveServer);
             this.groupBox4.Controls.Add(this.buttonAddServer);
             this.groupBox4.Controls.Add(this.ListSqlVms);
             this.groupBox4.Controls.Add(this.textBoxListener);
             this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Location = new System.Drawing.Point(1709, 569);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(819, 296);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(318, 565);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(159, 294);
             this.groupBox4.TabIndex = 54;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SqlListener Name";
             // 
             // buttonRemoveServer
             // 
-            this.buttonRemoveServer.Location = new System.Drawing.Point(266, 137);
+            this.buttonRemoveServer.Location = new System.Drawing.Point(133, 71);
             this.buttonRemoveServer.Margin = new System.Windows.Forms.Padding(0);
             this.buttonRemoveServer.Name = "buttonRemoveServer";
-            this.buttonRemoveServer.Size = new System.Drawing.Size(40, 40);
+            this.buttonRemoveServer.Size = new System.Drawing.Size(20, 21);
             this.buttonRemoveServer.TabIndex = 40;
             this.buttonRemoveServer.Text = "-";
             this.buttonRemoveServer.UseVisualStyleBackColor = true;
@@ -1976,10 +1988,10 @@ namespace D365.Setup
             // 
             // buttonAddServer
             // 
-            this.buttonAddServer.Location = new System.Drawing.Point(266, 96);
+            this.buttonAddServer.Location = new System.Drawing.Point(133, 50);
             this.buttonAddServer.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAddServer.Name = "buttonAddServer";
-            this.buttonAddServer.Size = new System.Drawing.Size(40, 40);
+            this.buttonAddServer.Size = new System.Drawing.Size(20, 21);
             this.buttonAddServer.TabIndex = 39;
             this.buttonAddServer.Text = "+";
             this.buttonAddServer.UseVisualStyleBackColor = true;
@@ -1988,28 +2000,27 @@ namespace D365.Setup
             // ListSqlVms
             // 
             this.ListSqlVms.FormattingEnabled = true;
-            this.ListSqlVms.ItemHeight = 25;
-            this.ListSqlVms.Location = new System.Drawing.Point(28, 117);
-            this.ListSqlVms.Margin = new System.Windows.Forms.Padding(4);
+            this.ListSqlVms.Location = new System.Drawing.Point(14, 61);
+            this.ListSqlVms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListSqlVms.Name = "ListSqlVms";
-            this.ListSqlVms.Size = new System.Drawing.Size(218, 404);
+            this.ListSqlVms.Size = new System.Drawing.Size(111, 212);
             this.ListSqlVms.TabIndex = 1;
             // 
             // textBoxListener
             // 
-            this.textBoxListener.Location = new System.Drawing.Point(112, 54);
-            this.textBoxListener.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxListener.Location = new System.Drawing.Point(56, 28);
+            this.textBoxListener.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxListener.Name = "textBoxListener";
-            this.textBoxListener.Size = new System.Drawing.Size(190, 31);
+            this.textBoxListener.Size = new System.Drawing.Size(97, 20);
             this.textBoxListener.TabIndex = 0;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(14, 54);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(7, 28);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 25);
+            this.label27.Size = new System.Drawing.Size(44, 13);
             this.label27.TabIndex = 36;
             this.label27.Text = "Listener";
             // 
@@ -2024,86 +2035,86 @@ namespace D365.Setup
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.chkDiagnoseShr);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Location = new System.Drawing.Point(1561, 273);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(745, 142);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(466, 288);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(233, 150);
             this.groupBox3.TabIndex = 53;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Diagnostics File Share";
             // 
             // textBoxDiagLocalPath
             // 
-            this.textBoxDiagLocalPath.Location = new System.Drawing.Point(124, 138);
-            this.textBoxDiagLocalPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDiagLocalPath.Location = new System.Drawing.Point(62, 72);
+            this.textBoxDiagLocalPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDiagLocalPath.Name = "textBoxDiagLocalPath";
-            this.textBoxDiagLocalPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDiagLocalPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDiagLocalPath.TabIndex = 50;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 144);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(3, 75);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 25);
+            this.label20.Size = new System.Drawing.Size(58, 13);
             this.label20.TabIndex = 49;
             this.label20.Text = "Local Path";
             // 
             // textBoxDiagBasePath
             // 
-            this.textBoxDiagBasePath.Location = new System.Drawing.Point(124, 98);
-            this.textBoxDiagBasePath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDiagBasePath.Location = new System.Drawing.Point(62, 51);
+            this.textBoxDiagBasePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDiagBasePath.Name = "textBoxDiagBasePath";
-            this.textBoxDiagBasePath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDiagBasePath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDiagBasePath.TabIndex = 48;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 104);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(3, 54);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(111, 25);
+            this.label21.Size = new System.Drawing.Size(56, 13);
             this.label21.TabIndex = 47;
             this.label21.Text = "Base Path";
             // 
             // textBoxDiagPath
             // 
-            this.textBoxDiagPath.Location = new System.Drawing.Point(124, 60);
-            this.textBoxDiagPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDiagPath.Location = new System.Drawing.Point(62, 31);
+            this.textBoxDiagPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDiagPath.Name = "textBoxDiagPath";
-            this.textBoxDiagPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDiagPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDiagPath.TabIndex = 46;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 65);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(3, 34);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 25);
+            this.label22.Size = new System.Drawing.Size(29, 13);
             this.label22.TabIndex = 45;
             this.label22.Text = "Path";
             // 
             // chkDiagnoseShr
             // 
             this.chkDiagnoseShr.AutoSize = true;
-            this.chkDiagnoseShr.Location = new System.Drawing.Point(396, 31);
-            this.chkDiagnoseShr.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDiagnoseShr.Location = new System.Drawing.Point(198, 16);
+            this.chkDiagnoseShr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDiagnoseShr.Name = "chkDiagnoseShr";
-            this.chkDiagnoseShr.Size = new System.Drawing.Size(28, 27);
+            this.chkDiagnoseShr.Size = new System.Drawing.Size(15, 14);
             this.chkDiagnoseShr.TabIndex = 44;
             this.chkDiagnoseShr.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(288, 27);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(144, 14);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(96, 25);
+            this.label23.Size = new System.Drawing.Size(48, 13);
             this.label23.TabIndex = 43;
             this.label23.Text = "Disabled";
             // 
@@ -2118,86 +2129,86 @@ namespace D365.Setup
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.chkDixfShr);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(1585, 17);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(757, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(442, 240);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(221, 125);
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dixf File Share";
             // 
             // textBoxDixfLocalPath
             // 
-            this.textBoxDixfLocalPath.Location = new System.Drawing.Point(124, 138);
-            this.textBoxDixfLocalPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDixfLocalPath.Location = new System.Drawing.Point(62, 72);
+            this.textBoxDixfLocalPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDixfLocalPath.Name = "textBoxDixfLocalPath";
-            this.textBoxDixfLocalPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDixfLocalPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDixfLocalPath.TabIndex = 50;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 144);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(3, 75);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 25);
+            this.label16.Size = new System.Drawing.Size(58, 13);
             this.label16.TabIndex = 49;
             this.label16.Text = "Local Path";
             // 
             // textBoxDixfBasePath
             // 
-            this.textBoxDixfBasePath.Location = new System.Drawing.Point(124, 98);
-            this.textBoxDixfBasePath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDixfBasePath.Location = new System.Drawing.Point(62, 51);
+            this.textBoxDixfBasePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDixfBasePath.Name = "textBoxDixfBasePath";
-            this.textBoxDixfBasePath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDixfBasePath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDixfBasePath.TabIndex = 48;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 104);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(3, 54);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 25);
+            this.label17.Size = new System.Drawing.Size(56, 13);
             this.label17.TabIndex = 47;
             this.label17.Text = "Base Path";
             // 
             // textBoxDixfPath
             // 
-            this.textBoxDixfPath.Location = new System.Drawing.Point(124, 60);
-            this.textBoxDixfPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDixfPath.Location = new System.Drawing.Point(62, 31);
+            this.textBoxDixfPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDixfPath.Name = "textBoxDixfPath";
-            this.textBoxDixfPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxDixfPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxDixfPath.TabIndex = 46;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 65);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(3, 34);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(56, 25);
+            this.label18.Size = new System.Drawing.Size(29, 13);
             this.label18.TabIndex = 45;
             this.label18.Text = "Path";
             // 
             // chkDixfShr
             // 
             this.chkDixfShr.AutoSize = true;
-            this.chkDixfShr.Location = new System.Drawing.Point(396, 31);
-            this.chkDixfShr.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDixfShr.Location = new System.Drawing.Point(198, 16);
+            this.chkDixfShr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDixfShr.Name = "chkDixfShr";
-            this.chkDixfShr.Size = new System.Drawing.Size(28, 27);
+            this.chkDixfShr.Size = new System.Drawing.Size(15, 14);
             this.chkDixfShr.TabIndex = 44;
             this.chkDixfShr.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(288, 27);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(144, 14);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 25);
+            this.label19.Size = new System.Drawing.Size(48, 13);
             this.label19.TabIndex = 43;
             this.label19.Text = "Disabled";
             // 
@@ -2213,86 +2224,86 @@ namespace D365.Setup
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.chkAosShr);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(1070, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(500, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(507, 240);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(254, 125);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aos File Share";
             // 
             // textBoxAosLocalPath
             // 
-            this.textBoxAosLocalPath.Location = new System.Drawing.Point(124, 138);
-            this.textBoxAosLocalPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAosLocalPath.Location = new System.Drawing.Point(62, 72);
+            this.textBoxAosLocalPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAosLocalPath.Name = "textBoxAosLocalPath";
-            this.textBoxAosLocalPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAosLocalPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAosLocalPath.TabIndex = 50;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 144);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(3, 75);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 25);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 49;
             this.label8.Text = "Local Path";
             // 
             // textBoxAosBasePath
             // 
-            this.textBoxAosBasePath.Location = new System.Drawing.Point(124, 98);
-            this.textBoxAosBasePath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAosBasePath.Location = new System.Drawing.Point(62, 51);
+            this.textBoxAosBasePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAosBasePath.Name = "textBoxAosBasePath";
-            this.textBoxAosBasePath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAosBasePath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAosBasePath.TabIndex = 48;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 104);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(3, 54);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 25);
+            this.label13.Size = new System.Drawing.Size(56, 13);
             this.label13.TabIndex = 47;
             this.label13.Text = "Base Path";
             // 
             // textBoxAosPath
             // 
-            this.textBoxAosPath.Location = new System.Drawing.Point(124, 60);
-            this.textBoxAosPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAosPath.Location = new System.Drawing.Point(62, 31);
+            this.textBoxAosPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAosPath.Name = "textBoxAosPath";
-            this.textBoxAosPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAosPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAosPath.TabIndex = 46;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 65);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(3, 34);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 25);
+            this.label14.Size = new System.Drawing.Size(29, 13);
             this.label14.TabIndex = 45;
             this.label14.Text = "Path";
             // 
             // chkAosShr
             // 
             this.chkAosShr.AutoSize = true;
-            this.chkAosShr.Location = new System.Drawing.Point(396, 31);
-            this.chkAosShr.Margin = new System.Windows.Forms.Padding(4);
+            this.chkAosShr.Location = new System.Drawing.Point(198, 16);
+            this.chkAosShr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkAosShr.Name = "chkAosShr";
-            this.chkAosShr.Size = new System.Drawing.Size(28, 27);
+            this.chkAosShr.Size = new System.Drawing.Size(15, 14);
             this.chkAosShr.TabIndex = 44;
             this.chkAosShr.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(288, 27);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(144, 14);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 25);
+            this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 43;
             this.label15.Text = "Disabled";
             // 
@@ -2309,86 +2320,86 @@ namespace D365.Setup
             this.groupFileShare.Controls.Add(this.label10);
             this.groupFileShare.Controls.Add(this.chkAgentShr);
             this.groupFileShare.Controls.Add(this.label9);
-            this.groupFileShare.Location = new System.Drawing.Point(616, 17);
-            this.groupFileShare.Margin = new System.Windows.Forms.Padding(4);
+            this.groupFileShare.Location = new System.Drawing.Point(308, 9);
+            this.groupFileShare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupFileShare.Name = "groupFileShare";
-            this.groupFileShare.Padding = new System.Windows.Forms.Padding(4);
-            this.groupFileShare.Size = new System.Drawing.Size(446, 240);
+            this.groupFileShare.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupFileShare.Size = new System.Drawing.Size(218, 125);
             this.groupFileShare.TabIndex = 23;
             this.groupFileShare.TabStop = false;
             this.groupFileShare.Text = "Agent File Share";
             // 
             // textBoxAgentLocalPath
             // 
-            this.textBoxAgentLocalPath.Location = new System.Drawing.Point(124, 138);
-            this.textBoxAgentLocalPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAgentLocalPath.Location = new System.Drawing.Point(62, 72);
+            this.textBoxAgentLocalPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentLocalPath.Name = "textBoxAgentLocalPath";
-            this.textBoxAgentLocalPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAgentLocalPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAgentLocalPath.TabIndex = 50;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 144);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(3, 75);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 25);
+            this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 49;
             this.label12.Text = "Local Path";
             // 
             // textBoxAgentBasePath
             // 
-            this.textBoxAgentBasePath.Location = new System.Drawing.Point(124, 98);
-            this.textBoxAgentBasePath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAgentBasePath.Location = new System.Drawing.Point(62, 51);
+            this.textBoxAgentBasePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentBasePath.Name = "textBoxAgentBasePath";
-            this.textBoxAgentBasePath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAgentBasePath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAgentBasePath.TabIndex = 48;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 104);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(3, 54);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 25);
+            this.label11.Size = new System.Drawing.Size(56, 13);
             this.label11.TabIndex = 47;
             this.label11.Text = "Base Path";
             // 
             // textBoxAgentPath
             // 
-            this.textBoxAgentPath.Location = new System.Drawing.Point(124, 60);
-            this.textBoxAgentPath.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAgentPath.Location = new System.Drawing.Point(62, 31);
+            this.textBoxAgentPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentPath.Name = "textBoxAgentPath";
-            this.textBoxAgentPath.Size = new System.Drawing.Size(300, 31);
+            this.textBoxAgentPath.Size = new System.Drawing.Size(152, 20);
             this.textBoxAgentPath.TabIndex = 46;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 65);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(3, 34);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 25);
+            this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 45;
             this.label10.Text = "Path";
             // 
             // chkAgentShr
             // 
             this.chkAgentShr.AutoSize = true;
-            this.chkAgentShr.Location = new System.Drawing.Point(396, 31);
-            this.chkAgentShr.Margin = new System.Windows.Forms.Padding(4);
+            this.chkAgentShr.Location = new System.Drawing.Point(198, 16);
+            this.chkAgentShr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkAgentShr.Name = "chkAgentShr";
-            this.chkAgentShr.Size = new System.Drawing.Size(28, 27);
+            this.chkAgentShr.Size = new System.Drawing.Size(15, 14);
             this.chkAgentShr.TabIndex = 44;
             this.chkAgentShr.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(288, 27);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(144, 14);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 25);
+            this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 43;
             this.label9.Text = "Disabled";
             // 
@@ -2404,11 +2415,11 @@ namespace D365.Setup
             this.groupDatabase.Controls.Add(this.chkAxDbAdmin);
             this.groupDatabase.Controls.Add(this.textBoxAxDbAdmin);
             this.groupDatabase.Controls.Add(this.labelAxDbAdmin);
-            this.groupDatabase.Location = new System.Drawing.Point(10, 383);
-            this.groupDatabase.Margin = new System.Windows.Forms.Padding(4);
+            this.groupDatabase.Location = new System.Drawing.Point(5, 199);
+            this.groupDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupDatabase.Name = "groupDatabase";
-            this.groupDatabase.Padding = new System.Windows.Forms.Padding(4);
-            this.groupDatabase.Size = new System.Drawing.Size(598, 183);
+            this.groupDatabase.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupDatabase.Size = new System.Drawing.Size(299, 95);
             this.groupDatabase.TabIndex = 22;
             this.groupDatabase.TabStop = false;
             this.groupDatabase.Text = "Database";
@@ -2416,94 +2427,94 @@ namespace D365.Setup
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(476, 17);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(238, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 25);
+            this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 45;
             this.label7.Text = "Enabled";
             // 
             // chkDwRuntime
             // 
             this.chkDwRuntime.AutoSize = true;
-            this.chkDwRuntime.Location = new System.Drawing.Point(508, 129);
-            this.chkDwRuntime.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDwRuntime.Location = new System.Drawing.Point(254, 67);
+            this.chkDwRuntime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDwRuntime.Name = "chkDwRuntime";
-            this.chkDwRuntime.Size = new System.Drawing.Size(28, 27);
+            this.chkDwRuntime.Size = new System.Drawing.Size(15, 14);
             this.chkDwRuntime.TabIndex = 44;
             this.chkDwRuntime.UseVisualStyleBackColor = true;
             // 
             // textBoxAxDwRuntime
             // 
-            this.textBoxAxDwRuntime.Location = new System.Drawing.Point(200, 125);
-            this.textBoxAxDwRuntime.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAxDwRuntime.Location = new System.Drawing.Point(100, 65);
+            this.textBoxAxDwRuntime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAxDwRuntime.Name = "textBoxAxDwRuntime";
-            this.textBoxAxDwRuntime.Size = new System.Drawing.Size(260, 31);
+            this.textBoxAxDwRuntime.Size = new System.Drawing.Size(132, 20);
             this.textBoxAxDwRuntime.TabIndex = 3;
             // 
             // labelAxDwRuntime
             // 
             this.labelAxDwRuntime.AutoSize = true;
-            this.labelAxDwRuntime.Location = new System.Drawing.Point(14, 129);
-            this.labelAxDwRuntime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAxDwRuntime.Location = new System.Drawing.Point(7, 67);
+            this.labelAxDwRuntime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAxDwRuntime.Name = "labelAxDwRuntime";
-            this.labelAxDwRuntime.Size = new System.Drawing.Size(146, 25);
+            this.labelAxDwRuntime.Size = new System.Drawing.Size(74, 13);
             this.labelAxDwRuntime.TabIndex = 42;
             this.labelAxDwRuntime.Text = "AxDwRuntime";
             // 
             // chkAxDwAdmin
             // 
             this.chkAxDwAdmin.AutoSize = true;
-            this.chkAxDwAdmin.Location = new System.Drawing.Point(508, 92);
-            this.chkAxDwAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.chkAxDwAdmin.Location = new System.Drawing.Point(254, 48);
+            this.chkAxDwAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkAxDwAdmin.Name = "chkAxDwAdmin";
-            this.chkAxDwAdmin.Size = new System.Drawing.Size(28, 27);
+            this.chkAxDwAdmin.Size = new System.Drawing.Size(15, 14);
             this.chkAxDwAdmin.TabIndex = 41;
             this.chkAxDwAdmin.UseVisualStyleBackColor = true;
             // 
             // textBoxAxDwAdmin
             // 
-            this.textBoxAxDwAdmin.Location = new System.Drawing.Point(200, 88);
-            this.textBoxAxDwAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAxDwAdmin.Location = new System.Drawing.Point(100, 46);
+            this.textBoxAxDwAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAxDwAdmin.Name = "textBoxAxDwAdmin";
-            this.textBoxAxDwAdmin.Size = new System.Drawing.Size(260, 31);
+            this.textBoxAxDwAdmin.Size = new System.Drawing.Size(132, 20);
             this.textBoxAxDwAdmin.TabIndex = 2;
             // 
             // labelAxDwAdmin
             // 
             this.labelAxDwAdmin.AutoSize = true;
-            this.labelAxDwAdmin.Location = new System.Drawing.Point(14, 90);
-            this.labelAxDwAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAxDwAdmin.Location = new System.Drawing.Point(7, 47);
+            this.labelAxDwAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAxDwAdmin.Name = "labelAxDwAdmin";
-            this.labelAxDwAdmin.Size = new System.Drawing.Size(127, 25);
+            this.labelAxDwAdmin.Size = new System.Drawing.Size(64, 13);
             this.labelAxDwAdmin.TabIndex = 39;
             this.labelAxDwAdmin.Text = "AxDwAdmin";
             // 
             // chkAxDbAdmin
             // 
             this.chkAxDbAdmin.AutoSize = true;
-            this.chkAxDbAdmin.Location = new System.Drawing.Point(508, 56);
-            this.chkAxDbAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.chkAxDbAdmin.Location = new System.Drawing.Point(254, 29);
+            this.chkAxDbAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkAxDbAdmin.Name = "chkAxDbAdmin";
-            this.chkAxDbAdmin.Size = new System.Drawing.Size(28, 27);
+            this.chkAxDbAdmin.Size = new System.Drawing.Size(15, 14);
             this.chkAxDbAdmin.TabIndex = 38;
             this.chkAxDbAdmin.UseVisualStyleBackColor = true;
             // 
             // textBoxAxDbAdmin
             // 
-            this.textBoxAxDbAdmin.Location = new System.Drawing.Point(200, 52);
-            this.textBoxAxDbAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAxDbAdmin.Location = new System.Drawing.Point(100, 27);
+            this.textBoxAxDbAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAxDbAdmin.Name = "textBoxAxDbAdmin";
-            this.textBoxAxDbAdmin.Size = new System.Drawing.Size(260, 31);
+            this.textBoxAxDbAdmin.Size = new System.Drawing.Size(132, 20);
             this.textBoxAxDbAdmin.TabIndex = 1;
             // 
             // labelAxDbAdmin
             // 
             this.labelAxDbAdmin.AutoSize = true;
-            this.labelAxDbAdmin.Location = new System.Drawing.Point(14, 54);
-            this.labelAxDbAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAxDbAdmin.Location = new System.Drawing.Point(7, 28);
+            this.labelAxDbAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAxDbAdmin.Name = "labelAxDbAdmin";
-            this.labelAxDbAdmin.Size = new System.Drawing.Size(124, 25);
+            this.labelAxDbAdmin.Size = new System.Drawing.Size(62, 13);
             this.labelAxDbAdmin.TabIndex = 36;
             this.labelAxDbAdmin.Text = "AxDbAdmin";
             // 
@@ -2532,11 +2543,11 @@ namespace D365.Setup
             this.groupGmsa.Controls.Add(this.label1);
             this.groupGmsa.Controls.Add(this.labelFRAS);
             this.groupGmsa.Controls.Add(this.labelLocalAgent);
-            this.groupGmsa.Location = new System.Drawing.Point(10, 17);
-            this.groupGmsa.Margin = new System.Windows.Forms.Padding(4);
+            this.groupGmsa.Location = new System.Drawing.Point(5, 9);
+            this.groupGmsa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupGmsa.Name = "groupGmsa";
-            this.groupGmsa.Padding = new System.Windows.Forms.Padding(4);
-            this.groupGmsa.Size = new System.Drawing.Size(598, 360);
+            this.groupGmsa.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupGmsa.Size = new System.Drawing.Size(299, 187);
             this.groupGmsa.TabIndex = 21;
             this.groupGmsa.TabStop = false;
             this.groupGmsa.Text = "Gmsa";
@@ -2544,206 +2555,206 @@ namespace D365.Setup
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(476, 27);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(238, 14);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 25);
+            this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 42;
             this.label6.Text = "Disabled";
             // 
             // chkDixF
             // 
             this.chkDixF.AutoSize = true;
-            this.chkDixF.Location = new System.Drawing.Point(506, 283);
-            this.chkDixF.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDixF.Location = new System.Drawing.Point(253, 147);
+            this.chkDixF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDixF.Name = "chkDixF";
-            this.chkDixF.Size = new System.Drawing.Size(28, 27);
+            this.chkDixF.Size = new System.Drawing.Size(15, 14);
             this.chkDixF.TabIndex = 41;
             this.chkDixF.UseVisualStyleBackColor = true;
             // 
             // chkReportSvc
             // 
             this.chkReportSvc.AutoSize = true;
-            this.chkReportSvc.Location = new System.Drawing.Point(506, 246);
-            this.chkReportSvc.Margin = new System.Windows.Forms.Padding(4);
+            this.chkReportSvc.Location = new System.Drawing.Point(253, 128);
+            this.chkReportSvc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkReportSvc.Name = "chkReportSvc";
-            this.chkReportSvc.Size = new System.Drawing.Size(28, 27);
+            this.chkReportSvc.Size = new System.Drawing.Size(15, 14);
             this.chkReportSvc.TabIndex = 40;
             this.chkReportSvc.UseVisualStyleBackColor = true;
             // 
             // chkAXSF
             // 
             this.chkAXSF.AutoSize = true;
-            this.chkAXSF.Location = new System.Drawing.Point(506, 210);
-            this.chkAXSF.Margin = new System.Windows.Forms.Padding(4);
+            this.chkAXSF.Location = new System.Drawing.Point(253, 109);
+            this.chkAXSF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkAXSF.Name = "chkAXSF";
-            this.chkAXSF.Size = new System.Drawing.Size(28, 27);
+            this.chkAXSF.Size = new System.Drawing.Size(15, 14);
             this.chkAXSF.TabIndex = 39;
             this.chkAXSF.UseVisualStyleBackColor = true;
             // 
             // chkFRCO
             // 
             this.chkFRCO.AutoSize = true;
-            this.chkFRCO.Location = new System.Drawing.Point(506, 171);
-            this.chkFRCO.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRCO.Location = new System.Drawing.Point(253, 89);
+            this.chkFRCO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRCO.Name = "chkFRCO";
-            this.chkFRCO.Size = new System.Drawing.Size(28, 27);
+            this.chkFRCO.Size = new System.Drawing.Size(15, 14);
             this.chkFRCO.TabIndex = 38;
             this.chkFRCO.UseVisualStyleBackColor = true;
             // 
             // chkFRPS
             // 
             this.chkFRPS.AutoSize = true;
-            this.chkFRPS.Location = new System.Drawing.Point(506, 135);
-            this.chkFRPS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRPS.Location = new System.Drawing.Point(253, 70);
+            this.chkFRPS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRPS.Name = "chkFRPS";
-            this.chkFRPS.Size = new System.Drawing.Size(28, 27);
+            this.chkFRPS.Size = new System.Drawing.Size(15, 14);
             this.chkFRPS.TabIndex = 37;
             this.chkFRPS.UseVisualStyleBackColor = true;
             // 
             // chkFRAS
             // 
             this.chkFRAS.AutoSize = true;
-            this.chkFRAS.Location = new System.Drawing.Point(506, 98);
-            this.chkFRAS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFRAS.Location = new System.Drawing.Point(253, 51);
+            this.chkFRAS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFRAS.Name = "chkFRAS";
-            this.chkFRAS.Size = new System.Drawing.Size(28, 27);
+            this.chkFRAS.Size = new System.Drawing.Size(15, 14);
             this.chkFRAS.TabIndex = 36;
             this.chkFRAS.UseVisualStyleBackColor = true;
             // 
             // chkLocalAgent
             // 
             this.chkLocalAgent.AutoSize = true;
-            this.chkLocalAgent.Location = new System.Drawing.Point(506, 62);
-            this.chkLocalAgent.Margin = new System.Windows.Forms.Padding(4);
+            this.chkLocalAgent.Location = new System.Drawing.Point(253, 32);
+            this.chkLocalAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkLocalAgent.Name = "chkLocalAgent";
-            this.chkLocalAgent.Size = new System.Drawing.Size(28, 27);
+            this.chkLocalAgent.Size = new System.Drawing.Size(15, 14);
             this.chkLocalAgent.TabIndex = 35;
             this.chkLocalAgent.UseVisualStyleBackColor = true;
             // 
             // textBoxFRCO
             // 
-            this.textBoxFRCO.Location = new System.Drawing.Point(202, 169);
-            this.textBoxFRCO.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRCO.Location = new System.Drawing.Point(101, 88);
+            this.textBoxFRCO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRCO.Name = "textBoxFRCO";
-            this.textBoxFRCO.Size = new System.Drawing.Size(260, 31);
+            this.textBoxFRCO.Size = new System.Drawing.Size(132, 20);
             this.textBoxFRCO.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 171);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(8, 89);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 25);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "FRCO";
             // 
             // textBoxDixF
             // 
-            this.textBoxDixF.Location = new System.Drawing.Point(202, 281);
-            this.textBoxDixF.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDixF.Location = new System.Drawing.Point(101, 146);
+            this.textBoxDixF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDixF.Name = "textBoxDixF";
-            this.textBoxDixF.Size = new System.Drawing.Size(260, 31);
+            this.textBoxDixF.Size = new System.Drawing.Size(132, 20);
             this.textBoxDixF.TabIndex = 6;
             // 
             // textBoxReportSvc
             // 
-            this.textBoxReportSvc.Location = new System.Drawing.Point(202, 242);
-            this.textBoxReportSvc.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxReportSvc.Location = new System.Drawing.Point(101, 126);
+            this.textBoxReportSvc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxReportSvc.Name = "textBoxReportSvc";
-            this.textBoxReportSvc.Size = new System.Drawing.Size(260, 31);
+            this.textBoxReportSvc.Size = new System.Drawing.Size(132, 20);
             this.textBoxReportSvc.TabIndex = 5;
             // 
             // textBoxAXSF
             // 
-            this.textBoxAXSF.Location = new System.Drawing.Point(202, 206);
-            this.textBoxAXSF.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAXSF.Location = new System.Drawing.Point(101, 107);
+            this.textBoxAXSF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAXSF.Name = "textBoxAXSF";
-            this.textBoxAXSF.Size = new System.Drawing.Size(260, 31);
+            this.textBoxAXSF.Size = new System.Drawing.Size(132, 20);
             this.textBoxAXSF.TabIndex = 4;
             // 
             // textBoxFRPS
             // 
-            this.textBoxFRPS.Location = new System.Drawing.Point(202, 133);
-            this.textBoxFRPS.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRPS.Location = new System.Drawing.Point(101, 69);
+            this.textBoxFRPS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRPS.Name = "textBoxFRPS";
-            this.textBoxFRPS.Size = new System.Drawing.Size(260, 31);
+            this.textBoxFRPS.Size = new System.Drawing.Size(132, 20);
             this.textBoxFRPS.TabIndex = 2;
             // 
             // textBoxFRAS
             // 
-            this.textBoxFRAS.Location = new System.Drawing.Point(202, 94);
-            this.textBoxFRAS.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFRAS.Location = new System.Drawing.Point(101, 49);
+            this.textBoxFRAS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFRAS.Name = "textBoxFRAS";
-            this.textBoxFRAS.Size = new System.Drawing.Size(260, 31);
+            this.textBoxFRAS.Size = new System.Drawing.Size(132, 20);
             this.textBoxFRAS.TabIndex = 1;
             // 
             // textBoxLocalAgent
             // 
-            this.textBoxLocalAgent.Location = new System.Drawing.Point(202, 58);
-            this.textBoxLocalAgent.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLocalAgent.Location = new System.Drawing.Point(101, 30);
+            this.textBoxLocalAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLocalAgent.Name = "textBoxLocalAgent";
-            this.textBoxLocalAgent.Size = new System.Drawing.Size(260, 31);
+            this.textBoxLocalAgent.Size = new System.Drawing.Size(132, 20);
             this.textBoxLocalAgent.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 283);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(8, 147);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
+            this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "DixF";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 246);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(8, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "ReportSvc";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 210);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(8, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "AXSF";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 135);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "FRPS";
             // 
             // labelFRAS
             // 
             this.labelFRAS.AutoSize = true;
-            this.labelFRAS.Location = new System.Drawing.Point(16, 98);
-            this.labelFRAS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFRAS.Location = new System.Drawing.Point(8, 51);
+            this.labelFRAS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFRAS.Name = "labelFRAS";
-            this.labelFRAS.Size = new System.Drawing.Size(68, 25);
+            this.labelFRAS.Size = new System.Drawing.Size(35, 13);
             this.labelFRAS.TabIndex = 23;
             this.labelFRAS.Text = "FRAS";
             // 
             // labelLocalAgent
             // 
             this.labelLocalAgent.AutoSize = true;
-            this.labelLocalAgent.Location = new System.Drawing.Point(16, 62);
-            this.labelLocalAgent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLocalAgent.Location = new System.Drawing.Point(8, 32);
+            this.labelLocalAgent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLocalAgent.Name = "labelLocalAgent";
-            this.labelLocalAgent.Size = new System.Drawing.Size(126, 25);
+            this.labelLocalAgent.Size = new System.Drawing.Size(64, 13);
             this.labelLocalAgent.TabIndex = 21;
             this.labelLocalAgent.Text = "Local Agent";
             // 
@@ -2751,11 +2762,11 @@ namespace D365.Setup
             // 
             this.tabPageCertificate.Controls.Add(this.groupBox7);
             this.tabPageCertificate.Controls.Add(this.groupBox6);
-            this.tabPageCertificate.Location = new System.Drawing.Point(8, 39);
-            this.tabPageCertificate.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageCertificate.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCertificate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageCertificate.Name = "tabPageCertificate";
-            this.tabPageCertificate.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageCertificate.Size = new System.Drawing.Size(2057, 1234);
+            this.tabPageCertificate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageCertificate.Size = new System.Drawing.Size(1028, 640);
             this.tabPageCertificate.TabIndex = 1;
             this.tabPageCertificate.Text = "Certificates";
             this.tabPageCertificate.UseVisualStyleBackColor = true;
@@ -2764,11 +2775,9 @@ namespace D365.Setup
             // 
             this.groupBox7.Controls.Add(this.gridVms);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox7.Location = new System.Drawing.Point(4, 377);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox7.Location = new System.Drawing.Point(2, 196);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox7.Size = new System.Drawing.Size(2049, 425);
+            this.groupBox7.Size = new System.Drawing.Size(1024, 221);
             this.groupBox7.TabIndex = 32;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Service Fabric Nodes";
@@ -2786,15 +2795,15 @@ namespace D365.Setup
             this.hasSSIS});
             this.gridVms.ContextMenuStrip = this.popupMenuGridNode;
             this.gridVms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridVms.Location = new System.Drawing.Point(6, 30);
-            this.gridVms.Margin = new System.Windows.Forms.Padding(4);
+            this.gridVms.Location = new System.Drawing.Point(3, 16);
+            this.gridVms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridVms.MultiSelect = false;
             this.gridVms.Name = "gridVms";
             this.gridVms.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridVms.RowHeadersVisible = false;
             this.gridVms.RowHeadersWidth = 20;
             this.gridVms.RowTemplate.Height = 20;
-            this.gridVms.Size = new System.Drawing.Size(2037, 389);
+            this.gridVms.Size = new System.Drawing.Size(1018, 202);
             this.gridVms.TabIndex = 31;
             // 
             // name
@@ -2839,19 +2848,19 @@ namespace D365.Setup
             this.toolStripMIAdd,
             this.toolStripMIRemove});
             this.popupMenuGridNode.Name = "popupMenuGridNode";
-            this.popupMenuGridNode.Size = new System.Drawing.Size(177, 80);
+            this.popupMenuGridNode.Size = new System.Drawing.Size(118, 48);
             // 
             // toolStripMIAdd
             // 
             this.toolStripMIAdd.Name = "toolStripMIAdd";
-            this.toolStripMIAdd.Size = new System.Drawing.Size(176, 38);
+            this.toolStripMIAdd.Size = new System.Drawing.Size(117, 22);
             this.toolStripMIAdd.Text = "Add";
             this.toolStripMIAdd.Click += new System.EventHandler(this.toolStripAddNew_Click);
             // 
             // toolStripMIRemove
             // 
             this.toolStripMIRemove.Name = "toolStripMIRemove";
-            this.toolStripMIRemove.Size = new System.Drawing.Size(176, 38);
+            this.toolStripMIRemove.Size = new System.Drawing.Size(117, 22);
             this.toolStripMIRemove.Text = "Remove";
             this.toolStripMIRemove.Click += new System.EventHandler(this.toolStripMIRemove_Click);
             // 
@@ -2859,11 +2868,11 @@ namespace D365.Setup
             // 
             this.groupBox6.Controls.Add(this.panel1);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Location = new System.Drawing.Point(4, 4);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Location = new System.Drawing.Point(2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(2049, 373);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Size = new System.Drawing.Size(1024, 194);
             this.groupBox6.TabIndex = 25;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Service Fabric Nodes Types";
@@ -2872,10 +2881,10 @@ namespace D365.Setup
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(2, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2041, 341);
+            this.panel1.Size = new System.Drawing.Size(1020, 177);
             this.panel1.TabIndex = 29;
             // 
             // panel3
@@ -2883,8 +2892,9 @@ namespace D365.Setup
             this.panel3.Controls.Add(this.gridNodes);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2041, 341);
+            this.panel3.Size = new System.Drawing.Size(1020, 177);
             this.panel3.TabIndex = 31;
             // 
             // gridNodes
@@ -2897,14 +2907,14 @@ namespace D365.Setup
             this.Disabled});
             this.gridNodes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridNodes.Location = new System.Drawing.Point(0, 0);
-            this.gridNodes.Margin = new System.Windows.Forms.Padding(4);
+            this.gridNodes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridNodes.MultiSelect = false;
             this.gridNodes.Name = "gridNodes";
             this.gridNodes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridNodes.RowHeadersVisible = false;
             this.gridNodes.RowHeadersWidth = 20;
             this.gridNodes.RowTemplate.Height = 20;
-            this.gridNodes.Size = new System.Drawing.Size(2041, 341);
+            this.gridNodes.Size = new System.Drawing.Size(1020, 177);
             this.gridNodes.TabIndex = 29;
             this.gridNodes.SelectionChanged += new System.EventHandler(this.gridNodes_SelectionChanged);
             // 
@@ -2928,21 +2938,21 @@ namespace D365.Setup
             // 
             this.panelChild.Controls.Add(this.tabControlConfig);
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChild.Location = new System.Drawing.Point(0, 127);
-            this.panelChild.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChild.Location = new System.Drawing.Point(0, 66);
+            this.panelChild.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(2073, 1281);
+            this.panelChild.Size = new System.Drawing.Size(1001, 531);
             this.panelChild.TabIndex = 1;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2073, 1408);
+            this.ClientSize = new System.Drawing.Size(1001, 597);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.groupTop);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.Text = "365 f&O Config Template";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -3237,5 +3247,6 @@ namespace D365.Setup
         private System.Windows.Forms.DataGridViewCheckBoxColumn hasSSIS;
         private System.Windows.Forms.TextBox textBoxConfig;
         private System.Windows.Forms.Button buttonCert;
+        private System.Windows.Forms.Button buttonGmsa;
     }
 }
